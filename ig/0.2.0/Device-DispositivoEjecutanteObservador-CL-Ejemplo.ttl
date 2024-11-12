@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Device/DispositivoEjecutanteObservador-CL-Ejemplo> a fhir:Device ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DispositivoEjecutanteObservador-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Device DispositivoEjecutanteObservador-CL-Ejemplo</b></p><a name=\"DispositivoEjecutanteObservador-CL-Ejemplo\"> </a><a name=\"hcDispositivoEjecutanteObservador-CL-Ejemplo\"> </a><a name=\"DispositivoEjecutanteObservador-CL-Ejemplo-es-CL\"> </a><p><b>identifier</b>: <code>http://ortopedia.organization/devicesID</code>/2121</p><p><b>manufacturer</b>: Ortopedia-Care</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>Férula para codo</td><td>Manufacturer name</td></tr></table><p><b>modelNumber</b>: 2.0.1</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 16349000}\">Dispositivo ortopédico</span></p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://ortopedia.organization/devicesID"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2121" ]
+  ] ) ; # 
+  fhir:manufacturer [ fhir:v "Ortopedia-Care"] ; # 
+  fhir:deviceName ( [
+     fhir:name [ fhir:v "Férula para codo" ] ;
+     fhir:type [ fhir:v "manufacturer-name" ]
+  ] ) ; # 
+  fhir:modelNumber [ fhir:v "2.0.1"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:16349000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "16349000" ] ;
+       fhir:display [ fhir:v "Orthopedic device" ]
+     ] ) ;
+     fhir:text [ fhir:v "Dispositivo ortopédico" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

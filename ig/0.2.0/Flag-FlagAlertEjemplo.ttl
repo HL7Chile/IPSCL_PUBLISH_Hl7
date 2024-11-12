@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Flag/FlagAlertEjemplo> a fhir:Flag ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FlagAlertEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"es\" lang=\"es\"><p class=\"res-header-id\"><b>Generated Narrative: Flag FlagAlertEjemplo</b></p><a name=\"FlagAlertEjemplo\"> </a><a name=\"hcFlagAlertEjemplo\"> </a><a name=\"FlagAlertEjemplo-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: es</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Flag-alerta-cl-ips.html\">Flag - Alerta (IPS-CL)</a></p></div><p><b>Flag Priority</b>: <span title=\"Codes:{http://hl7.org/fhir/flag-priority-code PH}\">High priority</span></p><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/flag-category drug}\">Alerta relacionada con la medicación del paciente</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 419511003}\">Paciente propenso a reacciones adversas a medicamentos</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/flag-priority"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/flag-priority-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PH" ] ;
+         fhir:display [ fhir:v "High priority" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/flag-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "drug" ] ;
+       fhir:display [ fhir:v "Drug" ]
+     ] ) ;
+     fhir:text [ fhir:v "Alerta relacionada con la medicación del paciente" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:419511003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "419511003" ] ;
+       fhir:display [ fhir:v "Propensity to adverse reactions to drug" ]
+     ] ) ;
+     fhir:text [ fhir:v "Paciente propenso a reacciones adversas a medicamentos" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

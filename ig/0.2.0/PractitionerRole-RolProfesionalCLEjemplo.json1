@@ -1,0 +1,25 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "RolProfesionalCLEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole RolProfesionalCLEjemplo</b></p><a name=\"RolProfesionalCLEjemplo\"> </a><a name=\"hcRolProfesionalCLEjemplo\"> </a><a name=\"RolProfesionalCLEjemplo-es-CL\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-PrestadorMedFamiliarClIpsEjemplo.html\">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>organization</b>: <a href=\"Organization-Organization-CL-Ejemplo.html\">Organization Centro de Salud Familiar Barón</a></p><p><b>specialty</b>: <span title=\"Codes:{https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialidadesDeisCL 28}\">Medicina Familiar</span></p></div>"
+  },
+  "practitioner" : {
+    "reference" : "Practitioner/PrestadorMedFamiliarClIpsEjemplo"
+  },
+  "organization" : {
+    "reference" : "Organization/Organization-CL-Ejemplo"
+  },
+  "specialty" : [{
+    "coding" : [{
+      "system" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialidadesDeisCL",
+      "code" : "28",
+      "display" : "Medicina Familiar"
+    }],
+    "text" : "Medicina Familiar"
+  }]
+}

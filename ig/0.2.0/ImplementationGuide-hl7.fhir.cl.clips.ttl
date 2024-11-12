@@ -1,0 +1,1464 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hl7.fhir.cl.clips"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.cl.clips</b></p><a name=\"hl7.fhir.cl.clips\"> </a><a name=\"hchl7.fhir.cl.clips\"> </a><a name=\"hl7.fhir.cl.clips-es-CL\"> </a><h2>InternationalPatientSummaryChile</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips</pre><div><p>Guía IPS homologada para la realidad Chilena.</p>\n</div></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "InternationalPatientSummaryChile"] ; # 
+  fhir:title [ fhir:v "Resumen Clínico de Paciente de Chile (IPS-CL)"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-11-12T12:50:29-03:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Chile"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Chile" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7chile.cl" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Guía IPS homologada para la realidad Chilena."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CL" ] ;
+       fhir:display [ fhir:v "Chile" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "hl7.fhir.cl.clips"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
+     fhir:version [ fhir:v "6.0.2" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "5.1.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_cl_clcore" ] ;
+     fhir:uri [
+       fhir:v "https://hl7chile.cl/fhir/ig/clcore/ImplementationGuide/hl7.fhir.cl.clcore"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clcore/ImplementationGuide/hl7.fhir.cl.clcore>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.cl.clcore" ] ;
+     fhir:version [ fhir:v "1.9.1" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_ips" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/uv/ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.ips" ] ;
+     fhir:version [ fhir:v "2.0.0" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2024+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ci-build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "https://hl7chile.cl/fhir/ig/clips/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.2.0" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2024+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ci-build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "https://hl7chile.cl/fhir/ig/clips/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "AllergyIntolerance" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/AllergyIntolerance/Alergia-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "AllergyIntolerance/Alergia-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Alergias - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre el padecimiento de una o más alergias por parte del paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/AllergiaInt-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Alergias e Intolerancias (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso de Alergias e Intolerancias para representar este modelo a nivel nacional" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Flag" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Flag/FlagAlertEjemplo> ;
+         fhir:reference [ fhir:v "Flag/FlagAlertEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Alerta Paciente- Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de una alerta sobre un problema  que sufre el paciente" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Bundle/Bundle-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Bundle/Bundle-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre un documento clínico tipo Bundle que representa el conjunto mínimo de datos para el Resumen Internacional de Pacientes (IPS)." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl> ;
+         fhir:reference [ fhir:v "StructureDefinition/Bundle-documento-ips-cl" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle Resumen Clínico" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso Bundle por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), incluyendo restricciones locales de chile, para ser aplicado a nivel nacional." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Composition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Composition/Composition-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Composition/Composition-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Composition - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre un documento clínico que representa un conjunto de datos para el Resumen Internacional de Pacientes (IPS)." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Composition-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Composition-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Condition-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Condición (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso Condition por la Guía de Implementación FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un registro de un problema se representa en el resumen del paciente como una instancia del recurso Condition restringido por este perfil.\r\n\r\nRepresentación de un problema en el resumen internacional del paciente." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Condition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Condition/Condition-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Condition/Condition-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Condición - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de una condición que padece el paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/RegMedicamentos-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Declaración de medicación (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso MedicationStatement según la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una declaración de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationStatement restringido por este perfil." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Declaracion-uso-dispositivo-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Declaración de uso del dispositivo (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso DeviceUseStatement por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL). Una declaración sobre un dispositivo utilizado por el paciente o implantado en él se describe en el resumen del paciente como una instancia de un recurso DeviceUseStatement restringido por este perfil." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DeviceUseStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/DeviceUseStatement/DeclaracionUsoDispositivo-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "DeviceUseStatement/DeclaracionUsoDispositivo-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Declaración Uso Dispositivo - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre la declaración de uso de un dispositivo médico" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Dispositivo-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Dispositivo (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso Device por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un dispositivo utilizado por el paciente o implantado en él se describe como una instancia del recurso Device restringido por este perfil." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Dispositivo-observador-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Dispositivo - Ejecutante, Observador (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso Device por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL).\r\n\r\nEste perfil describe un dispositivo que desempeña el papel de observador o ejecutante." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Device" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Device/DispositivoEjecutanteObservador-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Device/DispositivoEjecutanteObservador-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Dispositivo - Ejecutante, Observador Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre un dispositivo médico en rol de observador o ejecutante" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Device" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Device/Dispositivo-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Device/Dispositivo-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Dispositivo Médico - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre el dispositivo médico que utiliza el paciente" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Composition-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Composition-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Documento (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Documento clínico utilizado para representar el conjunto de datos del Resumen Internacional de Pacientes (IPS). \nUn documento de Resumen Internacional de Paciente (IPS) es un extracto de historia clínica electrónica que contiene información sanitaria esencial sobre un sujeto de atención. \nEl conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especialidad y la afección; pero sigue siendo clínicamente relevante. Tal como se especifica en las normas EN 17269 e ISO 27269, está diseñado para apoyar el caso de uso de la «atención transfronteriza no planificada», pero no se limita a él. Pretende ser internacional, es decir, ofrecer soluciones genéricas para su aplicación global más allá de una región o país concretos.\n\nEste perfil se basa en el perfil ClinicalDocument." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+         fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Ejemplo de Paciente CL - IPS" ] ;
+       fhir:description [ fhir:v "Ejemplo de paciente según el estándar IPS nacional" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Paciente-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Paciente-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Practitioner/PrestadorMedFamiliarClIpsEjemplo> ;
+         fhir:reference [ fhir:v "Practitioner/PrestadorMedFamiliarClIpsEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Ejemplo de Prestador Medicina Familiar CL - IPS" ] ;
+       fhir:description [ fhir:v "Ejemplo de prestador de medicina familiar que atiende al paciente según el estándar IPS nacional" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Practitioner/PrestadorMedInternaClIpsEjemplo> ;
+         fhir:reference [ fhir:v "Practitioner/PrestadorMedInternaClIpsEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Ejemplo de Prestador Medicina Interna CL - IPS" ] ;
+       fhir:description [ fhir:v "Ejemplo de prestador de medicina interna que atiende al paciente según el estándar IPS nacional" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/ImagingStudy-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Estudio de Imagenología (IPS-Cl)" ] ;
+       fhir:description [ fhir:v "Estudio de imagenología realizado a un paciente, del cual se obtiene despues una observación para un reporte diagnóstico" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ImagingStudy" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/ImagingStudy/EstudioImagenologiaCLEjemplo> ;
+         fhir:reference [ fhir:v "ImagingStudy/EstudioImagenologiaCLEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Estudio de imagenología - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre el estudio imagenológico de un paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Flag-alerta-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Flag - Alerta (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil limita el recurso Flag según la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL). Un registro de una alerta se representa en el resumen del paciente como una instancia de un recurso Flag restringido por este perfil. \n\nFlag se utiliza para transmitir información sobre una alerta específica de una IPS. La información se marca para crear conciencia sobre posibles preocupaciones o peligros para/del sujeto de la IPS. Pone la información en primer plano y puede hacer referencia a otra información del resumen (a través de la extensión supportedInfo), así como también presentar obstáculos para la atención." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/RolPrestador-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Función o Rol de Prestador Individual (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso profesional para representar a un profesional que actúa como observador de resultaos expresados" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Inmunizacion-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Immunización (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso Inmunización por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS). Un registro de una vacunación se representa en el resumen del paciente como una instancia de un recurso Inmunización restringido por este perfil.\n\nDescribe el evento de un paciente al que se le ha administrado una vacuna o un registro de una vacuna notificado por un paciente, un clínico u otra parte." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Immunization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Immunization/Inmunizacion-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Immunization/Inmunizacion-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Inmunización - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre las inmunizaciones que posee el paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "OperationDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/OperationDefinition/IpsClSummary> ;
+         fhir:reference [ fhir:v "OperationDefinition/IpsClSummary" ]
+       ] ;
+       fhir:name [ fhir:v "IPS-Cl Summary" ] ;
+       fhir:description [ fhir:v "Esta operación devuelve un documento IPS en respuesta a una solicitud POST/GET (ver Operaciones FHIR). El documento devuelto **PUEDE** generarse bajo demanda y **DEBERÍA** representar la información más reciente disponible. Esta operación no necesariamente crearía una instancia IPS persistida en el servidor que responde a la solicitud. Cuando se desean registros históricos u otros documentos, esta operación no es adecuada. Para operaciones alternativas y guía sobre la generación de IPS, consulte **IPS Generation and Data Inclusion**.\n\nGeneralmente, cuando se conoce el id lógico de un paciente, ese id se utilizaría para solicitar el resumen del paciente desde un servidor FHIR (ver patrón [id] a continuación). Cuando no se conoce, los servidores **PUEDEN** admitir el uso de otros identificadores (ver el parámetro identifier a continuación).\n\nEl servidor **DEBE** permitir el uso del perfil del [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html).\n\nEstá operación nace de la operación [IPS Summary](https://build.fhir.org/ig/HL7/fhir-ips/OperationDefinition-summary.html) pero especificada para el caso de uso nacional de Chile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Observation/LabPatologia-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Observation/LabPatologia-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Laboratorio Patología - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de una observación sobre un resultado proveniente del laboratorio de patología." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Medicamento-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Medicamento (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso Medicamento por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un medicamento se describe en el resumen del paciente como una instancia de un recurso Medicamento restringido por este perfil." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Medication" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Medication/MedicamentoCLEjemplo> ;
+         fhir:reference [ fhir:v "Medication/MedicamentoCLEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Medicamento - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre un medicamento que utiliza el paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/MedicationRequest/MedicationRequest-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "MedicationRequest/MedicationRequest-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Request - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre la solicitud de medicación relacionada con un paciente. Esta es prescrita por un profesional de salud" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/MedicationStatement/MedicationStatement-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "MedicationStatement/MedicationStatement-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Statement - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre la declaración de uso de medicación del paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Speciment-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Speciment-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Muestra (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Muestra por la cual hicieron el estudio" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Specimen" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Specimen/SpecimenCLEjemplo> ;
+         fhir:reference [ fhir:v "Specimen/SpecimenCLEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Muestra - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre una muestra biológica que se le extrajo al paciente para posteriormente hacer un estudio." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Speciment-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Speciment-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-estado-del-embarazo-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-estado-del-embarazo-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observación - Embarazo: Estado (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso Observation para representar el estado del embarazo." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso Observation para representar la fecha de parto estimada de un embarazo." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-resultado-del-embarazo-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observación - Embarazo: Resultados (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso Observation para representar un resumen de resultados del embarazo." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-uso-de-alcohol-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observación - SH: Uso de Alcohol (IPS CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso Observation para representar la evaluación del consumo de alcohol del paciente." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-tabaco-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-uso-de-tabaco-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observación - SH: Uso de tabaco (IPS CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso Observation para representar la evaluación del consumo de tabaco del paciente." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-resultado-radiology-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observación Resultado: Imagenológico (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Resultados obtenidos para un examen imagenológico" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observación Resultado: Laboratorio/Patología (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Resultados obtenidos para un examen de laboratorio" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Observation/ObservacionConsumoAlcoholEjemplo> ;
+         fhir:reference [ fhir:v "Observation/ObservacionConsumoAlcoholEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Observación: Consumo de Alcohol - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de una observación sobre el consumo de alcohol del paciente" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Observation/ObservacionConsumoTabacoEjemplo> ;
+         fhir:reference [ fhir:v "Observation/ObservacionConsumoTabacoEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Observación: Consumo de Tabaco - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de una observación sobre el consumo de tabaco del paciente" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-tabaco-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-tabaco-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Observation/ObservacionEstadoEmbarazoEjemplo> ;
+         fhir:reference [ fhir:v "Observation/ObservacionEstadoEmbarazoEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Observación: Estado del embarazo - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de una observación sobre el estado del embarazo" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-estado-del-embarazo-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-estado-del-embarazo-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Observation/ObservacionFechaEstimadaPartoEjemplo> ;
+         fhir:reference [ fhir:v "Observation/ObservacionFechaEstimadaPartoEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Observación: Fecha Estimada de Parto - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de una observación sobre la fecha estimada de parto" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Observation/ObservacionResultadoEmbarazoEjemplo> ;
+         fhir:reference [ fhir:v "Observation/ObservacionResultadoEmbarazoEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Observación: Resultado de Embarazo - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de una observación sobre un resumen de los resultados de embarazo del paciente" ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Organizacion-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Organización (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso Organización para representar a una organización que actúa como ejecutante u observador para una observación de resultados (laboratorio, patología o imagen), o como ejecutante para un procedimiento." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Organization/Organization-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Organization/Organization-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Organización - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre la organización." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Organization/OrganizationHospital-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Organization/OrganizationHospital-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Organización Hospital - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre la organización - Hospital." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Paciente-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Paciente-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Paciente (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Perfil basado en IPS para paciente Chileno." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Parameters" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Parameters/Parametros-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Parameters/Parametros-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Parametros - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre los parámetros de entrada para usar la operación Summary como un POST." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl> ;
+         fhir:reference [ fhir:v "StructureDefinition/Parametros-entradas-ips-cl" ]
+       ] ;
+       fhir:name [ fhir:v "Parametros De Entradas IPS Summary" ] ;
+       fhir:description [ fhir:v "Parámetros de Entradas para usar la operación IPS-Summary de manera POST" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Prestador-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Prestador Individual (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil restringe el recurso profesional para representar a un profesional que actúa como observador de resultados expresados." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Procedure" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Procedure/ProcedimientoCLEjemplo> ;
+         fhir:reference [ fhir:v "Procedure/ProcedimientoCLEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Procedimiento - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre un procedimiento al que se somete un paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Procedimientos-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Procedimientos (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso Procedure por el proyecto IPS, el cual especifica una entrada en el Historial de Procedimientos para el resumen internacional del paciente basado en el estándar FHIR R4." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DiagnosticReport" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/DiagnosticReport/DiagnosticReportAlergia-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "DiagnosticReport/DiagnosticReportAlergia-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Reporte Alergias (Diagnóstico) - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de un reporte de un estudio diagnóstico de las alergias que padece el paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/DiagnosticReport-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Reporte Diagnóstico (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Reporte resultado de un o varios estudios para diagnosticar una enfermedad. Este perfil es el simil al DiagnosticReport(IPS)." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DiagnosticReport" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/DiagnosticReport/DiagnosticReportLab-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "DiagnosticReport/DiagnosticReportLab-CL-Ejemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Reporte Laboratorio (Diagnóstico) - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo de un reporte de un estudio diagnóstico de alguna enfermedad que padece el paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Observation/ResultadoRadiologyCLEjemplo> ;
+         fhir:reference [ fhir:v "Observation/ResultadoRadiologyCLEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Resultado de Radiología - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre el resultado de radiología de un paciente." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PractitionerRole" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/PractitionerRole/RolProfesionalCLEjemplo> ;
+         fhir:reference [ fhir:v "PractitionerRole/RolProfesionalCLEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Rol Profesional Medicina Familiar - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre el rol de un profesional de la salud, específicamente de medicina familiar." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PractitionerRole" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/PractitionerRole/RolProfesionalMedInternaCLEjemplo> ;
+         fhir:reference [ fhir:v "PractitionerRole/RolProfesionalMedInternaCLEjemplo" ]
+       ] ;
+       fhir:name [ fhir:v "Rol Profesional Medicina Interna - Ejemplo" ] ;
+       fhir:description [ fhir:v "Ejemplo sobre el rol de un profesional de la salud, específicamente de medicina interna." ] ;
+       fhir:example [
+         fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips"^^xsd:anyURI ;
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/MedicationRequest-cl-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Solicitud de medicación (IPS-CL)" ] ;
+       fhir:description [ fhir:v "Este perfil representa las restricciones aplicadas al recurso MedicationRequest por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una solicitud de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationRequest restringido por este perfil." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] ) ;
+     fhir:page [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+       ] ) ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Resumen Clínico del Paciente de Chile" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "EstructuraIPS.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "EstructuraIPS.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Estructura del IPS" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "OperacionesIPS.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "OperacionesIPS.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Operaciones del IPS" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "artifacts.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "artifacts.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Artefactos Generados" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "changes.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "changes.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Historial de Cambios" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [ fhir:v "path-tx-cache" ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

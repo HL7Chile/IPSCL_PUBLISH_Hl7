@@ -1,0 +1,19 @@
+{
+  "website": {
+    "style": "fhir.layout",
+    "url": "https://hl7chile.cl/fhir/ig/clips",
+    "server": "asp-new",
+    "org": "HL7, Inc",
+    "search-template": "searchform.template.html",
+    "index-template": "index.template"
+  },
+  "feeds": {
+    "package": "package-feed.xml",
+    "publication": "publication-feed.xml"
+  },
+  "layout-rules" : [{
+    "npm" : "hl7.fhir.cl.clips",
+    "canonical" : "https://hl7chile.cl/fhir/ig/clips",
+    "destination" : "/"
+  }]
+}

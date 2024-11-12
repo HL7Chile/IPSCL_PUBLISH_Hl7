@@ -1,0 +1,44 @@
+{
+  "resourceType" : "Observation",
+  "id" : "LabPatologia-CL-Ejemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation LabPatologia-CL-Ejemplo</b></p><a name=\"LabPatologia-CL-Ejemplo\"> </a><a name=\"hcLabPatologia-CL-Ejemplo\"> </a><a name=\"LabPatologia-CL-Ejemplo-es-CL\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratorio</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 100746-7}\">Glucosa en sangre venosa mixta</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2015-06-04</p><p><b>performer</b>: <a href=\"Organization-OrganizationHospital-CL-Ejemplo.html\">Organization Hospital Dr. Gustavo Fricke</a></p><p><b>value</b>: 5.5 [mmol/L]<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p><p><b>note</b>: Nivel normal de glucosa en sangre venosa</p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory",
+      "display" : "Laboratory"
+    }],
+    "text" : "Laboratorio"
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "100746-7",
+      "display" : "Glucose [Moles/volume] in Mixed venous blood"
+    }],
+    "text" : "Glucosa en sangre venosa mixta"
+  },
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "effectiveDateTime" : "2015-06-04",
+  "performer" : [{
+    "reference" : "Organization/OrganizationHospital-CL-Ejemplo"
+  }],
+  "valueQuantity" : {
+    "value" : 5.5,
+    "unit" : "[mmol/L]",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mmol/L"
+  },
+  "note" : [{
+    "text" : "Nivel normal de glucosa en sangre venosa"
+  }]
+}

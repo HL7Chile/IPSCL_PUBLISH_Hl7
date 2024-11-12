@@ -1,0 +1,272 @@
+FHIR IG Publisher Version 1.7.1 (Git# 74ea670a3891). Built 2024-10-25T03:52:19.844Z (18 days old)
+Detected Java version: 21.0.2 from C:\Program Files\Java\jdk-21 on amd64 (64bit). 7884MB available
+dir = C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\IPS-CL\input-cache, path = C:\Users\franco.ulloa\AppData\Local\anaconda3;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\mingw-w64\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\usr\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Scripts;C:\Users\franco.ulloa\AppData\Local\anaconda3\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\condabin;C:\Program Files\PowerShell\7;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Users\franco.ulloa\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Amazon\AWSCLIV2;C:\Program Files\Java\jdk-21\bin;C:\apache-maven-3.9.6\bin;C:\Program Files\PowerShell\7;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Ruby32-x64\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\mingw-w64\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\usr\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Scripts;C:\Users\franco.ulloa\AppData\Local\Microsoft\WindowsApps;C:\Users\franco.ulloa\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\franco.ulloa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\DataGrip 2023.3.3\bin;.;C:\Program Files\Java\jdk-21;C:\Program Files\Java\jdk-21\bin;C:\apache-maven-3.9.6\bin;.
+Parameters: -go-publish -source C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\IPS-CL\ -web C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\ig\ -registry C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\ig-registry-master\fhir-ig-list.json -history C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\fhir-ig-history-template-master\ -temp C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp -templates C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\ig\templates
+---------------
+Publication Run: publish C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\IPS-CL\ to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\ig\
+Run Number: 1
+Relative directory for IG is '\'
+===== Web Publication Run Details ===============================
+ Source IG: hl7.fhir.cl.clips#0.2.0 : https://hl7chile.cl/fhir/ig/clips (R4) from C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\IPS-CL\
+All checks passed. Do the publication build from C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\IPS-CL and publish to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\web-root\run-20241112\
+Prepare Build space in C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0
+Build IG at C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\IPS-CL: final copy suitable for publication (in C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0)
+FHIR IG Publisher Version 1.7.1 (Git# 74ea670a3891). Built 2024-10-25T03:52:19.844Z (18 days old)   
+Detected Java version: 21.0.2 from C:\Program Files\Java\jdk-21 on Windows 11/amd64 (64bit). 7884MB available
+dir = C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\IPS-CL\input-cache, path = C:\Users\franco.ulloa\AppData\Local\anaconda3;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\mingw-w64\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\usr\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Scripts;C:\Users\franco.ulloa\AppData\Local\anaconda3\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\condabin;C:\Program Files\PowerShell\7;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Users\franco.ulloa\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\Amazon\AWSCLIV2;C:\Program Files\Java\jdk-21\bin;C:\apache-maven-3.9.6\bin;C:\Program Files\PowerShell\7;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Ruby32-x64\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\mingw-w64\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\usr\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Library\bin;C:\Users\franco.ulloa\AppData\Local\anaconda3\Scripts;C:\Users\franco.ulloa\AppData\Local\Microsoft\WindowsApps;C:\Users\franco.ulloa\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\franco.ulloa\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\DataGrip 2023.3.3\bin;.;C:\Program Files\Java\jdk-21;C:\Program Files\Java\jdk-21\bin;C:\apache-maven-3.9.6\bin;.
+Parameters: -ig C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0 -resetTx -publish https://hl7chile.cl/fhir/ig/clips/0.2.0 -no-exit
+Start Clock @ martes, 12 de noviembre de 2024, 12:48:43 (hora de verano de Chile) (2024-11-12T12:48:43-03:00)
+                                                                                                    
+Build FHIR IG from C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0 (00:00.063 / 00:00.063, 260Mb)
+Build Formal Publication package, intended for https://hl7chile.cl/fhir/ig/clips/0.2.0               (00:00.004 / 00:00.067, 260Mb)
+API keys loaded from C:\Users\franco.ulloa\.fhir\fhir-settings.json                                  (00:00.001 / 00:00.069, 260Mb)
+Package Cache: C:\Users\franco.ulloa\.fhir\packages                                                  (00:00.003 / 00:00.072, 260Mb)
+Run Sushi on C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0    (00:00.008 / 00:00.081, 260Mb)
+Sushi: info  Running SUSHI v3.12.1 (implements FHIR Shorthand specification v3.0.0)                  (00:01.517 / 00:01.598, 263Mb)
+Sushi: info  Arguments:                                                                              (00:00.011 / 00:01.611, 263Mb)
+Sushi: info    --require-latest                                                                      (00:00.005 / 00:01.615, 263Mb)
+Sushi: info    --out C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0 (00:00.002 / 00:01.618, 263Mb)
+Sushi: info    C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0  (00:00.002 / 00:01.620, 263Mb)
+Sushi: info  Using configuration file: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\sushi-config.yaml (00:02.067 / 00:03.688, 264Mb)
+Sushi: info  Importing FSH text...                                                                   (00:00.167 / 00:03.855, 264Mb)
+Sushi: info  Preprocessed 62 documents with 62 aliases.                                              (00:00.522 / 00:04.378, 264Mb)
+Sushi: info  Imported 28 definitions and 45 instances.                                               (00:00.050 / 00:04.429, 264Mb)
+Sushi: info  Checking C:\Users\franco.ulloa\.fhir\packages for hl7.fhir.uv.tools#current...          (00:00.012 / 00:04.441, 264Mb)
+Sushi: info  Found hl7.fhir.uv.tools#current in C:\Users\franco.ulloa\.fhir\packages.                (00:00.065 / 00:04.506, 264Mb)
+Sushi: warn  Failed to load automatically-provided hl7.fhir.uv.tools#current: connect ETIMEDOUT 35.190.153.146:443 (00:21.202 / 00:25.708, 264Mb)
+Sushi: info  Checking C:\Users\franco.ulloa\.fhir\packages for hl7.terminology.r4#6.0.2...           (00:00.926 / 00:26.635, 264Mb)
+Sushi: info  Found hl7.terminology.r4#6.0.2 in C:\Users\franco.ulloa\.fhir\packages.                 (00:01.309 / 00:27.944, 264Mb)
+Sushi: info  Loaded package hl7.terminology.r4#6.0.2                                                 (00:00.001 / 00:27.946, 264Mb)
+Sushi: info  Checking C:\Users\franco.ulloa\.fhir\packages for hl7.fhir.uv.extensions.r4#5.1.0...    (00:00.214 / 00:28.160, 264Mb)
+Sushi: info  Found hl7.fhir.uv.extensions.r4#5.1.0 in C:\Users\franco.ulloa\.fhir\packages.          (00:00.992 / 00:29.153, 264Mb)
+Sushi: info  Loaded package hl7.fhir.uv.extensions.r4#5.1.0                                          (00:00.001 / 00:29.154, 264Mb)
+Sushi: info  Checking C:\Users\franco.ulloa\.fhir\packages for hl7.fhir.cl.clcore#1.9.1...           (00:00.001 / 00:29.155, 264Mb)
+Sushi: info  Found hl7.fhir.cl.clcore#1.9.1 in C:\Users\franco.ulloa\.fhir\packages.                 (00:00.680 / 00:29.835, 264Mb)
+Sushi: info  Loaded package hl7.fhir.cl.clcore#1.9.1                                                 (00:00.001 / 00:29.837, 264Mb)
+Sushi: info  Checking C:\Users\franco.ulloa\.fhir\packages for hl7.fhir.uv.ips#2.0.0...              (00:00.001 / 00:29.838, 264Mb)
+Sushi: info  Found hl7.fhir.uv.ips#2.0.0 in C:\Users\franco.ulloa\.fhir\packages.                    (00:00.705 / 00:30.544, 264Mb)
+Sushi: info  Loaded package hl7.fhir.uv.ips#2.0.0                                                    (00:00.001 / 00:30.545, 264Mb)
+Sushi: info  Checking C:\Users\franco.ulloa\.fhir\packages for hl7.fhir.r4.core#4.0.1...             (00:00.005 / 00:30.551, 264Mb)
+Sushi: info  Found hl7.fhir.r4.core#4.0.1 in C:\Users\franco.ulloa\.fhir\packages.                   (00:02.018 / 00:32.569, 265Mb)
+Sushi: info  Loaded package hl7.fhir.r4.core#4.0.1                                                   (00:00.001 / 00:32.571, 265Mb)
+Sushi: info  Converting FSH to FHIR resources...                                                     (00:00.064 / 00:32.636, 265Mb)
+Sushi: info  Converted 28 FHIR StructureDefinitions.                                                 (00:08.088 / 00:40.724, 265Mb)
+Sushi: info  Converted 45 FHIR instances.                                                            (00:03.046 / 00:43.771, 265Mb)
+Sushi: info  Exporting FHIR resources as JSON...                                                     (00:00.003 / 00:43.774, 265Mb)
+Sushi: info  Exported 61 FHIR resources as JSON.                                                     (00:00.328 / 00:44.103, 265Mb)
+Sushi: info  Assembling Implementation Guide sources...                                              (00:00.003 / 00:44.106, 265Mb)
+Sushi: info  Generated ImplementationGuide-hl7.fhir.cl.clips.json                                    (00:00.046 / 00:44.153, 265Mb)
+Sushi: info  Assembled Implementation Guide sources; ready for IG Publisher.                         (00:00.001 / 00:44.154, 265Mb)
+Sushi: ========================= SUSHI RESULTS ===========================                           (00:00.001 / 00:44.155, 265Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.001 / 00:44.156, 265Mb)
+Sushi: | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |                           (00:00.007 / 00:44.166, 265Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.007 / 00:44.172, 265Mb)
+Sushi: | |      28       |      0       |      0       |       0       | |                           (00:00.002 / 00:44.175, 265Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.002 / 00:44.177, 265Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.001 / 00:44.179, 265Mb)
+Sushi: | |      ValueSets     |    CodeSystems    |     Instances      | |                           (00:00.001 / 00:44.180, 265Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.001 / 00:44.182, 265Mb)
+Sushi: | |         0          |         0         |         45         | |                           (00:00.001 / 00:44.183, 265Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.001 / 00:44.184, 265Mb)
+Sushi: |                                                                 |                           (00:00.001 / 00:44.185, 265Mb)
+Sushi: ===================================================================                           (00:00.001 / 00:44.186, 265Mb)
+Sushi: | You should gut it out.                 0 Errors       1 Warning |                           (00:00.001 / 00:44.187, 265Mb)
+Sushi: ===================================================================                           (00:00.011 / 00:44.199, 265Mb)
+Unable to load IG as an r5 IG - try R4 (property code is a class com.google.gson.JsonPrimitive looking for an object) (00:00.816 / 00:45.016, 59Mb)
+Load Template from hl7chile-ig-template                                                              (00:00.844 / 00:45.860, 66Mb)
+ Load Template from fhir.base.template#current                                                       (00:00.495 / 00:46.356, 82Mb)
+Error connecting to build server - running without build (Connect timed out)
+Unable to check package currency: fhir.base.template: fhir.base.template
+
+onLoad.findSpreadsheets:
+
+onLoad.updateIg:
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onLoad-ig-working.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onLoad-ig-updated.xml
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\onLoad.xslt
+
+onLoad.extend:
+
+onLoad:
+Root directory: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0 (00:36.278 / 01:22.634, 101Mb)
+Terminology Cache is at C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\txcache. Clearing now (00:05.502 / 01:28.137, 101Mb)
+Core Package hl7.fhir.r4.core#4.0.1
+Running Terminology Log: C:\Users\FRANCO~1.ULL\AppData\Local\Temp\ohfu-fhir-ig-16225377189480420268.log
+Connect to Terminology Server at http://tx.fhir.org                                                  (00:04.466 / 01:32.604, 256Mb)
+Load Package hl7.fhir.pubpack#0.1.8
+Load Package hl7.fhir.xver-extensions#0.1.0
+Load Package hl7.terminology.r4#6.0.2
+Load Package hl7.fhir.uv.extensions.r4#5.1.0
+Load Package hl7.fhir.cl.clcore#1.9.1
+Load Package hl7.fhir.uv.ips#2.0.0-ballot
+Version mismatch. This IG is version 4.0.1, while the IG 'hl7.fhir.uv.tools' is from version 5.0.0 (will try to run anyway) (00:08.573 / 01:41.179, 486Mb)
+Load Package hl7.fhir.uv.tools#0.2.0
+Load R5 Specials
+Initialization complete                                                                              (00:03.945 / 01:45.123, 487Mb)
+Load Content                                                                                         (00:00.001 / 01:45.125, 487Mb)
+Using es_CL as the default narrative language. (inferred from ImplementationGuide.jurisdiction=CL)   (00:00.101 / 01:45.227, 499Mb)
+loadPrePages from FetchedFile[C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\includes] as C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\includes
+loadPrePages from FetchedFile[C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input\pagecontent] as C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input\pagecontent
+Fetch https://hl7chile.cl/fhir/ig/clips/package-list.json for version check                          (00:01.209 / 01:46.437, 585Mb)
+Processing Conformance Resources                                                                     (00:01.543 / 01:47.980, 589Mb)
+Load Dependency Info                                                                                 (00:00.006 / 01:47.987, 589Mb)
+Load Info                                                                                            (00:00.013 / 01:48.001, 589Mb)
+Load Resources                                                                                       (00:00.003 / 01:48.004, 591Mb)
+Load Paths                                                                                           (00:00.336 / 01:48.340, 669Mb)
+Generating Snapshots                                                                                 (00:00.001 / 01:48.342, 669Mb)
+Check R4 / R4B                                                                                       (00:02.438 / 01:50.780, 631Mb)
+Assign Comparison Ids                                                                                (00:00.026 / 01:50.807, 633Mb)
+Propagating status                                                                                   (00:00.002 / 01:50.809, 633Mb)
+Generating Narratives                                                                                (00:00.001 / 01:50.811, 633Mb)
+Validating Conformance Resources                                                                     (00:05.114 / 01:55.926, 659Mb)
+Check profiles & code systems                                                                        (00:21.374 / 02:17.300, 1000Mb)
+Check realm rules                                                                                    (00:00.006 / 02:17.306, 1000Mb)
+Previous Version Comparison                                                                          (00:00.001 / 02:17.307, 1000Mb)
+Validating Resources                                                                                 (00:00.069 / 02:17.377, 1014Mb)
+Processing Provenance Records                                                                        (00:35.005 / 02:52.383, 1Gb)
+Generating Outputs in C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\output (00:00.006 / 02:52.389, 1Gb)
+Warning @ Unable to read the git branch: not a git repository (or any of the parent directories): .git
+Generate Native Outputs                                                                              (00:00.376 / 02:52.766, 1Gb)
+Run Template                                                                                         (00:36.848 / 03:29.614, 810Mb)
+
+onGenerate.checkVersions:
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-working.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\versions.txt
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\onGenerate.getVersions.xslt
+
+onGenerate.r5-schemas:
+      [get] Getting: http://build.fhir.org/fhir-single.xsd
+      [get] To: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\schemas\R5\fhir-single.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/fhir-xhtml.xsd
+      [get] To: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\schemas\R5\fhir-xhtml.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/xml.xsd
+      [get] To: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\schemas\R5\xml.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://build.fhir.org/xmldsig-core-schema.xsd
+      [get] To: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\schemas\R5\xmldsig-core-schema.xsd
+      [get] Not modified - so not downloaded
+
+onGenerate.r4-schemas:
+      [get] Getting: http://hl7.org/fhir/R4/fhir-single.xsd
+      [get] To: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\schemas\R4\fhir-single.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://hl7.org/fhir/R4/fhir-xhtml.xsd
+      [get] To: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\schemas\R4\fhir-xhtml.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://hl7.org/fhir/R4/xml.xsd
+      [get] To: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\schemas\R4\xml.xsd
+      [get] Not modified - so not downloaded
+      [get] Getting: http://hl7.org/fhir/R4/xmldsig-core-schema.xsd
+      [get] To: C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\input-cache\schemas\R4\xmldsig-core-schema.xsd
+      [get] Not modified - so not downloaded
+
+onGenerate.r3-schemas:
+
+onGenerate.r2b-schemas:
+
+onGenerate.r2-schemas:
+
+onGenerate.schemas:
+
+onGenerate.data:
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-working.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\temp\pages\_data\artifacts.json
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\onGenerate.data.xslt
+
+onGenerate.setup:
+
+onGenerate.infoFile:
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-working.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\temp\pages\_data\info.json
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\onGenerate.genJson.xslt
+
+onGenerate.processIncludes:
+     [copy] Copying 18 files to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\temp\pages\_includes
+
+onGenerate.processIg:
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-working.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-working.1.xml
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\onGenerate.group.xslt
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-working.1.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-working.2.xml
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\onGenerate.groupSort.xslt
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-working.2.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-updated.xml
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\onGenerate.final.xslt
+
+onGenerate.igQa:
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-updated.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\ongenerate-validation-igqa.json
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\onGenerate.qa.xslt
+
+onGenerate.artifactList:
+     [xslt] Processing C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\onGenerate-ig-updated.xml to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\temp\pages\_includes\artifacts.xml
+     [xslt] Loading stylesheet C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\template\scripts\createArtifactSummary.xslt
+
+check-plantumlfiles:
+
+onGenerate.plantUml.ig:
+
+onGenerate.plantUml.template:
+
+onGenerate.plantUml:
+
+onGenerate.copyDataFiles:
+
+onGenerate.extend:
+
+onGenerate:
+Template Done                                                                                        (00:05.653 / 03:35.268, 892Mb)
+Generate HTML Outputs                                                                                (00:00.001 / 03:35.269, 892Mb)
+ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
+Value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' at https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips#ImagingStudy.series.instance.sopClass not found
+Value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' at https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips#ImagingStudy.series.instance.sopClass not found
+Value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' at https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips#ImagingStudy.series.instance.sopClass not found
+Generate Summaries                                                                                   (00:41.874 / 04:17.144, 851Mb)
+Generating Summary Outputs                                                                           (00:00.001 / 04:17.146, 851Mb)
+DB Cumulative Time invested: 00:00:00.471
+Sending Usage Stats to Server                                                                        (00:36.245 / 04:53.391, 1Gb)
+## Memory (MB): Use = 1258, Free = 509, Total = 1768, Max = 7884                                     (00:00.024 / 04:53.415, 1Gb)
+Reclaiming memory...                                                                                 (00:00.001 / 04:53.417, 1Gb)
+## Memory (MB): Use = 805, Free = 961, Total = 1768, Max = 7884                                      (00:00.352 / 04:53.769, 808Mb)
+Run jekyll: jekyll build --destination "C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\output" (in folder C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\temp\pages) (00:00.004 / 04:53.774, 808Mb)
+Due to a known issue, Jekyll errors are lost between Java and Ruby in windows systems.               (00:00.002 / 04:53.776, 808Mb)
+If the build process hangs at this point, you have to go to a                                        (00:00.001 / 04:53.777, 808Mb)
+command prompt, and then run these two commands:                                                     (00:00.001 / 04:53.778, 808Mb)
+                                                                                                     (00:00.001 / 04:53.780, 808Mb)
+cd C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\temp\pages   (00:00.001 / 04:53.781, 808Mb)
+jekyll build --destination "C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\output" (00:00.001 / 04:53.783, 808Mb)
+                                                                                                     (00:00.001 / 04:53.785, 808Mb)
+and then investigate why Jekyll has failed                                                           (00:00.001 / 04:53.786, 808Mb)
+Troubleshooting Note: usual cases for Jekyll to fail are:                                            (00:00.001 / 04:53.788, 808Mb)
+* A failure to produce a fragment that is already logged in the output above                         (00:00.001 / 04:53.790, 808Mb)
+* A reference to a manually edited file that hasn't been provided                                    (00:00.001 / 04:53.791, 808Mb)
+Jekyll: Source: C:/Users/franco.ulloa/Documents/sushi/ipscl_publish_hl7/temp/hl7.fhir.cl.clips#0.2.0/temp/pages (00:02.887 / 04:56.678, 813Mb)
+Jekyll: Generating...                                                                                (00:00.001 / 04:56.680, 813Mb)
+Jekyll: done in 12.249 seconds.                                                                      (00:12.260 / 05:08.941, 814Mb)
+
+Installing hl7.fhir.cl.clips#0.2.0
+Sending usage stats failed: Connection timed out: connect
+Checking Output HTML                                                                                 (00:08.579 / 05:17.521, 1Gb)
+found 1354 files                                                                                     (00:00.077 / 05:17.598, 1Gb)
+.........................................
+.........................................
+  ... 1354 html files, 0 pages invalid xhtml (0%)                                                    (00:35.145 / 05:52.744, 2Gb)
+  ... 584417 links, 0 broken links (0%)                                                              (00:00.014 / 05:52.758, 2Gb)
+Generate fragment-usage-analysis.csv                                                                 (00:00.003 / 05:52.761, 2Gb)
+Build final .zip                                                                                     (00:00.009 / 05:52.771, 2Gb)
+Final .zip built                                                                                     (00:06.783 / 05:59.554, 2Gb)
+Built. Times: loading: 00:02.851, generate: 04:21.927, narrative generation: 00:05.113, realm-rules: 00:00.001, previous-version: 00:00.000, jekyll: 00:15.226, validation: 00:56.359 (#62), template: 00:05.651 (#3) (00:10.415 / 06:09.969, 1Gb)
+Generating QA                                                                                        (00:00.001 / 06:09.971, 1Gb)
+Validation output in C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\output\qa.html
+Errors: 0, Warnings: 2, Info: 27, Broken Links: 0 (00:00.770 / 06:10.742, 1Gb)
+Finished. Max Memory Used = 2Gb. Log file saved in C:\Users\FRANCO~1.ULL\AppData\Local\Temp\fhir-ig-publisher-tmp.log (00:00.014 / 06:10.757, 1Gb)
+Keep a copy of the build directory at C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\web-root\run-20241112\ig-build-zips\hl7.fhir.cl.clips#0.2.0.zip
+
+ok. All checks passed. Publish v0.2.0 to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\web-root\run-20241112\0.2.0
+Copy the IG to C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\web-root\run-20241112\0.2.0
+Update C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\web-root\run-20241112\package-list.json
+Publish Box Statement: This page is part of the Resumen Clinico de Paciente de Chile (v0.2.0: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>1 Draft) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. .  For a full list of available versions, see the <a no-external="true" href="https://hl7chile.cl/fhir/ig/clips/history.html">Directory of published versions</a>
+no html insert in C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\web-root\run-20241112\0.2.0\qa-txservers.html
+  .. 424 files checked, 424 updated
+  .. 127 clones checked, 254 updated
+  .. 25 redirections (25 created/updated)
+Update history page at C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\web-root\run-20241112\ from C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\fhir-ig-history-template-master and C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\ig\templates
+Build is complete. Copy from C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\web-root\run-20241112
+Error in package-list.json:path to build.fhir.org should not use https://
+hl7.fhir.cl.clips (https://hl7chile.cl/fhir/ig/clips): Resumen Clinico de Paciente de Chile @ http://build.fhir.org/ig/HL7Chile/IPS-CL
+  candidate: STU1 Draft 0.2.0/4.0.1 @ https://hl7chile.cl/fhir/ig/clips/0.2.0

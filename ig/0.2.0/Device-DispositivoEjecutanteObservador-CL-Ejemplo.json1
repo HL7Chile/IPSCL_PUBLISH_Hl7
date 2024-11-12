@@ -1,0 +1,29 @@
+{
+  "resourceType" : "Device",
+  "id" : "DispositivoEjecutanteObservador-CL-Ejemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Device DispositivoEjecutanteObservador-CL-Ejemplo</b></p><a name=\"DispositivoEjecutanteObservador-CL-Ejemplo\"> </a><a name=\"hcDispositivoEjecutanteObservador-CL-Ejemplo\"> </a><a name=\"DispositivoEjecutanteObservador-CL-Ejemplo-es-CL\"> </a><p><b>identifier</b>: <code>http://ortopedia.organization/devicesID</code>/2121</p><p><b>manufacturer</b>: Ortopedia-Care</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>Férula para codo</td><td>Manufacturer name</td></tr></table><p><b>modelNumber</b>: 2.0.1</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 16349000}\">Dispositivo ortopédico</span></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://ortopedia.organization/devicesID",
+    "value" : "2121"
+  }],
+  "manufacturer" : "Ortopedia-Care",
+  "deviceName" : [{
+    "name" : "Férula para codo",
+    "type" : "manufacturer-name"
+  }],
+  "modelNumber" : "2.0.1",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "16349000",
+      "display" : "Orthopedic device"
+    }],
+    "text" : "Dispositivo ortopédico"
+  }
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="PrestadorMedInternaClIpsEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner PrestadorMedInternaClIpsEjemplo</b></p><a name="PrestadorMedInternaClIpsEjemplo"> </a><a name="hcPrestadorMedInternaClIpsEjemplo"> </a><a name="PrestadorMedInternaClIpsEjemplo-es-CL"> </a><p><b>identifier</b>: RUN/17435678-2 (use: official, )</p><p><b>name</b>: Nicolás Bastian Figueroa (Official)</p><p><b>telecom</b>: <a href="mailto:DrNicolasB@hotmail.com">DrNicolasB@hotmail.com</a></p><blockquote><p><b>qualification</b></p><p><b>identifier</b>: esp</p><p><b>code</b>: <span title="Codes:">Medicina Interna</span></p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: subesp</p><p><b>code</b>: <span title="Codes:">Cirugía cardiovascular</span></p></blockquote></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador"/>
+        <code value="01"/>
+        <display value="RUN"/>
+      </coding>
+    </type>
+    <value value="17435678-2"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Figueroa"/>
+    <given value="Nicolás"/>
+    <given value="Bastian"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="DrNicolasB@hotmail.com"/>
+    <use value="work"/>
+  </telecom>
+  <qualification>
+    <identifier>
+      <value value="esp"/>
+    </identifier>
+    <code>
+      <text value="Medicina Interna"/>
+    </code>
+  </qualification>
+  <qualification>
+    <identifier>
+      <value value="subesp"/>
+    </identifier>
+    <code>
+      <text value="Cirugía cardiovascular"/>
+    </code>
+  </qualification>
+</Practitioner>

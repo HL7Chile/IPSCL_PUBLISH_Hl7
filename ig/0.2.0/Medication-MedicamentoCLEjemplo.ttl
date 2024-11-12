@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Medication/MedicamentoCLEjemplo> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedicamentoCLEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"es\" lang=\"es\"><p class=\"res-header-id\"><b>Generated Narrative: Medication MedicamentoCLEjemplo</b></p><a name=\"MedicamentoCLEjemplo\"> </a><a name=\"hcMedicamentoCLEjemplo\"> </a><a name=\"MedicamentoCLEjemplo-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: es</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Medicamento-cl-ips.html\">Medicamento (IPS-CL)</a></p></div><p><b>Nombre Comercial Fármaco</b>: Aspirina</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 7947003}, {http://www.whocc.no/atc A01AD05}\">Aspirina (medicamento)</span></p><p><b>status</b>: Inactive</p><p><b>form</b>: <span title=\"Codes:{http://standardterms.edqm.eu 10323000}\">Pastilla</span></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/NombreComercial"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Aspirina" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:7947003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "7947003" ] ;
+       fhir:display [
+         fhir:v "Product containing aspirin (medicinal product)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "es" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Aspirina (medicamento)" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] [
+       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "A01AD05" ] ;
+       fhir:display [
+         fhir:v "acetylsalicylic acid" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "es" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Ácido acetilsalicílico" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] ) ;
+     fhir:text [ fhir:v "Aspirina (medicamento)" ]
+  ] ; # 
+  fhir:status [ fhir:v "inactive"] ; # 
+  fhir:form [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "10323000" ] ;
+       fhir:display [ fhir:v "Pastille" ]
+     ] ) ;
+     fhir:text [ fhir:v "Pastilla" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

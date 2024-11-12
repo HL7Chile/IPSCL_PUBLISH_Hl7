@@ -1,0 +1,97 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Immunization/Inmunizacion-CL-Ejemplo> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Inmunizacion-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "es"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"es\" lang=\"es\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization Inmunizacion-CL-Ejemplo</b></p><a name=\"Inmunizacion-CL-Ejemplo\"> </a><a name=\"hcInmunizacion-CL-Ejemplo\"> </a><a name=\"Inmunizacion-CL-Ejemplo-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: es</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Inmunizacion-cl-ips.html\">Immunización (IPS-CL)</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{http://snomed.info/sct 871765008}, {https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoVacunas vacunaSRPTrivMonodos}\">Vacuna contra el sarampión</span></p><p><b>patient</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>occurrence</b>: 2005-04-23</p><p><b>site</b>: <span title=\"Codes:{http://snomed.info/sct 368208006}\">Brazo izquierdo</span></p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20066000}\">Uso subcutáneo</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       a sct:871765008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "871765008" ] ;
+       fhir:display [
+         fhir:v "Measles vaccine" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "es" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Vacuna contra el sarampión" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] [
+       fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoVacunas"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "vacunaSRPTrivMonodos" ] ;
+       fhir:display [ fhir:v "Vacuna SRP (trivirica) Monodosis" ]
+     ] ) ;
+     fhir:text [ fhir:v "Vacuna contra el sarampión" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2005-04-23"^^xsd:date] ; # 
+  fhir:site [
+     fhir:coding ( [
+       a sct:368208006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "368208006" ] ;
+       fhir:display [
+         fhir:v "Left upper arm structure (body structure)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "es" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Brazo izquierdo" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] ) ;
+     fhir:text [ fhir:v "Brazo izquierdo" ]
+  ] ; # 
+  fhir:route [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "20066000" ] ;
+       fhir:display [
+         fhir:v "Subcutaneous use" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "es" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Uso subcutáneo" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] ) ;
+     fhir:text [ fhir:v "Uso subcutáneo" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

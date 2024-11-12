@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Observation/LabPatologia-CL-Ejemplo> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "LabPatologia-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation LabPatologia-CL-Ejemplo</b></p><a name=\"LabPatologia-CL-Ejemplo\"> </a><a name=\"hcLabPatologia-CL-Ejemplo\"> </a><a name=\"LabPatologia-CL-Ejemplo-es-CL\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratorio</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 100746-7}\">Glucosa en sangre venosa mixta</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>effective</b>: 2015-06-04</p><p><b>performer</b>: <a href=\"Organization-OrganizationHospital-CL-Ejemplo.html\">Organization Hospital Dr. Gustavo Fricke</a></p><p><b>value</b>: 5.5 [mmol/L]<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p><p><b>note</b>: Nivel normal de glucosa en sangre venosa</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] ) ;
+     fhir:text [ fhir:v "Laboratorio" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:100746-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "100746-7" ] ;
+       fhir:display [ fhir:v "Glucose [Moles/volume] in Mixed venous blood" ]
+     ] ) ;
+     fhir:text [ fhir:v "Glucosa en sangre venosa mixta" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2015-06-04"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Organization/OrganizationHospital-CL-Ejemplo> ;
+     fhir:reference [ fhir:v "Organization/OrganizationHospital-CL-Ejemplo" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "5.5"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "[mmol/L]" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Nivel normal de glucosa en sangre venosa" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

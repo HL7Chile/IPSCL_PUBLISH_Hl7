@@ -1,0 +1,46 @@
+- Modificar archivo clcore_publish/clcore/publication-request.json con la version a publicar
+- Correr _genonce.sh en la carpeta clcore
+* usar el mismo publisher en clcore/input-cache y carpeta root, en este caso clcore_publish
+- salir a carpeta clcore_publish
+
+
+java -jar publisher.jar -go-publish -source /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/clcore_ig/ -web /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/ig/ -registry /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/ig-registry-master/fhir-ig-list.json -history /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/fhir-ig-history-template-master/ -temp /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/temp -templates /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/ig/templates
+
+
+- subir lo que esta en clcore_publish/temp/web-root
+- Reemplazar en la web
+clcore_publish/ig/
+  package-feed.xml
+  publication-feed.xml
+  package-registry.json
+
+
+
+workingFolder -- carpeta que contiene todo (fhir)
+  web-root -- fhir/ig
+    (org) 
+      (ig) --- fhir/ig/clcore
+        (version) fhir/ig/clcore/1.8.5
+
+
+
+package-feed.xml
+
+Generating QA                                                                                        (00:00.001 / 02:09.744, 1Gb)
+Validation output in /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/temp/hl7.fhir.cl.clcore#1.8.10/output/qa.html
+Errors: 0, Warnings: 4, Info: 7, Broken Links: 0 (00:00.419 / 02:10.163, 1Gb)
+Finished. Max Memory Used = 1Gb. Log file saved in /var/folders/0g/fbcld4s52t5fl6f9w63l8y3h0000gn/T/fhir-ig-publisher-tmp.log
+ok. All checks passed. Publish v1.8.10 to /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/temp/web-root/run-20240319/clcore/1.8.10
+Copy the IG to /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/temp/web-root/run-20240319/clcore/1.8.10
+Update /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/temp/web-root/run-20240319/clcore/package-list.json
+
+
+Update history page at /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/temp/web-root/run-20240319/clcore from /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/fhir-ig-history-template-master and /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/ig/templates
+Build is complete. Copy from /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/temp/web-root/run-20240319
+hl7.fhir.cl.clcore (https://hl7chile.cl/fhir/ig/clcore): Chile Core @ http://build.fhir.org/ig/HL7Chile/clcore
+  candidate: STU2 Draft 1.8.10/4.0.1 @ https://hl7chile.cl/fhir/ig/clcore/1.8.10
+Applying changes to website source at /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/ig/
+  ... done
+Finished Publishing. The web site source in /Users/jmansilla/IGs/_HL7CHILE_clcore_publish_hl7/ig/ has been updated
+Success
+Full log in /var/folders/0g/fbcld4s52t5fl6f9w63l8y3h0000gn/T/publication-process.log

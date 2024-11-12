@@ -1,0 +1,33 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObservacionResultadoEmbarazoEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ObservacionResultadoEmbarazoEjemplo</b></p><a name=\"ObservacionResultadoEmbarazoEjemplo\"> </a><a name=\"hcObservacionResultadoEmbarazoEjemplo\"> </a><a name=\"ObservacionResultadoEmbarazoEjemplo-es-CL\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 11640-0}\">[#] Nacimientos totales</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2022-08-18</p><p><b>performer</b>: <a href=\"Practitioner-PrestadorMedFamiliarClIpsEjemplo.html\">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>value</b>: 1 Hijo<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "11640-0",
+      "display" : "[#] Births total"
+    }],
+    "text" : "[#] Nacimientos totales"
+  },
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "effectiveDateTime" : "2022-08-18",
+  "performer" : [{
+    "reference" : "Practitioner/PrestadorMedFamiliarClIpsEjemplo"
+  }],
+  "valueQuantity" : {
+    "value" : 1,
+    "unit" : "Hijo",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "1"
+  }
+}

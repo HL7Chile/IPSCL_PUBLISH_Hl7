@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="Condition-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition Condition-CL-Ejemplo</b></p><a name="Condition-CL-Ejemplo"> </a><a name="hcCondition-CL-Ejemplo"> </a><a name="Condition-CL-Ejemplo-es-CL"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Activa</span></p><p><b>category</b>: <span title="Codes:{http://loinc.org 75326-9}">Problema</span></p><p><b>severity</b>: <span title="Codes:{http://snomed.info/sct 6736007}">Moderado</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 1201005}">Hipertensión esencial benigna</span></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>onset</b>: 2023-08-04 --&gt; (ongoing)</p><p><b>asserter</b>: <a href="Practitioner-PrestadorMedInternaClIpsEjemplo.html">Practitioner Nicolás Bastian Figueroa (official)</a></p></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+    <text value="Activa"/>
+  </clinicalStatus>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="75326-9"/>
+      <display value="Problem"/>
+    </coding>
+    <text value="Problema"/>
+  </category>
+  <severity>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="6736007"/>
+      <display value="Moderate severity"/>
+    </coding>
+    <text value="Moderado"/>
+  </severity>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1201005"/>
+      <display value="Benign essential hypertension"/>
+    </coding>
+    <text value="Hipertensión esencial benigna"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <onsetPeriod>
+    <start value="2023-08-04"/>
+  </onsetPeriod>
+  <asserter>
+    <reference value="Practitioner/PrestadorMedInternaClIpsEjemplo"/>
+  </asserter>
+</Condition>

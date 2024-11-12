@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="Parametros-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl"/>
+  </meta>
+  <parameter>
+    <name value="identifier"/>
+    <valueIdentifier>
+      <system value="http://regcivil.cl/Validacion/RUN"/>
+      <value value="19.241.323-8"/>
+    </valueIdentifier>
+  </parameter>
+  <parameter>
+    <name value="profile"/>
+    <valueUri value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Composition-cl-ips"/>
+  </parameter>
+</Parameters>

@@ -1,0 +1,64 @@
+{
+  "resourceType" : "Medication",
+  "id" : "MedicamentoCLEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips"]
+  },
+  "language" : "es",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"es\" lang=\"es\"><p class=\"res-header-id\"><b>Generated Narrative: Medication MedicamentoCLEjemplo</b></p><a name=\"MedicamentoCLEjemplo\"> </a><a name=\"hcMedicamentoCLEjemplo\"> </a><a name=\"MedicamentoCLEjemplo-es-CL\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: es</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Medicamento-cl-ips.html\">Medicamento (IPS-CL)</a></p></div><p><b>Nombre Comercial Fármaco</b>: Aspirina</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 7947003}, {http://www.whocc.no/atc A01AD05}\">Aspirina (medicamento)</span></p><p><b>status</b>: Inactive</p><p><b>form</b>: <span title=\"Codes:{http://standardterms.edqm.eu 10323000}\">Pastilla</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/NombreComercial",
+    "valueString" : "Aspirina"
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "7947003",
+      "display" : "Product containing aspirin (medicinal product)",
+      "_display" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "es"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Aspirina (medicamento)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    },
+    {
+      "system" : "http://www.whocc.no/atc",
+      "code" : "A01AD05",
+      "display" : "acetylsalicylic acid",
+      "_display" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "es"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Ácido acetilsalicílico"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    }],
+    "text" : "Aspirina (medicamento)"
+  },
+  "status" : "inactive",
+  "form" : {
+    "coding" : [{
+      "system" : "http://standardterms.edqm.eu",
+      "code" : "10323000",
+      "display" : "Pastille"
+    }],
+    "text" : "Pastilla"
+  }
+}

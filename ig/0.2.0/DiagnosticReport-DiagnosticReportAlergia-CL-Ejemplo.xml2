@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="DiagnosticReportAlergia-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DiagnosticReport DiagnosticReportAlergia-CL-Ejemplo</b></p><a name="DiagnosticReportAlergia-CL-Ejemplo"> </a><a name="hcDiagnosticReportAlergia-CL-Ejemplo"> </a><a name="DiagnosticReportAlergia-CL-Ejemplo-es-CL"> </a><h2><span title="Codes:{http://loinc.org 10155-0}">Historial de alergias, reportado</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 OTH}">Otra categoría</span>) </h2><table class="grid"><tr><td>Subject</td><td>Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</td></tr><tr><td>When For</td><td>2006-06-10</td></tr><tr><td>Performer</td><td> <a href="Organization-OrganizationHospital-CL-Ejemplo.html">Hospital Dr. Gustavo Fricke</a></td></tr></table><p><b>Report Details</b></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="OTH"/>
+      <display value="Other"/>
+    </coding>
+    <text value="Otra categoría"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="10155-0"/>
+      <display value="History of allergies, reported"/>
+    </coding>
+    <text value="Historial de alergias, reportado"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+    <display value="Este es un reporte de alergias confirmadas por un profesional de la salud y declaradas por el paciente: Clotrimazol"/>
+  </subject>
+  <effectiveDateTime value="2006-06-10"/>
+  <performer>
+    <reference value="Organization/OrganizationHospital-CL-Ejemplo"/>
+    <display value="Hospital Dr. Gustavo Fricke"/>
+  </performer>
+</DiagnosticReport>

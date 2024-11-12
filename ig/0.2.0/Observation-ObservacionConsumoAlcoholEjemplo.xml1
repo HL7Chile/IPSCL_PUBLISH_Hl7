@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ObservacionConsumoAlcoholEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ObservacionConsumoAlcoholEjemplo</b></p><a name="ObservacionConsumoAlcoholEjemplo"> </a><a name="hcObservacionConsumoAlcoholEjemplo"> </a><a name="ObservacionConsumoAlcoholEjemplo-es-CL"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 74013-4}">Bebidas alcohólicas por día</span></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>effective</b>: 2023-08-10</p><p><b>performer</b>: <a href="Practitioner-PrestadorMedFamiliarClIpsEjemplo.html">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>value</b>: 2 Copas de vino por día<span style="background: LightGoldenRodYellow"> (Details: UCUM  coded = 'd')</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="74013-4"/>
+      <display value="Alcoholic drinks per day"/>
+    </coding>
+    <text value="Bebidas alcohólicas por día"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <effectiveDateTime value="2023-08-10"/>
+  <performer>
+    <reference value="Practitioner/PrestadorMedFamiliarClIpsEjemplo"/>
+  </performer>
+  <valueQuantity>
+    <value value="2"/>
+    <unit value="Copas de vino por día"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="d"/>
+  </valueQuantity>
+</Observation>

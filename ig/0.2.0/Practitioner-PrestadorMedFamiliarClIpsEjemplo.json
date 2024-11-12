@@ -1,0 +1,41 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "PrestadorMedFamiliarClIpsEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner PrestadorMedFamiliarClIpsEjemplo</b></p><a name=\"PrestadorMedFamiliarClIpsEjemplo\"> </a><a name=\"hcPrestadorMedFamiliarClIpsEjemplo\"> </a><a name=\"PrestadorMedFamiliarClIpsEjemplo-es-CL\"> </a><p><b>identifier</b>: RUN/12829325-k\u00a0(use:\u00a0official,\u00a0)</p><p><b>name</b>: Catalina Alexandra Donoso (Official)</p><p><b>telecom</b>: <a href=\"mailto:DraCatalinaAle@hotmail.com\">DraCatalinaAle@hotmail.com</a></p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>esp</td><td><span title=\"Codes:\">Medicina Familiar</span></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador",
+        "code" : "01",
+        "display" : "RUN"
+      }]
+    },
+    "value" : "12829325-k"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Donoso",
+    "given" : ["Catalina",
+    "Alexandra"]
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "DraCatalinaAle@hotmail.com",
+    "use" : "work"
+  }],
+  "qualification" : [{
+    "identifier" : [{
+      "value" : "esp"
+    }],
+    "code" : {
+      "text" : "Medicina Familiar"
+    }
+  }]
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "id" : "hl7.fhir.cl.clips",
+    "type" : "ImplementationGuide",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips",
+    "version" : "0.2.0",
+    "name" : "InternationalPatientSummaryChile"
+  },
+  {
+    "id" : "IpsClSummary",
+    "type" : "OperationDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/OperationDefinition/IpsClSummary",
+    "version" : "0.2.0",
+    "name" : "IpsClSummary"
+  },
+  {
+    "id" : "AllergiaInt-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips",
+    "version" : "0.2.0",
+    "name" : "AlergiaIntClIps"
+  },
+  {
+    "id" : "Bundle-documento-ips-cl",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl",
+    "version" : "0.2.0",
+    "name" : "BundleDocumentoIPSCl"
+  },
+  {
+    "id" : "Composition-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Composition-cl-ips",
+    "version" : "0.2.0",
+    "name" : "DocumentoClIps"
+  },
+  {
+    "id" : "Condition-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ConditionClIps"
+  },
+  {
+    "id" : "Declaracion-uso-dispositivo-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips",
+    "version" : "0.2.0",
+    "name" : "DeclaracionUsoDispositivoClIps"
+  },
+  {
+    "id" : "DiagnosticReport-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips",
+    "version" : "0.2.0",
+    "name" : "DiagnosticReportClIps"
+  },
+  {
+    "id" : "Dispositivo-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips",
+    "version" : "0.2.0",
+    "name" : "DispositivoClIps"
+  },
+  {
+    "id" : "Dispositivo-observador-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips",
+    "version" : "0.2.0",
+    "name" : "DispositivoObservadorClIps"
+  },
+  {
+    "id" : "Flag-alerta-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips",
+    "version" : "0.2.0",
+    "name" : "FlagAlertClIps"
+  },
+  {
+    "id" : "ImagingStudy-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ImagingStudyClIps"
+  },
+  {
+    "id" : "Inmunizacion-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips",
+    "version" : "0.2.0",
+    "name" : "InmunizacionClIps"
+  },
+  {
+    "id" : "Medicamento-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips",
+    "version" : "0.2.0",
+    "name" : "MedicamentoClIps"
+  },
+  {
+    "id" : "MedicationRequest-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips",
+    "version" : "0.2.0",
+    "name" : "PrescripcionClIps"
+  },
+  {
+    "id" : "Observation-embarazo-fecha-estimada-de-parto-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ObservationEmbarazoFechaEstimadaDePartoClIps"
+  },
+  {
+    "id" : "Observation-estado-del-embarazo-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-estado-del-embarazo-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ObservationEstadoEmbarazoClIps"
+  },
+  {
+    "id" : "Observation-resultado-del-embarazo-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ObservationResultadoEmbarazoClIps"
+  },
+  {
+    "id" : "Observation-resultado-laboratorio-patologico-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ObservationResultadoLaboratorioPatologiaClIps"
+  },
+  {
+    "id" : "Observation-resultado-radiology-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ObservationResultadoRadiologyClIps"
+  },
+  {
+    "id" : "Observation-uso-de-alcohol-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ObservationUsoAlcoholClIps"
+  },
+  {
+    "id" : "Observation-uso-de-tabaco-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-tabaco-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ObservationUsoTabacoClIps"
+  },
+  {
+    "id" : "Organizacion-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips",
+    "version" : "0.2.0",
+    "name" : "OrganizacionClIps"
+  },
+  {
+    "id" : "Paciente-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Paciente-cl-ips",
+    "version" : "0.2.0",
+    "name" : "PacienteCLIps"
+  },
+  {
+    "id" : "Parametros-entradas-ips-cl",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl",
+    "version" : "0.2.0",
+    "name" : "ParametrosDeEntradasIPS"
+  },
+  {
+    "id" : "Prestador-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips",
+    "version" : "0.2.0",
+    "name" : "PrestadorClIps"
+  },
+  {
+    "id" : "Procedimientos-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips",
+    "version" : "0.2.0",
+    "name" : "ProcedimientosClIps"
+  },
+  {
+    "id" : "RegMedicamentos-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips",
+    "version" : "0.2.0",
+    "name" : "RegMedicamentosClIps"
+  },
+  {
+    "id" : "RolPrestador-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips",
+    "version" : "0.2.0",
+    "name" : "RolPrestadorClIps"
+  },
+  {
+    "id" : "Speciment-cl-ips",
+    "type" : "StructureDefinition",
+    "url" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Speciment-cl-ips",
+    "version" : "0.2.0",
+    "name" : "SpecimentClIPS"
+  }
+]

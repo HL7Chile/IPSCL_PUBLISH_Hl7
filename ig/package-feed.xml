@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:fhir="http://hl7.org/fhir/feed" version="2.0">
+<channel>
+<title>HL7 Chile IPS FHIR Packages</title>
+<description>New Packages published by HL7 Chile</description>
+<link>http://hl7chile.cl/fhir/ig/clips/package-feed.xml</link>
+<generator>HL7, Inc FHIR Publication tooling</generator>
+<lastBuildDate>Tue, 12 Nov 2024 12:48:43 -0300</lastBuildDate>
+<atom:link href="http://hl7chile.cl/fhir/ig/clips/package-feed.xml" rel="self" type="application/rss+xml"/>
+<pubDate>Tue, 12 Nov 2024 12:48:43 -0300</pubDate>
+<language>en</language>
+<ttl>600</ttl>
+
+    <item>
+      <title>hl7.fhir.cl.clips#0.2.0</title>
+      <description>Versión de desarrollo</description>
+      <link>https://hl7chile.cl/fhir/ig/clips/0.2.0/package.tgz</link>
+      <guid isPermaLink="true">https://hl7chile.cl/fhir/ig/clips/0.2.0/package.tgz</guid>
+      <dc:creator>HL7, Inc</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>IG</fhir:kind>
+      <pubDate>Tue, 12 Nov 2024 12:48:43 -0300</pubDate>
+      <fhir:details>Publication run at 12/11/2024 by HU670_FULLOA using vVersion 1.7.1 (Git# 74ea670a3891). Built 2024-10-25T03:52:19.844Z (18 days old) source id Unknown (todo) Run #1</fhir:details>
+    </item></channel>
+</rss>

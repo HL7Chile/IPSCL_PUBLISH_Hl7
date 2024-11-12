@@ -1,0 +1,87 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/OperationDefinition/IpsClSummary> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IpsClSummary"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition IpsClSummary</b></p><a name=\"IpsClSummary\"> </a><a name=\"hcIpsClSummary\"> </a><a name=\"IpsClSummary-es-CL\"> </a><p>URL: [base]/Patient/$summary</p><p>URL: [base]/Patient/[id]/$summary</p><p>Input parameters Profile:<a href=\"StructureDefinition-Parametros-entradas-ips-cl.html\">Parametros De Entradas IPS Summary</a></p><p>Output parameters Profile:<a href=\"StructureDefinition-Bundle-documento-ips-cl.html\">Bundle Resumen Clínico</a></p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#token\">token</a>)</td><td/><td><div><p>Cuando no se utiliza el id lógico del paciente, los servidores <strong>PUEDEN</strong> optar por admitir la selección del paciente basada en el identificador proporcionado. A menos que el sistema de identificadores sea desconocido, los solicitantes <strong>DEBERÍAN</strong> incluir tanto el sistema como el valor (por ejemplo, 'identifier=https://standards.digital.health.nz/ns/nhi-id|CNNJ9186') al usar este parámetro.</p>\n</div></td></tr><tr><td>IN</td><td>profile</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a></td><td/><td><div><p>Se debe especificar un perfil específico para el resumen del paciente. Para el caso de Chile se debe especificar el <a href=\"StructureDefinition-Composition-cl-ips.html\">Documento (IPS-CL)</a>.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>El Bundle devuelto es un documento que cumple con el parámetro del perfil de Composición <a href=\"StructureDefinition-Composition-cl-ips.html\">Documento (IPS-CL)</a>.</p>\n</div></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "1"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "draft" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clips/OperationDefinition/IpsClSummary"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "IpsClSummary"] ; # 
+  fhir:title [ fhir:v "IPS-Cl Summary"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:date [ fhir:v "2024-10-04"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "HL7 Chile"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Chile" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7chile.cl" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Esta operación devuelve un documento IPS en respuesta a una solicitud POST/GET (ver Operaciones FHIR). El documento devuelto **PUEDE** generarse bajo demanda y **DEBERÍA** representar la información más reciente disponible. Esta operación no necesariamente crearía una instancia IPS persistida en el servidor que responde a la solicitud. Cuando se desean registros históricos u otros documentos, esta operación no es adecuada. Para operaciones alternativas y guía sobre la generación de IPS, consulte **IPS Generation and Data Inclusion**.\n\nGeneralmente, cuando se conoce el id lógico de un paciente, ese id se utilizaría para solicitar el resumen del paciente desde un servidor FHIR (ver patrón [id] a continuación). Cuando no se conoce, los servidores **PUEDEN** admitir el uso de otros identificadores (ver el parámetro identifier a continuación).\n\nEl servidor **DEBE** permitir el uso del perfil del [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html).\n\nEstá operación nace de la operación [IPS Summary](https://build.fhir.org/ig/HL7/fhir-ips/OperationDefinition-summary.html) pero especificada para el caso de uso nacional de Chile."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CL" ] ;
+       fhir:display [ fhir:v "Chile" ]
+     ] )
+  ] ) ; # 
+  fhir:code [ fhir:v "summary"] ; # 
+  fhir:base [
+     fhir:v "http://hl7.org/fhir/uv/ips/OperationDefinition/summary"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/uv/ips/OperationDefinition/summary>
+  ] ; # 
+  fhir:resource ( [ fhir:v "Patient"] ) ; # 
+  fhir:system [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:type [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:instance [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:inputProfile [
+     fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl"^^xsd:anyURI ;
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl>
+  ] ; # 
+  fhir:outputProfile [
+     fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"^^xsd:anyURI ;
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl>
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "identifier" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Cuando no se utiliza el id lógico del paciente, los servidores **PUEDEN** optar por admitir la selección del paciente basada en el identificador proporcionado. A menos que el sistema de identificadores sea desconocido, los solicitantes **DEBERÍAN** incluir tanto el sistema como el valor (por ejemplo, 'identifier=https://standards.digital.health.nz/ns/nhi-id|CNNJ9186') al usar este parámetro." ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "token" ]
+  ] [
+     fhir:name [ fhir:v "profile" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "1"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "Se debe especificar un perfil específico para el resumen del paciente. Para el caso de Chile se debe especificar el [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html)." ] ;
+     fhir:type [ fhir:v "uri" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "El Bundle devuelto es un documento que cumple con el parámetro del perfil de Composición [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html)." ] ;
+     fhir:type [ fhir:v "Bundle" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

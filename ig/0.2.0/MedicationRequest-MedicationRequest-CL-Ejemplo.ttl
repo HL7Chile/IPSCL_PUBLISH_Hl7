@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/MedicationRequest/MedicationRequest-CL-Ejemplo> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "MedicationRequest-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest MedicationRequest-CL-Ejemplo</b></p><a name=\"MedicationRequest-CL-Ejemplo\"> </a><a name=\"hcMedicationRequest-CL-Ejemplo\"> </a><a name=\"MedicationRequest-CL-Ejemplo-es-CL\"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Original Order</p><p><b>medication</b>: <a href=\"Medication-MedicamentoCLEjemplo.html\">Pastilla Aspirina</a></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: Administrar 500 mg por 3 días</p><p><b>timing</b>: Once per 3 days</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20002500}\">Vía de administración bucal</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>500 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote><h3>DispenseRequests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ValidityPeriod</b></td></tr><tr><td style=\"display: none\">*</td><td>2019-02-04 --&gt; 2019-02-05</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "original-order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Medication/MedicamentoCLEjemplo> ;
+     fhir:reference [ fhir:v "Medication/MedicamentoCLEjemplo" ] ;
+     fhir:display [ fhir:v "Pastilla Aspirina" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "Administrar 500 mg por 3 días" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "3"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "20002500" ] ;
+         fhir:display [ fhir:v "Buccal use" ]
+       ] ) ;
+       fhir:text [ fhir:v "Vía de administración bucal" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:dispenseRequest [
+     fhir:validityPeriod [
+       fhir:start [ fhir:v "2019-02-04"^^xsd:date ] ;
+       fhir:end [ fhir:v "2019-02-05"^^xsd:date ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Condition/Condition-CL-Ejemplo> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Condition-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition Condition-CL-Ejemplo</b></p><a name=\"Condition-CL-Ejemplo\"> </a><a name=\"hcCondition-CL-Ejemplo\"> </a><a name=\"Condition-CL-Ejemplo-es-CL\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Activa</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 75326-9}\">Problema</span></p><p><b>severity</b>: <span title=\"Codes:{http://snomed.info/sct 6736007}\">Moderado</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 1201005}\">Hipertensión esencial benigna</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>onset</b>: 2023-08-04 --&gt; (ongoing)</p><p><b>asserter</b>: <a href=\"Practitioner-PrestadorMedInternaClIpsEjemplo.html\">Practitioner Nicolás Bastian Figueroa (official)</a></p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Activa" ]
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:75326-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "75326-9" ] ;
+       fhir:display [ fhir:v "Problem" ]
+     ] ) ;
+     fhir:text [ fhir:v "Problema" ]
+  ] ) ; # 
+  fhir:severity [
+     fhir:coding ( [
+       a sct:6736007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "6736007" ] ;
+       fhir:display [ fhir:v "Moderate severity" ]
+     ] ) ;
+     fhir:text [ fhir:v "Moderado" ]
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:1201005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1201005" ] ;
+       fhir:display [ fhir:v "Benign essential hypertension" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hipertensión esencial benigna" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2023-08-04"^^xsd:date ]
+  ] ; # 
+  fhir:asserter [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Practitioner/PrestadorMedInternaClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Practitioner/PrestadorMedInternaClIpsEjemplo" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ObservacionResultadoEmbarazoEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ObservacionResultadoEmbarazoEjemplo</b></p><a name="ObservacionResultadoEmbarazoEjemplo"> </a><a name="hcObservacionResultadoEmbarazoEjemplo"> </a><a name="ObservacionResultadoEmbarazoEjemplo-es-CL"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 11640-0}">[#] Nacimientos totales</span></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>effective</b>: 2022-08-18</p><p><b>performer</b>: <a href="Practitioner-PrestadorMedFamiliarClIpsEjemplo.html">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>value</b>: 1 Hijo<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11640-0"/>
+      <display value="[#] Births total"/>
+    </coding>
+    <text value="[#] Nacimientos totales"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <effectiveDateTime value="2022-08-18"/>
+  <performer>
+    <reference value="Practitioner/PrestadorMedFamiliarClIpsEjemplo"/>
+  </performer>
+  <valueQuantity>
+    <value value="1"/>
+    <unit value="Hijo"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="1"/>
+  </valueQuantity>
+</Observation>

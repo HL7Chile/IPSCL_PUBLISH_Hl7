@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "PrestadorMedInternaClIpsEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner PrestadorMedInternaClIpsEjemplo</b></p><a name=\"PrestadorMedInternaClIpsEjemplo\"> </a><a name=\"hcPrestadorMedInternaClIpsEjemplo\"> </a><a name=\"PrestadorMedInternaClIpsEjemplo-es-CL\"> </a><p><b>identifier</b>: RUN/17435678-2\u00a0(use:\u00a0official,\u00a0)</p><p><b>name</b>: Nicolás Bastian Figueroa (Official)</p><p><b>telecom</b>: <a href=\"mailto:DrNicolasB@hotmail.com\">DrNicolasB@hotmail.com</a></p><blockquote><p><b>qualification</b></p><p><b>identifier</b>: esp</p><p><b>code</b>: <span title=\"Codes:\">Medicina Interna</span></p></blockquote><blockquote><p><b>qualification</b></p><p><b>identifier</b>: subesp</p><p><b>code</b>: <span title=\"Codes:\">Cirugía cardiovascular</span></p></blockquote></div>"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "type" : {
+      "coding" : [{
+        "system" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador",
+        "code" : "01",
+        "display" : "RUN"
+      }]
+    },
+    "value" : "17435678-2"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Figueroa",
+    "given" : ["Nicolás",
+    "Bastian"]
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "DrNicolasB@hotmail.com",
+    "use" : "work"
+  }],
+  "qualification" : [{
+    "identifier" : [{
+      "value" : "esp"
+    }],
+    "code" : {
+      "text" : "Medicina Interna"
+    }
+  },
+  {
+    "identifier" : [{
+      "value" : "subesp"
+    }],
+    "code" : {
+      "text" : "Cirugía cardiovascular"
+    }
+  }]
+}
