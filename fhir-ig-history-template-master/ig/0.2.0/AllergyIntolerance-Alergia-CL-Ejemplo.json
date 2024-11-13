@@ -1,0 +1,58 @@
+{
+  "resourceType" : "AllergyIntolerance",
+  "id" : "Alergia-CL-Ejemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance Alergia-CL-Ejemplo</b></p><a name=\"Alergia-CL-Ejemplo\"> </a><a name=\"hcAlergia-CL-Ejemplo\"> </a><a name=\"Alergia-CL-Ejemplo-es-CL\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Activo</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\">Confirmado</span></p><p><b>code</b>: <span title=\"Codes:{http://www.whocc.no/atc A01AB18}\">Clotrimazol</span></p><p><b>patient</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>onset</b>: 11 años<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codea = 'a')</span></p><p><b>recorder</b>: <a href=\"Practitioner-PrestadorMedInternaClIpsEjemplo.html\">Practitioner Nicolás Bastian Figueroa (official)</a></p><h3>Reactions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Manifestation</b></td><td><b>Severity</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 703938007}\">Dermatitis inflamatoria</span></td><td>Severe</td></tr></table></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+      "code" : "active",
+      "display" : "Active"
+    }],
+    "text" : "Activo"
+  },
+  "verificationStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+      "code" : "confirmed",
+      "display" : "Confirmed"
+    }],
+    "text" : "Confirmado"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://www.whocc.no/atc",
+      "code" : "A01AB18",
+      "display" : "clotrimazole"
+    }],
+    "text" : "Clotrimazol"
+  },
+  "patient" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "onsetAge" : {
+    "value" : 11,
+    "unit" : "años",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "a"
+  },
+  "recorder" : {
+    "reference" : "Practitioner/PrestadorMedInternaClIpsEjemplo"
+  },
+  "reaction" : [{
+    "manifestation" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "703938007",
+        "display" : "Inflammatory dermatosis (disorder)"
+      }],
+      "text" : "Dermatitis inflamatoria"
+    }],
+    "severity" : "severe"
+  }]
+}

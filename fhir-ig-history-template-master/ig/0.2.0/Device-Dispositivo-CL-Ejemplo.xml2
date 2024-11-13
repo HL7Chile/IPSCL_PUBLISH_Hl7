@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Device xmlns="http://hl7.org/fhir">
+  <id value="Dispositivo-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Device Dispositivo-CL-Ejemplo</b></p><a name="Dispositivo-CL-Ejemplo"> </a><a name="hcDispositivo-CL-Ejemplo"> </a><a name="Dispositivo-CL-Ejemplo-es-CL"> </a><p><b>manufacturer</b>: Ortopedia-Care</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 16349000}">Dispositivo ortopédico</span></p><p><b>patient</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p></div>
+  </text>
+  <manufacturer value="Ortopedia-Care"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="16349000"/>
+      <display value="Orthopedic device"/>
+    </coding>
+    <text value="Dispositivo ortopédico"/>
+  </type>
+  <patient>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </patient>
+</Device>

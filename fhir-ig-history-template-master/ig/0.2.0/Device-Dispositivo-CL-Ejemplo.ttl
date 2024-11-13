@@ -1,0 +1,38 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Device/Dispositivo-CL-Ejemplo> a fhir:Device ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Dispositivo-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Device Dispositivo-CL-Ejemplo</b></p><a name=\"Dispositivo-CL-Ejemplo\"> </a><a name=\"hcDispositivo-CL-Ejemplo\"> </a><a name=\"Dispositivo-CL-Ejemplo-es-CL\"> </a><p><b>manufacturer</b>: Ortopedia-Care</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 16349000}\">Dispositivo ortopédico</span></p><p><b>patient</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p></div>"
+  ] ; # 
+  fhir:manufacturer [ fhir:v "Ortopedia-Care"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:16349000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "16349000" ] ;
+       fhir:display [ fhir:v "Orthopedic device" ]
+     ] ) ;
+     fhir:text [ fhir:v "Dispositivo ortopédico" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/DeviceUseStatement/DeclaracionUsoDispositivo-CL-Ejemplo> a fhir:DeviceUseStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DeclaracionUsoDispositivo-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DeviceUseStatement DeclaracionUsoDispositivo-CL-Ejemplo</b></p><a name=\"DeclaracionUsoDispositivo-CL-Ejemplo\"> </a><a name=\"hcDeclaracionUsoDispositivo-CL-Ejemplo\"> </a><a name=\"DeclaracionUsoDispositivo-CL-Ejemplo-es-CL\"> </a><p><b>status</b>: Completed</p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>timing</b>: 2022-12-20 --&gt; 2023-04-03</p><p><b>device</b>: <a href=\"Device-Dispositivo-CL-Ejemplo.html\">Device: manufacturer = Ortopedia-Care; type = Orthopedic device</a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 1927002}\">Toda región del codo izquierdo</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:timing [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2022-12-20"^^xsd:date ] ;
+     fhir:end [ fhir:v "2023-04-03"^^xsd:date ]
+  ] ; # 
+  fhir:device [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Device/Dispositivo-CL-Ejemplo> ;
+     fhir:reference [ fhir:v "Device/Dispositivo-CL-Ejemplo" ]
+  ] ; # 
+  fhir:bodySite [
+     fhir:coding ( [
+       a sct:1927002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1927002" ] ;
+       fhir:display [ fhir:v "Entire left elbow region" ]
+     ] ) ;
+     fhir:text [ fhir:v "Toda región del codo izquierdo" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

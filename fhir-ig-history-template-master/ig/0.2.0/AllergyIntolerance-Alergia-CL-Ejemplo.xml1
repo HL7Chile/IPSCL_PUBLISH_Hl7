@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="Alergia-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: AllergyIntolerance Alergia-CL-Ejemplo</b></p><a name="Alergia-CL-Ejemplo"> </a><a name="hcAlergia-CL-Ejemplo"> </a><a name="Alergia-CL-Ejemplo-es-CL"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}">Activo</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}">Confirmado</span></p><p><b>code</b>: <span title="Codes:{http://www.whocc.no/atc A01AB18}">Clotrimazol</span></p><p><b>patient</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>onset</b>: 11 años<span style="background: LightGoldenRodYellow"> (Details: UCUM  codea = 'a')</span></p><p><b>recorder</b>: <a href="Practitioner-PrestadorMedInternaClIpsEjemplo.html">Practitioner Nicolás Bastian Figueroa (official)</a></p><h3>Reactions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Manifestation</b></td><td><b>Severity</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 703938007}">Dermatitis inflamatoria</span></td><td>Severe</td></tr></table></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+    <text value="Activo"/>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+    <text value="Confirmado"/>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://www.whocc.no/atc"/>
+      <code value="A01AB18"/>
+      <display value="clotrimazole"/>
+    </coding>
+    <text value="Clotrimazol"/>
+  </code>
+  <patient>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </patient>
+  <onsetAge>
+    <value value="11"/>
+    <unit value="años"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="a"/>
+  </onsetAge>
+  <recorder>
+    <reference value="Practitioner/PrestadorMedInternaClIpsEjemplo"/>
+  </recorder>
+  <reaction>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="703938007"/>
+        <display value="Inflammatory dermatosis (disorder)"/>
+      </coding>
+      <text value="Dermatitis inflamatoria"/>
+    </manifestation>
+    <severity value="severe"/>
+  </reaction>
+</AllergyIntolerance>

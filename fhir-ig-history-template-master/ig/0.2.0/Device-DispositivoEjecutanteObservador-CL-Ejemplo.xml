@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Device xmlns="http://hl7.org/fhir">
+  <id value="DispositivoEjecutanteObservador-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Device DispositivoEjecutanteObservador-CL-Ejemplo</b></p><a name="DispositivoEjecutanteObservador-CL-Ejemplo"> </a><a name="hcDispositivoEjecutanteObservador-CL-Ejemplo"> </a><a name="DispositivoEjecutanteObservador-CL-Ejemplo-es-CL"> </a><p><b>identifier</b>: <code>http://ortopedia.organization/devicesID</code>/2121</p><p><b>manufacturer</b>: Ortopedia-Care</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>Férula para codo</td><td>Manufacturer name</td></tr></table><p><b>modelNumber</b>: 2.0.1</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 16349000}">Dispositivo ortopédico</span></p></div>
+  </text>
+  <identifier>
+    <system value="http://ortopedia.organization/devicesID"/>
+    <value value="2121"/>
+  </identifier>
+  <manufacturer value="Ortopedia-Care"/>
+  <deviceName>
+    <name value="Férula para codo"/>
+    <type value="manufacturer-name"/>
+  </deviceName>
+  <modelNumber value="2.0.1"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="16349000"/>
+      <display value="Orthopedic device"/>
+    </coding>
+    <text value="Dispositivo ortopédico"/>
+  </type>
+</Device>

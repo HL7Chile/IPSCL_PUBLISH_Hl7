@@ -1,0 +1,18 @@
+{
+  "packages" : [
+    {
+      "path" : "/package-list.json",
+      "package-id" : "hl7.fhir.cl.clips",
+      "title" : "Resumen Clinico de Paciente de Chile",
+      "canonical" : "https://hl7chile.cl/fhir/ig/clips",
+      "category" : "Patient Summary",
+      "ci-build" : "https://build.fhir.org/ig/HL7Chile/IPS-CL",
+      "version-count" : 1,
+      "latest" : {
+        "version" : "0.2.0",
+        "date" : "2024-11-13",
+        "path" : "https://hl7chile.cl/fhir/ig/clips/0.2.0"
+      }
+    }
+  ]
+}

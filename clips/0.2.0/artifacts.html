@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>HL7.FHIR.CL.CLIPS\Artefactos Generados - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link href="fhir.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet" />
+    <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/prism.css" rel="stylesheet" /> <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7chile.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async>
+</script>
+
+    <script type="text/javascript" src="fhir-table-scripts.js">
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="assets/ico/favicon.png" />
+</head>
+
+<!-- JORGE MANSILLA -->
+<!-- Google tag (gtag.js) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDP1SHWXWT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KDP1SHWXWT');
+</script>
+-->
+<!-- Franco: Nota Para Mansilla Revisa este script genera errores al subir en Build -->
+
+
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">
+        h2 {
+            --heading-prefix:"4"
+        }
+        
+        h3,
+        h4,
+        h5,
+        h6 {
+            --heading-prefix:"4.0"
+        }
+    </style>
+    <div id="segment-header" class="segment">
+        <!-- segment-header -->
+        <div class="container">
+            <!-- container -->
+            <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="hl7chile-logo" no-external="true" href="http://hl7chile.cl">
+        <img height="71" alt="Visitar HL7 Chile" src="assets/images/hl7chile-logo.png" />
+    </a>
+</div>
+<div id="family-nav">
+    <a id="hl7chile-logo" no-external="true" href="https://www.hl7.org/"><img height="60" alt="Visitar HL7 FHIR Internacional" src="assets/images/LOGO_FHIR.svg" /> </a>
+</div>
+
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+--> 
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Resumen Clínico de Paciente de Chile (IPS-CL)</span>
+                    <br/>
+                    <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Chile flag" src="assets/images/chl.svg" height="16" title="Chile"/>
+ 
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">
+        <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">
+            <!-- container -->
+            <!-- HEADER CONTENT -->
+
+            <nav class="navbar navbar-inverse">
+                <!--status-bar-->
+                <div class="container">
+                    <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+                    <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificaciones Negocio
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="EstructuraIPS.html">Estructura del IPS</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificaciones Técnicas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="OperacionesIPS.html">Operaciones del IPS</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefactos</a>
+  </li>
+  <li>
+    <a href="changes.html">Historial de Cambios</a>
+  </li>
+</ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+            <!-- /HEADER CONTENT -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-navbar -->
+    <!--status-bar-->
+    
+    <div id="segment-breadcrumb" class="segment">
+        <!-- segment-breadcrumb -->
+        <div class="container">
+            <!-- container -->
+            <ul class="breadcrumb">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artefactos Generados</b></li> 
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">
+        <!-- segment-content -->
+        <div class="container">
+            <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Resumen Clinico de Paciente de Chile (v0.2.0: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>1 Draft) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. .  For a full list of available versions, see the <a no-external="true" href="https://hl7chile.cl/fhir/ig/clips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artefactos Generados</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Operation Definitions</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Operation Definitions </h3>
+    <p>These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationDefinition-IpsClSummary.html"
+                  title="OperationDefinition/IpsClSummary">IPS-Cl Summary</a>
+            </td>
+            <td>
+<p>Esta operación devuelve un documento IPS en respuesta a una solicitud POST/GET (ver Operaciones FHIR). El documento devuelto <strong>PUEDE</strong> generarse bajo demanda y <strong>DEBERÍA</strong> representar la información más reciente disponible. Esta operación no necesariamente crearía una instancia IPS persistida en el servidor que responde a la solicitud. Cuando se desean registros históricos u otros documentos, esta operación no es adecuada. Para operaciones alternativas y guía sobre la generación de IPS, consulte <strong>IPS Generation and Data Inclusion</strong>.</p>
+
+<p>Generalmente, cuando se conoce el id lógico de un paciente, ese id se utilizaría para solicitar el resumen del paciente desde un servidor FHIR (ver patrón [id] a continuación). Cuando no se conoce, los servidores <strong>PUEDEN</strong> admitir el uso de otros identificadores (ver el parámetro identifier a continuación).</p>
+
+<p>El servidor <strong>DEBE</strong> permitir el uso del perfil del <a href="StructureDefinition-Composition-cl-ips.html">Documento (IPS-CL)</a>.</p>
+
+<p>Está operación nace de la operación <a href="https://build.fhir.org/ig/HL7/fhir-ips/OperationDefinition-summary.html">IPS Summary</a> pero especificada para el caso de uso nacional de Chile.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-AllergiaInt-cl-ips.html"
+                  title="StructureDefinition/AllergiaInt-cl-ips">Alergias e Intolerancias (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso de Alergias e Intolerancias para representar este modelo a nivel nacional</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Bundle-documento-ips-cl.html"
+                  title="StructureDefinition/Bundle-documento-ips-cl">Bundle Resumen Clínico</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso Bundle por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), incluyendo restricciones locales de chile, para ser aplicado a nivel nacional.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Condition-cl-ips.html"
+                  title="StructureDefinition/Condition-cl-ips">Condición (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso Condition por la Guía de Implementación FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un registro de un problema se representa en el resumen del paciente como una instancia del recurso Condition restringido por este perfil.
+
+Representación de un problema en el resumen internacional del paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-RegMedicamentos-cl-ips.html"
+                  title="StructureDefinition/RegMedicamentos-cl-ips">Declaración de medicación (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso MedicationStatement según la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una declaración de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationStatement restringido por este perfil.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html"
+                  title="StructureDefinition/Declaracion-uso-dispositivo-cl-ips">Declaración de uso del dispositivo (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso DeviceUseStatement por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL). Una declaración sobre un dispositivo utilizado por el paciente o implantado en él se describe en el resumen del paciente como una instancia de un recurso DeviceUseStatement restringido por este perfil.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Dispositivo-cl-ips.html"
+                  title="StructureDefinition/Dispositivo-cl-ips">Dispositivo (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso Device por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un dispositivo utilizado por el paciente o implantado en él se describe como una instancia del recurso Device restringido por este perfil.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Dispositivo-observador-cl-ips.html"
+                  title="StructureDefinition/Dispositivo-observador-cl-ips">Dispositivo - Ejecutante, Observador (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso Device por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL).
+
+Este perfil describe un dispositivo que desempeña el papel de observador o ejecutante.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Composition-cl-ips.html"
+                  title="StructureDefinition/Composition-cl-ips">Documento (IPS-CL)</a>
+            </td>
+            <td>
+<p>Documento clínico utilizado para representar el conjunto de datos del Resumen Internacional de Pacientes (IPS). 
+Un documento de Resumen Internacional de Paciente (IPS) es un extracto de historia clínica electrónica que contiene información sanitaria esencial sobre un sujeto de atención. 
+El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especialidad y la afección; pero sigue siendo clínicamente relevante. Tal como se especifica en las normas EN 17269 e ISO 27269, está diseñado para apoyar el caso de uso de la «atención transfronteriza no planificada», pero no se limita a él. Pretende ser internacional, es decir, ofrecer soluciones genéricas para su aplicación global más allá de una región o país concretos.</p>
+
+<p>Este perfil se basa en el perfil ClinicalDocument.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ImagingStudy-cl-ips.html"
+                  title="StructureDefinition/ImagingStudy-cl-ips">Estudio de Imagenología (IPS-Cl)</a>
+            </td>
+            <td>
+<p>Estudio de imagenología realizado a un paciente, del cual se obtiene despues una observación para un reporte diagnóstico</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Flag-alerta-cl-ips.html"
+                  title="StructureDefinition/Flag-alerta-cl-ips">Flag - Alerta (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil limita el recurso Flag según la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL). Un registro de una alerta se representa en el resumen del paciente como una instancia de un recurso Flag restringido por este perfil.</p>
+
+<p>Flag se utiliza para transmitir información sobre una alerta específica de una IPS. La información se marca para crear conciencia sobre posibles preocupaciones o peligros para/del sujeto de la IPS. Pone la información en primer plano y puede hacer referencia a otra información del resumen (a través de la extensión supportedInfo), así como también presentar obstáculos para la atención.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-RolPrestador-cl-ips.html"
+                  title="StructureDefinition/RolPrestador-cl-ips">Función o Rol de Prestador Individual (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso profesional para representar a un profesional que actúa como observador de resultaos expresados</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Inmunizacion-cl-ips.html"
+                  title="StructureDefinition/Inmunizacion-cl-ips">Immunización (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso Inmunización por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS). Un registro de una vacunación se representa en el resumen del paciente como una instancia de un recurso Inmunización restringido por este perfil.</p>
+
+<p>Describe el evento de un paciente al que se le ha administrado una vacuna o un registro de una vacuna notificado por un paciente, un clínico u otra parte.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Medicamento-cl-ips.html"
+                  title="StructureDefinition/Medicamento-cl-ips">Medicamento (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso Medicamento por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un medicamento se describe en el resumen del paciente como una instancia de un recurso Medicamento restringido por este perfil.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Speciment-cl-ips.html"
+                  title="StructureDefinition/Speciment-cl-ips">Muestra (IPS-CL)</a>
+            </td>
+            <td>
+<p>Muestra por la cual hicieron el estudio</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-estado-del-embarazo-cl-ips.html"
+                  title="StructureDefinition/Observation-estado-del-embarazo-cl-ips">Observación - Embarazo: Estado (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso Observation para representar el estado del embarazo.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html"
+                  title="StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips">Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso Observation para representar la fecha de parto estimada de un embarazo.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html"
+                  title="StructureDefinition/Observation-resultado-del-embarazo-cl-ips">Observación - Embarazo: Resultados (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso Observation para representar un resumen de resultados del embarazo.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-uso-de-alcohol-cl-ips.html"
+                  title="StructureDefinition/Observation-uso-de-alcohol-cl-ips">Observación - SH: Uso de Alcohol (IPS CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso Observation para representar la evaluación del consumo de alcohol del paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-uso-de-tabaco-cl-ips.html"
+                  title="StructureDefinition/Observation-uso-de-tabaco-cl-ips">Observación - SH: Uso de tabaco (IPS CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso Observation para representar la evaluación del consumo de tabaco del paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html"
+                  title="StructureDefinition/Observation-resultado-radiology-cl-ips">Observación Resultado: Imagenológico (IPS-CL)</a>
+            </td>
+            <td>
+<p>Resultados obtenidos para un examen imagenológico</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html"
+                  title="StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips">Observación Resultado: Laboratorio/Patología (IPS-CL)</a>
+            </td>
+            <td>
+<p>Resultados obtenidos para un examen de laboratorio</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Organizacion-cl-ips.html"
+                  title="StructureDefinition/Organizacion-cl-ips">Organización (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso Organización para representar a una organización que actúa como ejecutante u observador para una observación de resultados (laboratorio, patología o imagen), o como ejecutante para un procedimiento.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Paciente-cl-ips.html"
+                  title="StructureDefinition/Paciente-cl-ips">Paciente (IPS-CL)</a>
+            </td>
+            <td>
+<p>Perfil basado en IPS para paciente Chileno.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Parametros-entradas-ips-cl.html"
+                  title="StructureDefinition/Parametros-entradas-ips-cl">Parametros De Entradas IPS Summary</a>
+            </td>
+            <td>
+<p>Parámetros de Entradas para usar la operación IPS-Summary de manera POST</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Prestador-cl-ips.html"
+                  title="StructureDefinition/Prestador-cl-ips">Prestador Individual (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil restringe el recurso profesional para representar a un profesional que actúa como observador de resultados expresados.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Procedimientos-cl-ips.html"
+                  title="StructureDefinition/Procedimientos-cl-ips">Procedimientos (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso Procedure por el proyecto IPS, el cual especifica una entrada en el Historial de Procedimientos para el resumen internacional del paciente basado en el estándar FHIR R4.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-DiagnosticReport-cl-ips.html"
+                  title="StructureDefinition/DiagnosticReport-cl-ips">Reporte Diagnóstico (IPS-CL)</a>
+            </td>
+            <td>
+<p>Reporte resultado de un o varios estudios para diagnosticar una enfermedad. Este perfil es el simil al DiagnosticReport(IPS).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-MedicationRequest-cl-ips.html"
+                  title="StructureDefinition/MedicationRequest-cl-ips">Solicitud de medicación (IPS-CL)</a>
+            </td>
+            <td>
+<p>Este perfil representa las restricciones aplicadas al recurso MedicationRequest por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una solicitud de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationRequest restringido por este perfil.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-Alergia-CL-Ejemplo.html"
+                  title="AllergyIntolerance/Alergia-CL-Ejemplo">Alergias - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre el padecimiento de una o más alergias por parte del paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Flag-FlagAlertEjemplo.html" title="Flag/FlagAlertEjemplo">Alerta Paciente- Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de una alerta sobre un problema  que sufre el paciente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-Bundle-CL-Ejemplo.html" title="Bundle/Bundle-CL-Ejemplo">Bundle - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre un documento clínico tipo Bundle que representa el conjunto mínimo de datos para el Resumen Internacional de Pacientes (IPS).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Composition-Composition-CL-Ejemplo.html"
+                  title="Composition/Composition-CL-Ejemplo">Composition - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre un documento clínico que representa un conjunto de datos para el Resumen Internacional de Pacientes (IPS).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-Condition-CL-Ejemplo.html"
+                  title="Condition/Condition-CL-Ejemplo">Condición - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de una condición que padece el paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DeviceUseStatement-DeclaracionUsoDispositivo-CL-Ejemplo.html"
+                  title="DeviceUseStatement/DeclaracionUsoDispositivo-CL-Ejemplo">Declaración Uso Dispositivo - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre la declaración de uso de un dispositivo médico</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-DispositivoEjecutanteObservador-CL-Ejemplo.html"
+                  title="Device/DispositivoEjecutanteObservador-CL-Ejemplo">Dispositivo - Ejecutante, Observador Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre un dispositivo médico en rol de observador o ejecutante</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Device-Dispositivo-CL-Ejemplo.html"
+                  title="Device/Dispositivo-CL-Ejemplo">Dispositivo Médico - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre el dispositivo médico que utiliza el paciente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-PacienteClIpsEjemplo.html"
+                  title="Patient/PacienteClIpsEjemplo">Ejemplo de Paciente CL - IPS</a>
+            </td>
+            <td>
+<p>Ejemplo de paciente según el estándar IPS nacional</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-PrestadorMedFamiliarClIpsEjemplo.html"
+                  title="Practitioner/PrestadorMedFamiliarClIpsEjemplo">Ejemplo de Prestador Medicina Familiar CL - IPS</a>
+            </td>
+            <td>
+<p>Ejemplo de prestador de medicina familiar que atiende al paciente según el estándar IPS nacional</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-PrestadorMedInternaClIpsEjemplo.html"
+                  title="Practitioner/PrestadorMedInternaClIpsEjemplo">Ejemplo de Prestador Medicina Interna CL - IPS</a>
+            </td>
+            <td>
+<p>Ejemplo de prestador de medicina interna que atiende al paciente según el estándar IPS nacional</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ImagingStudy-EstudioImagenologiaCLEjemplo.html"
+                  title="ImagingStudy/EstudioImagenologiaCLEjemplo">Estudio de imagenología - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre el estudio imagenológico de un paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Immunization-Inmunizacion-CL-Ejemplo.html"
+                  title="Immunization/Inmunizacion-CL-Ejemplo">Inmunización - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre las inmunizaciones que posee el paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-LabPatologia-CL-Ejemplo.html"
+                  title="Observation/LabPatologia-CL-Ejemplo">Laboratorio Patología - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de una observación sobre un resultado proveniente del laboratorio de patología.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-MedicamentoCLEjemplo.html"
+                  title="Medication/MedicamentoCLEjemplo">Medicamento - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre un medicamento que utiliza el paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-MedicationRequest-CL-Ejemplo.html"
+                  title="MedicationRequest/MedicationRequest-CL-Ejemplo">Medication Request - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre la solicitud de medicación relacionada con un paciente. Esta es prescrita por un profesional de salud</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationStatement-MedicationStatement-CL-Ejemplo.html"
+                  title="MedicationStatement/MedicationStatement-CL-Ejemplo">Medication Statement - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre la declaración de uso de medicación del paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-SpecimenCLEjemplo.html"
+                  title="Specimen/SpecimenCLEjemplo">Muestra - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre una muestra biológica que se le extrajo al paciente para posteriormente hacer un estudio.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObservacionConsumoAlcoholEjemplo.html"
+                  title="Observation/ObservacionConsumoAlcoholEjemplo">Observación: Consumo de Alcohol - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de una observación sobre el consumo de alcohol del paciente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObservacionConsumoTabacoEjemplo.html"
+                  title="Observation/ObservacionConsumoTabacoEjemplo">Observación: Consumo de Tabaco - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de una observación sobre el consumo de tabaco del paciente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObservacionEstadoEmbarazoEjemplo.html"
+                  title="Observation/ObservacionEstadoEmbarazoEjemplo">Observación: Estado del embarazo - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de una observación sobre el estado del embarazo</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObservacionFechaEstimadaPartoEjemplo.html"
+                  title="Observation/ObservacionFechaEstimadaPartoEjemplo">Observación: Fecha Estimada de Parto - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de una observación sobre la fecha estimada de parto</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ObservacionResultadoEmbarazoEjemplo.html"
+                  title="Observation/ObservacionResultadoEmbarazoEjemplo">Observación: Resultado de Embarazo - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de una observación sobre un resumen de los resultados de embarazo del paciente</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Organization-CL-Ejemplo.html"
+                  title="Organization/Organization-CL-Ejemplo">Organización - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre la organización.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-OrganizationHospital-CL-Ejemplo.html"
+                  title="Organization/OrganizationHospital-CL-Ejemplo">Organización Hospital - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre la organización - Hospital.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Parameters-Parametros-CL-Ejemplo.html"
+                  title="Parameters/Parametros-CL-Ejemplo">Parametros - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre los parámetros de entrada para usar la operación Summary como un POST.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-ProcedimientoCLEjemplo.html"
+                  title="Procedure/ProcedimientoCLEjemplo">Procedimiento - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre un procedimiento al que se somete un paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-DiagnosticReportAlergia-CL-Ejemplo.html"
+                  title="DiagnosticReport/DiagnosticReportAlergia-CL-Ejemplo">Reporte Alergias (Diagnóstico) - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de un reporte de un estudio diagnóstico de las alergias que padece el paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-DiagnosticReportLab-CL-Ejemplo.html"
+                  title="DiagnosticReport/DiagnosticReportLab-CL-Ejemplo">Reporte Laboratorio (Diagnóstico) - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo de un reporte de un estudio diagnóstico de alguna enfermedad que padece el paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ResultadoRadiologyCLEjemplo.html"
+                  title="Observation/ResultadoRadiologyCLEjemplo">Resultado de Radiología - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre el resultado de radiología de un paciente.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-RolProfesionalCLEjemplo.html"
+                  title="PractitionerRole/RolProfesionalCLEjemplo">Rol Profesional Medicina Familiar - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre el rol de un profesional de la salud, específicamente de medicina familiar.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-RolProfesionalMedInternaCLEjemplo.html"
+                  title="PractitionerRole/RolProfesionalMedInternaCLEjemplo">Rol Profesional Medicina Interna - Ejemplo</a>
+            </td>
+            <td>
+<p>Ejemplo sobre el rol de un profesional de la salud, específicamente de medicina interna.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7chile.cl">HL7 Chile</a>.  Package hl7.fhir.cl.clips#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 13, 2024 08:36-0300">2024-11-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Tabla de contenidos</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">Reporte QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7chile.cl/fhir/ig/clips/history.html">Historial de versiones</a></a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

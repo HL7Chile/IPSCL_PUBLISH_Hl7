@@ -1,0 +1,37 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "DiagnosticReportAlergia-CL-Ejemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport DiagnosticReportAlergia-CL-Ejemplo</b></p><a name=\"DiagnosticReportAlergia-CL-Ejemplo\"> </a><a name=\"hcDiagnosticReportAlergia-CL-Ejemplo\"> </a><a name=\"DiagnosticReportAlergia-CL-Ejemplo-es-CL\"> </a><h2><span title=\"Codes:{http://loinc.org 10155-0}\">Historial de alergias, reportado</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 OTH}\">Otra categoría</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</td></tr><tr><td>When For</td><td>2006-06-10</td></tr><tr><td>Performer</td><td> <a href=\"Organization-OrganizationHospital-CL-Ejemplo.html\">Hospital Dr. Gustavo Fricke</a></td></tr></table><p><b>Report Details</b></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "OTH",
+      "display" : "Other"
+    }],
+    "text" : "Otra categoría"
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "10155-0",
+      "display" : "History of allergies, reported"
+    }],
+    "text" : "Historial de alergias, reportado"
+  },
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo",
+    "display" : "Este es un reporte de alergias confirmadas por un profesional de la salud y declaradas por el paciente: Clotrimazol"
+  },
+  "effectiveDateTime" : "2006-06-10",
+  "performer" : [{
+    "reference" : "Organization/OrganizationHospital-CL-Ejemplo",
+    "display" : "Hospital Dr. Gustavo Fricke"
+  }]
+}

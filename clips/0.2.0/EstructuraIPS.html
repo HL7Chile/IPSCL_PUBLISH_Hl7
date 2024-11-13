@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>HL7.FHIR.CL.CLIPS\Estructura del IPS - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link href="fhir.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet" />
+    <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/prism.css" rel="stylesheet" /> <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7chile.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async>
+</script>
+
+    <script type="text/javascript" src="fhir-table-scripts.js">
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="assets/ico/favicon.png" />
+</head>
+
+<!-- JORGE MANSILLA -->
+<!-- Google tag (gtag.js) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDP1SHWXWT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KDP1SHWXWT');
+</script>
+-->
+<!-- Franco: Nota Para Mansilla Revisa este script genera errores al subir en Build -->
+
+
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">
+        h2 {
+            --heading-prefix:"2"
+        }
+        
+        h3,
+        h4,
+        h5,
+        h6 {
+            --heading-prefix:"2"
+        }
+    </style>
+    <div id="segment-header" class="segment">
+        <!-- segment-header -->
+        <div class="container">
+            <!-- container -->
+            <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="hl7chile-logo" no-external="true" href="http://hl7chile.cl">
+        <img height="71" alt="Visitar HL7 Chile" src="assets/images/hl7chile-logo.png" />
+    </a>
+</div>
+<div id="family-nav">
+    <a id="hl7chile-logo" no-external="true" href="https://www.hl7.org/"><img height="60" alt="Visitar HL7 FHIR Internacional" src="assets/images/LOGO_FHIR.svg" /> </a>
+</div>
+
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+--> 
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Resumen Clínico de Paciente de Chile (IPS-CL)</span>
+                    <br/>
+                    <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Chile flag" src="assets/images/chl.svg" height="16" title="Chile"/>
+ 
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">
+        <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">
+            <!-- container -->
+            <!-- HEADER CONTENT -->
+
+            <nav class="navbar navbar-inverse">
+                <!--status-bar-->
+                <div class="container">
+                    <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+                    <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificaciones Negocio
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="EstructuraIPS.html">Estructura del IPS</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificaciones Técnicas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="OperacionesIPS.html">Operaciones del IPS</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefactos</a>
+  </li>
+  <li>
+    <a href="changes.html">Historial de Cambios</a>
+  </li>
+</ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+            <!-- /HEADER CONTENT -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-navbar -->
+    <!--status-bar-->
+    
+    <div id="segment-breadcrumb" class="segment">
+        <!-- segment-breadcrumb -->
+        <div class="container">
+            <!-- container -->
+            <ul class="breadcrumb">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Estructura del IPS</b></li> 
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">
+        <!-- segment-content -->
+        <div class="container">
+            <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Resumen Clinico de Paciente de Chile (v0.2.0: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>1 Draft) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. .  For a full list of available versions, see the <a no-external="true" href="https://hl7chile.cl/fhir/ig/clips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Estructura del IPS</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#especificaciones-del-ips" id="markdown-toc-especificaciones-del-ips">Especificaciones del IPS</a></li>
+  <li><a href="#descripción-de-las-secciones" id="markdown-toc-descripción-de-las-secciones">Descripción de las secciones</a></li>
+  <li><a href="#lista-de-perfiles" id="markdown-toc-lista-de-perfiles">Lista de Perfiles</a></li>
+</ul>
+
+</div>
+<h3 id="especificaciones-del-ips">Especificaciones del IPS</h3>
+
+<p>El IPS está compuesto por las siguientes secciones que se describen a continuación.</p>
+
+<p><br /></p>
+<div align="left"> 
+ <img src="IPS_composition.png" style="width:60%" /> <p>Componentes de un IPS (Fuente: International Patient Summary Implementation Guide)</p> 
+</div>
+<p><br /></p>
+
+<h3 id="descripción-de-las-secciones">Descripción de las secciones</h3>
+
+<h4 id="información-de-la-cabecera-del-documento">Información de la cabecera del documento</h4>
+
+<p>La cabecera del documento contiene datos para la identificación de las siguientes secciones:</p>
+
+<ul>
+  <li>Patient, donde se deben indicar datos de identificación del sujeto de atencion.</li>
+  <li>Author, donde se deben indicar datos de identificación del presunto autor del documento.</li>
+  <li>Attester, donde se deben indicar datos sobre cuándo y quién dio fe de la composición del documento.</li>
+  <li>Custodian, donde se debe indicar la organización que mantiene el documento.</li>
+</ul>
+
+<h4 id="alergias-e-intolerancias">Alergias e Intolerancias</h4>
+
+<p>Esta sección documenta las alergias y/o intolerancias relevantes para un paciente, describiendo el tipo de reacción (por ejemplo, erupción cutánea, anafilaxia, inflamaciones, etc.); indicando preferiblemente los agentes que la causan; y opcionalmente la criticidad y certeza de la alergia.</p>
+
+<p>Como mínimo, debe incluir las alergias y reacciones adversas actuales y las alergias históricas relevantes del paciente. Si no hay información disponible o si no se conocen alergias, debe documentarse en el recurso de referencia de la sección (en el Composition.section.entry).</p>
+
+<h5 id="resúmen-de-medicación">Resúmen de medicación</h5>
+
+<p>La sección de resumen de la medicación contiene una descripción de los medicamentos relevantes del paciente para el alcance del resumen del paciente.</p>
+
+<p>El contenido podría informar acerca de:</p>
+
+<ul>
+  <li>Los medicamentos actualmente activos.</li>
+  <li>Los medicamentos actuales y pasados considerados relevantes por el médico.</li>
+  <li>Las prescripciones o dispensaciones de medicamentos extraídas automáticamente de un registro clínico electrónico regional o nacional.</li>
+</ul>
+
+<p>Sin embargo, en todos estos casos los medicamentos se documentan en el resumen del paciente como "Declaraciones de medicamentos" o "Solicitudes de medicamentos".</p>
+
+<p>Para completar esta sección se debe utilizar una de las siguientes opciones:</p>
+
+<ul>
+  <li>Una entrada que indique que se sabe que el paciente no está tomando ningún medicamento relevante u otra información sobre "ausencia de medicación".</li>
+  <li>Una o más entradas que enumeren la medicación relevante del paciente (una entrada por medicación).</li>
+</ul>
+
+<h4 id="listado-de-problemas">Listado de problemas</h4>
+
+<p>La sección de problemas del IPS enumera y describe los problemas o condiciones clínicas que se está monitoreando actualmente el paciente. Si no hay información sobre los problemas o no hay problemas conocidos, debe documentarse en el recurso de referencia de la sección (en el Composition.section.entry).</p>
+
+<h4 id="historial-de-procedimientos">Historial de procedimientos</h4>
+
+<p>La sección Historial de procedimientos contiene una descripción de los procedimientos pasados del paciente que son pertinentes al alcence del IPS.</p>
+
+<p>Por ejemplo, los procedimientos pueden referirse a:</p>
+
+<ol>
+  <li>Procedimiento diagnóstico invasivo: por ejemplo, cateterismo cardíaco, biopsias de tejidos; (los resultados de estos procedimientos se documentan en la sección de resultados).</li>
+  <li>Procedimiento terapéutico: por ejemplo, diálisis, oxigenoterapia, etc</li>
+  <li>Procedimiento quirúrgico: por ejemplo, apendicectomía, cirugía de tiroides, cirguía de hernia umbilical, etc.</li>
+</ol>
+
+<h4 id="inmunizaciones">Inmunizaciones</h4>
+
+<p>La sección de inmunizaciones define el estado de inmunización actual de un paciente y el historial de inmunización pertinente que se conoce. El caso de uso principal de esta sección es permitir la comunicación del estado de inmunización de un paciente.</p>
+
+<h4 id="dispositivos-médicos">Dispositivos médicos</h4>
+
+<p>La secicón de dispositivos médicos contiene texto narrativo y entradas codificadas que describen el historial del paciente sobre el uso de dispositivos médicos.</p>
+
+<h4 id="resultados-del-diagnóstico">Resultados del diagnóstico</h4>
+
+<p>En esta sección se reúnen los resultados de las observaciones pertinentes obtenidas del paciente o de muestras biológicas in vitro del mismo. Estos resultados pueden incluir resultados de laboratorio, patología y radiología.</p>
+
+<p>Esta sección incluye opciones de entrada para realizar observaciones de resultados (usando Observacion-CL) de:</p>
+
+<ul>
+  <li>Laboratorio/Patología</li>
+  <li>Radiología</li>
+</ul>
+
+<p>U observaciones referenciadas en DiagnosticReport:</p>
+
+<ul>
+  <li>Reporte-Diagnóstico</li>
+</ul>
+
+<h4 id="directivas-anticipadas">Directivas anticipadas</h4>
+
+<p>La sección de directivas anticipadas contiene una descripción narrativa de las directivas anticipadas del paciente con enlaces a documentos de respaldo y consentimientos.</p>
+
+<h4 id="estado-funcional">Estado funcional</h4>
+
+<p>La sección sobre el estado funcional contiene una descripción narrativa sobre la capacidad del paciente para realizar actos de la vida diaria, incluidas las posibles necesidades del paciente de ser evaluado continuamente por terceros. El estado de invalidez puede influir en las decisiones sobre cómo administrar los tratamientos. En futuras versionas de esta guía se podrán especificar perfiles para expresar discapacidades y evaluaciones funcionales.</p>
+
+<h4 id="embarazo-resumen-del-estado-y-antecedentes">Embarazo (resumen del estado y antecedentes)</h4>
+
+<p>El estado y la historia del embarazo se componen de:</p>
+
+<ul>
+  <li>
+    <p>Una entrada como Observación del Estado del Embarazo y, opcionalmente, un miembro como Observación de la Fecha Estimada de Parto.</p>
+  </li>
+  <li>
+    <p>Una entrada como Observación de la historia del embarazo (resumen.)</p>
+  </li>
+</ul>
+
+<h4 id="plan-de-cuidados">Plan de cuidados</h4>
+
+<p>La sección del plan de cuidados contiene una descripción narrativa de las expectativas de atención, incluidas propuestas, objetivos y solicitudes de órdenes para monitorear, seguir o mejorar la condición del paciente.</p>
+
+<h4 id="signos-vitales">Signos vitales</h4>
+
+<p>La sección de signos vitales incluye la presión arterial, la temperatura corporal, la frecuencia cardíaca y la frecuencia respiratoria. También puede incluir otros hallazgos clínicos, como la altura, el peso, el índice de masa corporal, la circunferencia de la cabeza y la oximetría de pulso. En particular, se pueden incluir signos vitales o hallazgos físicos notables, como los más recientes, máximos y/o mínimos, de referencia o tendencias relevantes.</p>
+
+<h4 id="alertas">Alertas</h4>
+
+<p>La sección de alertas se utiliza para transmitir información y crear conciencia sobre posibles preocupaciones y/o peligros para/del paciente de la IPS.</p>
+
+<h4 id="historial-de-enfermedades-pasadas">Historial de enfermedades pasadas</h4>
+
+<p>La sección Historial de enfermedades pasadas contiene una descripción de las condiciones que sufrió el paciente en el pasado.</p>
+
+<h4 id="historia-del-paciente">Historia del paciente</h4>
+
+<p>La sección Historia del paciente contiene texto narrativo junto con recursos opcionales que expresan lo que le importa al paciente. Esto puede incluir necesidades, fortalezas, valores, inquietudes y preferencias con respecto a otras personas que brindan apoyo y atención. Se puede utilizar cualquier tipo de recurso para respaldar la narración.</p>
+
+<h4 id="historia-social">Historia social</h4>
+
+<p>La sección Historia social se compone de las siguientes entradas:</p>
+
+<ul>
+  <li>Uso de tabaco.</li>
+  <li>Consumo de alcohol.</li>
+</ul>
+
+<h3 id="lista-de-perfiles">Lista de Perfiles</h3>
+
+<p>Los perfiles que se han definido para esta guía de implementación se enumeran <a href="artifacts.html">aquí</a>.</p>
+
+<p>A continuación se muestran los perfiles que se han definido para cada sección:</p>
+<ul>
+  <li>(R) denota una sección obligatoria (es decir, debe estar presente en el documento IPS).</li>
+  <li>(S) denota una sección recomendada.</li>
+  <li>
+    <p>El resto de las secciones son opcionales.</p>
+  </li>
+  <li>
+    <p>Alergias e Intolerancias (R)
+[ <a href="StructureDefinition-AllergiaInt-cl-ips.html">Alergias e Intolerancias (IPS-CL)</a> ]</p>
+  </li>
+  <li>
+    <p>Resumen de medicación (R)
+[ <a href="StructureDefinition-RegMedicamentos-cl-ips.html">Declaración de medicación (IPS-CL)</a> |
+<a href="StructureDefinition-MedicationRequest-cl-ips.html">Solicitud de medicación (IPS-CL)</a> |
+<a href="StructureDefinition-Medicamento-cl-ips.html">Medicamento (IPS-CL)</a> ]</p>
+  </li>
+  <li>
+    <p>Listado de problemas (R)
+[ <a href="StructureDefinition-Condition-cl-ips.html">Condición (IPS-CL)</a> ]</p>
+  </li>
+  <li>
+    <p>Historial de procedimientos (S)
+[ <a href="StructureDefinition-Procedimientos-cl-ips.html">Procedimientos (IPS-CL)</a> | 
+<a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador (IPS-CL)</a> ]</p>
+  </li>
+  <li>
+    <p>Inmunizaciones (S)
+[ <a href="StructureDefinition-Inmunizacion-cl-ips.html">Immunización (IPS-CL)</a> ]</p>
+  </li>
+  <li>
+    <p>Dispositivos médicos (S)
+[ <a href="StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html">Declaración de uso del dispositivo (IPS-CL)</a> |
+<a href="StructureDefinition-Dispositivo-cl-ips.html">Dispositivo (IPS-CL)</a> ]</p>
+  </li>
+  <li>Resultados de diagnóstico(S)
+[ <a href="StructureDefinition-DiagnosticReport-cl-ips.html">Reporte Diagnóstico (IPS-CL)</a> ]
+    <ul>
+      <li>Resultados de Laboratorio/Patología
+[ <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">Observación Resultado: Laboratorio/Patología (IPS-CL)</a> |
+<a href="StructureDefinition-Speciment-cl-ips.html">Muestra (IPS-CL)</a> ]</li>
+      <li>Resultados de Radiología/Imagenología
+[ <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">Observación Resultado: Imagenológico (IPS-CL)</a> |
+<a href="StructureDefinition-Dispositivo-observador-cl-ips.html">Dispositivo - Ejecutante, Observador (IPS-CL)</a> |
+<a href="StructureDefinition-ImagingStudy-cl-ips.html">Estudio de Imagenología (IPS-Cl)</a> ]</li>
+    </ul>
+  </li>
+  <li>
+    <p>Directivas avanzadas
+[ <a href="http://hl7.org/fhir/R4/consent.html">Consent</a> ]</p>
+  </li>
+  <li>
+    <p>Estado funcional (Autonomía/Invalidez)
+[ <a href="StructureDefinition-Condition-cl-ips.html">Condición (IPS-CL)</a> |
+<a href="http://hl7.org/fhir/R4/clinicalimpression.html">Clinical Impression</a> ]</p>
+  </li>
+  <li>
+    <p>Embarazo (resumen del estado y antecedentes)
+[ <a href="StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html">Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)</a> |
+<a href="StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html">Observación - Embarazo: Resultados (IPS-CL)</a> |
+<a href="StructureDefinition-Observation-estado-del-embarazo-cl-ips.html">Observación - Embarazo: Estado (IPS-CL)</a> ]</p>
+  </li>
+  <li>
+    <p>Plan de cuidado
+[ <a href="http://hl7.org/fhir/R4/careplan.html">Care Plan</a> ]</p>
+  </li>
+  <li>
+    <p>Signos vitales
+[ <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html">Vital Signs Profiles</a> ]</p>
+  </li>
+  <li>
+    <p>Alertas
+[ <a href="StructureDefinition-Flag-alerta-cl-ips.html">Flag - Alerta (IPS-CL)</a> ]</p>
+  </li>
+  <li>
+    <p>Historial de enfermedades pasadas
+[ <a href="StructureDefinition-Condition-cl-ips.html">Condición (IPS-CL)</a> ]</p>
+  </li>
+  <li>
+    <p>Historia del paciente
+[ No se requieren recursos específicos. Se puede utilizar cualquiera de ellos para respaldar la narración. ]</p>
+  </li>
+  <li>
+    <p>Historia social
+[ <a href="StructureDefinition-Observation-uso-de-tabaco-cl-ips.html">Observación - SH: Uso de tabaco (IPS CL)</a> |
+  <a href="StructureDefinition-Observation-uso-de-alcohol-cl-ips.html">Observación - SH: Uso de Alcohol (IPS CL)</a> ]</p>
+  </li>
+  <li>Recursos y perfiles utilizados en varias secciones
+[ <a href="StructureDefinition-Organizacion-cl-ips.html">Organización (IPS-CL)</a> | <a href="StructureDefinition-Prestador-cl-ips.html">Prestador Individual (IPS-CL)</a> | <a href="StructureDefinition-RolPrestador-cl-ips.html">Función o Rol de Prestador Individual (IPS-CL)</a> | <a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a>]</li>
+</ul>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7chile.cl">HL7 Chile</a>.  Package hl7.fhir.cl.clips#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 13, 2024 08:36-0300">2024-11-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Tabla de contenidos</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">Reporte QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7chile.cl/fhir/ig/clips/history.html">Historial de versiones</a></a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

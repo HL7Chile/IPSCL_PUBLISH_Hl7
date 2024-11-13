@@ -1,0 +1,888 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>HL7.FHIR.CL.CLIPS\Bundle - Ejemplo - JSON Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link href="fhir.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet" />
+    <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/prism.css" rel="stylesheet" /> <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7chile.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async>
+</script>
+
+    <script type="text/javascript" src="fhir-table-scripts.js">
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="assets/ico/favicon.png" />
+</head>
+
+<!-- JORGE MANSILLA -->
+<!-- Google tag (gtag.js) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDP1SHWXWT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KDP1SHWXWT');
+</script>
+-->
+<!-- Franco: Nota Para Mansilla Revisa este script genera errores al subir en Build -->
+
+
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">
+        h2 {
+            --heading-prefix:"4.32"
+        }
+        
+        h3,
+        h4,
+        h5,
+        h6 {
+            --heading-prefix:"4.32"
+        }
+    </style>
+    <div id="segment-header" class="segment">
+        <!-- segment-header -->
+        <div class="container">
+            <!-- container -->
+            <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="hl7chile-logo" no-external="true" href="http://hl7chile.cl">
+        <img height="71" alt="Visitar HL7 Chile" src="assets/images/hl7chile-logo.png" />
+    </a>
+</div>
+<div id="family-nav">
+    <a id="hl7chile-logo" no-external="true" href="https://www.hl7.org/"><img height="60" alt="Visitar HL7 FHIR Internacional" src="assets/images/LOGO_FHIR.svg" /> </a>
+</div>
+
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+--> 
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Resumen Clínico de Paciente de Chile (IPS-CL)</span>
+                    <br/>
+                    <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Chile flag" src="assets/images/chl.svg" height="16" title="Chile"/>
+ 
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">
+        <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">
+            <!-- container -->
+            <!-- HEADER CONTENT -->
+
+            <nav class="navbar navbar-inverse">
+                <!--status-bar-->
+                <div class="container">
+                    <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+                    <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificaciones Negocio
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="EstructuraIPS.html">Estructura del IPS</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificaciones Técnicas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="OperacionesIPS.html">Operaciones del IPS</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefactos</a>
+  </li>
+  <li>
+    <a href="changes.html">Historial de Cambios</a>
+  </li>
+</ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+            <!-- /HEADER CONTENT -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-navbar -->
+    <!--status-bar-->
+    
+    <div id="segment-breadcrumb" class="segment">
+        <!-- segment-breadcrumb -->
+        <div class="container">
+            <!-- container -->
+            <ul class="breadcrumb">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artefactos Generados</b></a></li><li><b>Bundle - Ejemplo</b></li> 
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">
+        <!-- segment-content -->
+        <div class="container">
+            <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">This page is part of the Resumen Clinico de Paciente de Chile (v0.2.0: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>1 Draft) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. .  For a full list of available versions, see the <a no-external="true" href="https://hl7chile.cl/fhir/ig/clips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Bundle-Bundle-CL-Ejemplo.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-Bundle-CL-Ejemplo.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-Bundle-CL-Ejemplo.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Bundle - Ejemplo - JSON Representation</h2>
+
+
+<p><a href="Bundle-Bundle-CL-Ejemplo.json" no-download="true">Raw json</a> | <a href="Bundle-Bundle-CL-Ejemplo.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "Bundle-CL-Ejemplo",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-Bundle-documento-ips-cl.html" style="color: Maroon">&#x1F517;</a> "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.152.1.10.1",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "IPS-Bundle-2024-001"
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "document",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">timestamp</a>" : "2024-05-30T15:00:00.000-04:00",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:debdd403-9c7e-48d0-93c4-71a4ecc89f2f",
+      "<a href="http://hl7.org/fhir/R4/composition.html#Composition">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/composition.html">resourceType</a>" : "Composition",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.id">id</a>" : "debdd403-9c7e-48d0-93c4-71a4ecc89f2f",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Composition_debdd403-9c7e-48d0-93c4-71a4ecc89f2f\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Composition debdd403-9c7e-48d0-93c4-71a4ecc89f2f&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;debdd403-9c7e-48d0-93c4-71a4ecc89f2f\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdebdd403-9c7e-48d0-93c4-71a4ecc89f2f\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;debdd403-9c7e-48d0-93c4-71a4ecc89f2f-es-CL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 60591-5}\&quot;&gt;Documento resumen del paciente&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2024-05-28&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;Bundle-Bundle-CL-Ejemplo.html#urn-uuid-503a0267-1cfd-44cc-a382-e052a78fa5cc\&quot;&gt;Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: International Patient Summary Genérico para uso en Chile&lt;/p&gt;&lt;p&gt;&lt;b&gt;custodian&lt;/b&gt;: &lt;a href=\&quot;Bundle-Bundle-CL-Ejemplo.html#urn-uuid-e80c16ae-eec7-4ff7-99c4-27e756ace6fa\&quot;&gt;Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;RelatesTos&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Target[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Appends&lt;/td&gt;&lt;td&gt;&lt;code&gt;urn:oid:2.16.152.1.10.1&lt;/code&gt;/IPS-CL-2024-001&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.status">status</a>" : "final",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.type">type</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "60591-5",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Patient summary Document"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Documento resumen del paciente"
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a"
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.date">date</a>" : "2024-05-28",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.author">author</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.title">title</a>" : "International Patient Summary Genérico para uso en Chile",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.custodian">custodian</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:e80c16ae-eec7-4ff7-99c4-27e756ace6fa"
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.relatesTo">relatesTo</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.relatesTo.code">code</a>" : "appends",
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.relatesTo.target[x]">targetIdentifier</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.152.1.10.1",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "IPS-CL-2024-001"
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section">section</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.title">title</a>" : "Medicamentos",
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "10160-0",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "History of Medication use Narrative"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Historial de uso de medicamentos"
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;div&gt;&lt;b&gt;Medication Name&lt;/b&gt;: Aspirina (medicamento)&lt;/div&gt;&lt;div&gt;&lt;b&gt;Code&lt;/b&gt;: &lt;span&gt;7947003&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Status&lt;/b&gt;: &lt;span&gt;completed, started 2019-02-04&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Instructions: Administrar 500 mg por 3 días&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.title">title</a>" : "Alergias",
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "48765-2",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Allergies and adverse reactions Document"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Documento de alergias y reacciones adversas"
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;div&gt;&lt;b&gt;Allergy Name&lt;/b&gt;: Hierro y Clotrimazol&lt;/div&gt;&lt;div&gt;&lt;b&gt;Verification Status&lt;/b&gt;: Confirmado&lt;/div&gt;&lt;div&gt;&lt;b&gt;Reaction&lt;/b&gt;: &lt;span&gt;Gastritis y Dermatitis inflamatoria&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:4383be84-d431-47e1-85e7-80d995742514"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.title">title</a>" : "Problemas de salud - Condiciones",
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "11450-4",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Problem list - Reported"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Lista de problemas"
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.text">text</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;div&gt;&lt;b&gt;Condition Name&lt;/b&gt;: Hipertensión esencial benigna&lt;/div&gt;&lt;div&gt;&lt;b&gt;Code&lt;/b&gt;: &lt;span&gt;1201005&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Status&lt;/b&gt;: &lt;span&gt;Activa&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a",
+      "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "a4104fff-1237-4cc4-8b7e-6c4c235f282a",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-Paciente-cl-ips.html" style="color: Maroon">&#x1F517;</a> "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Paciente-cl-ips"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Patient_a4104fff-1237-4cc4-8b7e-6c4c235f282a\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Patient a4104fff-1237-4cc4-8b7e-6c4c235f282a&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;a4104fff-1237-4cc4-8b7e-6c4c235f282a\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hca4104fff-1237-4cc4-8b7e-6c4c235f282a\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;a4104fff-1237-4cc4-8b7e-6c4c235f282a-es-CL\&quot;&gt; &lt;/a&gt;&lt;p style=\&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\&quot;&gt;Valentina Ester Henriquez (official) Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))&lt;/p&gt;&lt;hr/&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;Record is active\&quot;&gt;Active:&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;true&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;background-color: #f3f5da\&quot; title=\&quot;Ways to contact the Patient\&quot;&gt;Contact Detail&lt;/td&gt;&lt;td colspan=\&quot;3\&quot;&gt;&lt;ul&gt;&lt;li&gt;ph: 932785678(Mobile)&lt;/li&gt;&lt;li&gt;Av. General Vidaurre, casa 84 G, playa ancha(home)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "152",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Chile"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "NNCHL",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Chile"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://regcivil.cl/Validacion/RUN",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "19.241.323-8"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.active">active</a>" : true,
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Henriquez",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Valentina",
+              "Ester"
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "932785678",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "mobile"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "female",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "1995-05-01",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.use">use</a>" : "home",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.text">text</a>" : "Av. General Vidaurre, casa 84 G, playa ancha",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "Av. General Vidaurre, casa 84 G"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Santiago Centro",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">_city</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#string#string.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "13101",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Santiago Centro"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "Metropolitana de Santiago",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">_state</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#string#string.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "13",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Metropolitana de Santiago"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "Chile",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">_country</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#string#string.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "152",
+                        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Chile"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc",
+      "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "503a0267-1cfd-44cc-a382-e052a78fa5cc",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-Prestador-cl-ips.html" style="color: Maroon">&#x1F517;</a> "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Practitioner_503a0267-1cfd-44cc-a382-e052a78fa5cc\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Practitioner 503a0267-1cfd-44cc-a382-e052a78fa5cc&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;503a0267-1cfd-44cc-a382-e052a78fa5cc\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc503a0267-1cfd-44cc-a382-e052a78fa5cc\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;503a0267-1cfd-44cc-a382-e052a78fa5cc-es-CL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: RUN/17435678-2\u00a0(use:\u00a0official,\u00a0)&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Nicolás Bastian Figueroa (Official)&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;mailto:DrNicolasB@hotmail.com\&quot;&gt;DrNicolasB@hotmail.com&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Qualifications&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Identifier&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;subesp&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:\&quot;&gt;Cirugía cardiovascular&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "01",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "RUN"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "17435678-2"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Figueroa",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Nicolás",
+              "Bastian"
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "DrNicolasB@hotmail.com",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification">qualification</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification.identifier">identifier</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "subesp"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Cirugía cardiovascular"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:e80c16ae-eec7-4ff7-99c4-27e756ace6fa",
+      "<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/organization.html">resourceType</a>" : "Organization",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.id">id</a>" : "e80c16ae-eec7-4ff7-99c4-27e756ace6fa",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-Organizacion-cl-ips.html" style="color: Maroon">&#x1F517;</a> "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Organization_e80c16ae-eec7-4ff7-99c4-27e756ace6fa\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Organization e80c16ae-eec7-4ff7-99c4-27e756ace6fa&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;e80c16ae-eec7-4ff7-99c4-27e756ace6fa\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hce80c16ae-eec7-4ff7-99c4-27e756ace6fa\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;e80c16ae-eec7-4ff7-99c4-27e756ace6fa-es-CL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc&lt;/code&gt;/3271&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Hospital Dr. Gustavo Fricke&lt;/p&gt;&lt;p&gt;&lt;b&gt;alias&lt;/b&gt;: Hospital Gustavo Fricke&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: ph: 322577571(Work)&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "3271"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a>" : "Hospital Dr. Gustavo Fricke",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.alias">alias</a>" : [
+          "Hospital Gustavo Fricke"
+        ],
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "322577571",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5",
+      "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html">resourceType</a>" : "MedicationStatement",
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.id">id</a>" : "f6759f7e-630f-400e-bbe2-c8378fa6a1a5",
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-RegMedicamentos-cl-ips.html" style="color: Maroon">&#x1F517;</a> "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;MedicationStatement_f6759f7e-630f-400e-bbe2-c8378fa6a1a5\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: MedicationStatement f6759f7e-630f-400e-bbe2-c8378fa6a1a5&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;f6759f7e-630f-400e-bbe2-c8378fa6a1a5\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcf6759f7e-630f-400e-bbe2-c8378fa6a1a5\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;f6759f7e-630f-400e-bbe2-c8378fa6a1a5-es-CL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;Bundle-Bundle-CL-Ejemplo.html#urn-uuid-edbe2197-1ead-44d3-b572-4b26de4fb427\&quot;&gt;Pastilla Aspirina&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Bundle-Bundle-CL-Ejemplo.html#urn-uuid-a4104fff-1237-4cc4-8b7e-6c4c235f282a\&quot;&gt;Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2019-02-04 --&amp;gt; 2019-02-07&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;dosage&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Administrar 500 mg/día&lt;/p&gt;&lt;p&gt;&lt;b&gt;timing&lt;/b&gt;: Once per 3 days&lt;/p&gt;&lt;p&gt;&lt;b&gt;route&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://standardterms.edqm.eu 20002500}\&quot;&gt;Vía de administración bucal&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;DoseAndRates&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Dose[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;500 mg&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  codemg = 'mg')&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Pastilla Aspirina"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.effective[x]">effectivePeriod</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2019-02-04",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2019-02-07"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement.dosage">dosage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.text">text</a>" : "Administrar 500 mg/día",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.timing">timing</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Timing#Timing.repeat">repeat</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Timing#Timing.repeat.frequency">frequency</a>" : 1,
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Timing#Timing.repeat.period">period</a>" : 3,
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Timing#Timing.repeat.periodUnit">periodUnit</a>" : "d"
+              }
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.route">route</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://standardterms.edqm.eu",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "20002500",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Buccal use"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Vía de administración bucal"
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.doseAndRate">doseAndRate</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.doseAndRate.dose[x]">doseQuantity</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a>" : 500,
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a>" : "mg",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">code</a>" : "mg"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427",
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.id">id</a>" : "edbe2197-1ead-44d3-b572-4b26de4fb427",
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-Medicamento-cl-ips.html" style="color: Maroon">&#x1F517;</a> "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Medication_edbe2197-1ead-44d3-b572-4b26de4fb427\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Medication edbe2197-1ead-44d3-b572-4b26de4fb427&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;edbe2197-1ead-44d3-b572-4b26de4fb427\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcedbe2197-1ead-44d3-b572-4b26de4fb427\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;edbe2197-1ead-44d3-b572-4b26de4fb427-es-CL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;Nombre Comercial Fármaco&lt;/b&gt;: Aspirina&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 7947003}\&quot;&gt;Aspirina (medicamento)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;form&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://standardterms.edqm.eu 10323000}\&quot;&gt;Pastilla&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/NombreComercial",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Aspirina"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "7947003",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Product containing aspirin (medicinal product)",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">_display</a>" : {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#string#string.extension">extension</a>" : [
+                  {
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">extension</a>" : [
+                      {
+                        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "lang",
+                        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "es"
+                      },
+                      {
+                        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "content",
+                        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Aspirina (medicamento)"
+                      }
+                    ],
+                    "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/translation"
+                  }
+                ]
+              }
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Aspirina (medicamento)"
+        },
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.form">form</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://standardterms.edqm.eu",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "10323000",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Pastille"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Pastilla"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:4383be84-d431-47e1-85e7-80d995742514",
+      "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html">resourceType</a>" : "AllergyIntolerance",
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.id">id</a>" : "4383be84-d431-47e1-85e7-80d995742514",
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-AllergiaInt-cl-ips.html" style="color: Maroon">&#x1F517;</a> "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;AllergyIntolerance_4383be84-d431-47e1-85e7-80d995742514\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: AllergyIntolerance 4383be84-d431-47e1-85e7-80d995742514&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;4383be84-d431-47e1-85e7-80d995742514\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc4383be84-d431-47e1-85e7-80d995742514\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;4383be84-d431-47e1-85e7-80d995742514-es-CL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\&quot;&gt;Activo&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;verificationStatus&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\&quot;&gt;Confirmado&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Allergy&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://www.whocc.no/atc A01AB18}\&quot;&gt;Clotrimazol&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Bundle-Bundle-CL-Ejemplo.html#urn-uuid-a4104fff-1237-4cc4-8b7e-6c4c235f282a\&quot;&gt;Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;onset&lt;/b&gt;: 11 años&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM  codea = 'a')&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.clinicalStatus">clinicalStatus</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "active",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Active"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Activo"
+        },
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.verificationStatus">verificationStatus</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "confirmed",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Confirmed"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Confirmado"
+        },
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.type">type</a>" : "allergy",
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://www.whocc.no/atc",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "A01AB18",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "clotrimazole"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Clotrimazol"
+        },
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.patient">patient</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a"
+        },
+        "<a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.onset[x]">onsetAge</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Age#Age.value">value</a>" : 11,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Age#Age.unit">unit</a>" : "años",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Age#Age.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Age#Age.code">code</a>" : "a"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350",
+      "<a href="http://hl7.org/fhir/R4/condition.html#Condition">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/condition.html">resourceType</a>" : "Condition",
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.id">id</a>" : "fd5676b3-0011-49a3-9c21-d1bd8458f350",
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-Condition-cl-ips.html" style="color: Maroon">&#x1F517;</a> "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;a name=\&quot;Condition_fd5676b3-0011-49a3-9c21-d1bd8458f350\&quot;&gt; &lt;/a&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Condition fd5676b3-0011-49a3-9c21-d1bd8458f350&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;fd5676b3-0011-49a3-9c21-d1bd8458f350\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcfd5676b3-0011-49a3-9c21-d1bd8458f350\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;fd5676b3-0011-49a3-9c21-d1bd8458f350-es-CL\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\&quot;&gt;Activa&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 75326-9}\&quot;&gt;Problema&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 1201005}\&quot;&gt;Hipertensión esencial benigna&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Bundle-Bundle-CL-Ejemplo.html#urn-uuid-a4104fff-1237-4cc4-8b7e-6c4c235f282a\&quot;&gt;Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;onset&lt;/b&gt;: 2023-08-04 --&amp;gt; (ongoing)&lt;/p&gt;&lt;/div&gt;"
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.clinicalStatus">clinicalStatus</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "active",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Active"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Activa"
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.category">category</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "75326-9",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Problem"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Problema"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1201005",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Benign essential hypertension"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Hipertensión esencial benigna"
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a"
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.onset[x]">onsetPeriod</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2023-08-04"
+        }
+      }
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7chile.cl">HL7 Chile</a>.  Package hl7.fhir.cl.clips#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 13, 2024 08:36-0300">2024-11-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Tabla de contenidos</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">Reporte QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7chile.cl/fhir/ig/clips/history.html">Historial de versiones</a></a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
