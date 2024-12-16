@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>HL7.FHIR.CL.CLIPS\Resumen Clínico del Paciente de Chile - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link href="fhir.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet" />
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet" />
+    <link href="assets/css/pygments-manni.css" rel="stylesheet" />
+    <link href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link href="assets/css/prism.css" rel="stylesheet" /> <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7chile.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async>
+</script>
+
+    <script type="text/javascript" src="fhir-table-scripts.js">
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="assets/ico/favicon.png" />
+</head>
+
+<!-- JORGE MANSILLA -->
+<!-- Google tag (gtag.js) -->
+<!-- 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDP1SHWXWT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KDP1SHWXWT');
+</script>
+-->
+<!-- Franco: Nota Para Mansilla Revisa este script genera errores al subir en Build -->
+
+
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">
+        h2 {
+            --heading-prefix:"1"
+        }
+        
+        h3,
+        h4,
+        h5,
+        h6 {
+            --heading-prefix:"1"
+        }
+    </style>
+    <div id="segment-header" class="segment">
+        <!-- segment-header -->
+        <div class="container">
+            <!-- container -->
+            <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+    <a id="hl7chile-logo" no-external="true" href="http://hl7chile.cl">
+        <img height="71" alt="Visitar HL7 Chile" src="assets/images/hl7chile-logo.png" />
+    </a>
+</div>
+<div id="family-nav">
+    <a id="hl7chile-logo" no-external="true" href="https://www.hl7.org/"><img height="60" alt="Visitar HL7 FHIR Internacional" src="assets/images/LOGO_FHIR.svg" /> </a>
+</div>
+
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+--> 
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Resumen Clínico de Paciente de Chile (IPS-CL)</span>
+                    <br/>
+                    <span style="display:inline-block;">0.3.0-ballot - STU2 Ballot 1
+
+
+
+  <img alt="Chile flag" src="assets/images/chl.svg" height="16" title="Chile"/>
+ 
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">
+        <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">
+            <!-- container -->
+            <!-- HEADER CONTENT -->
+
+            <nav class="navbar navbar-inverse">
+                <!--status-bar-->
+                <div class="container">
+                    <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+                    <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Inicio</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificaciones Negocio
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="EstructuraIPS.html">Estructura del IPS</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Especificaciones Técnicas
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="OperacionesIPS.html">Operaciones del IPS</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefactos</a>
+  </li>
+  <li>
+    <a href="changes.html">Historial de Cambios</a>
+  </li>
+</ul>
+                    </div>
+                    <!-- /.nav-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+            <!-- /HEADER CONTENT -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-navbar -->
+    <!--status-bar-->
+    
+    <div id="segment-breadcrumb" class="segment">
+        <!-- segment-breadcrumb -->
+        <div class="container">
+            <!-- container -->
+            <ul class="breadcrumb">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Resumen Clínico del Paciente de Chile</b></li> 
+            </ul>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">
+        <!-- segment-content -->
+        <div class="container">
+            <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Resumen Clinico de Paciente de Chile (v0.3.0-ballot: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>2 Ballot 1) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. .  For a full list of available versions, see the <a no-external="true" href="https://hl7chile.cl/fhir/ig/clips/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Resumen Clínico del Paciente de Chile</h2>
+  
+
+
+
+
+
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.3.0-ballot<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips|0.3.0-ballot"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2024-12-16
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">InternationalPatientSummaryChile</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#alcance" id="markdown-toc-alcance">Alcance</a></li>
+  <li><a href="#antecedentes" id="markdown-toc-antecedentes">Antecedentes</a></li>
+  <li><a href="#descripción" id="markdown-toc-descripción">Descripción</a></li>
+  <li><a href="#objetivo" id="markdown-toc-objetivo">Objetivo</a></li>
+  <li><a href="#perfiles" id="markdown-toc-perfiles">Perfiles</a></li>
+  <li><a href="#dependencias" id="markdown-toc-dependencias">Dependencias</a></li>
+  <li><a href="#analisis-de-versiones-cruzadas" id="markdown-toc-analisis-de-versiones-cruzadas">Analisis de versiones cruzadas</a></li>
+  <li><a href="#declaracion-de-propiedad-intelectual" id="markdown-toc-declaracion-de-propiedad-intelectual">Declaracion de propiedad intelectual</a></li>
+</ul>
+
+</div>
+<h3 id="alcance">Alcance</h3>
+
+<p>Está versión del resumen de paciente internacional (IPS, por sus siglas en inglés), busca ser una adaptación de la guía internacional y una base a nivel nacional. Tomando como referencia la misma guía <a href="https://hl7.org/fhir/uv/ips/">IPS</a> y la guía <a href="https://hl7chile.cl/fhir/ig/clcore/">Cl Core</a>.</p>
+
+<h3 id="antecedentes">Antecedentes</h3>
+
+<p>Un documento de Resumen de Paciente Internacional o IPS, por sus siglas en inglés, es un extracto de la historia clínica electrónica que contiene información esencial sobre la atención sanitaria de un sujeto de atención. Según lo especificado en EN 17269 e ISO 27269, está diseñado para apoyar el caso de uso de 'atención no planificada y transfronteriza', aunque no se limita a este escenario. Está pensado para ser internacional, es decir, para proporcionar soluciones genéricas de aplicación global más allá de una región o país particular.</p>
+
+<p>El conjunto de datos del IPS es mínimo y no exhaustivo; no está orientado a especialidades ni condicionado por enfermedades específicas; pero sigue siendo clínicamente relevante.</p>
+
+<p>El documento IPS está compuesto por un conjunto de elementos de datos básicos, bien definidos y potencialmente reutilizables (indicados como biblioteca IPS en la figura a continuación). El enfoque específico del IPS en la atención no planificada no es una limitación, sino que, por el contrario, facilita su potencial reutilización más allá del ámbito del IPS. Fuente: <em>International Patient Summary Implementation Guide</em> (<a href="https://hl7.org/fhir/uv/ips/">https://hl7.org/fhir/uv/ips/</a>)</p>
+
+<p><br /></p>
+<div align="center">
+  <img src="IPS_doc_library.png" style="width:70%" /> 
+  <p>El producto de un IPS y por productos (Fuente: International Patient Summary Implementation Guide)</p>
+</div>
+<p><br /></p>
+
+<h3 id="descripción">Descripción</h3>
+
+<p>Para adaptar el International Patient Summary (IPS) a una versión chilena, es fundamental integrar los lineamientos establecidos en la Guía CORE de Chile, desarrollada por HL7 Chile con el apoyo del Ministerio de Salud. Esta guía define los perfiles específicos para la interoperabilidad de datos de salud en el país, facilitando la comunicación entre distintos sistemas de información y asegurando que estos cumplan con las normativas y necesidades del sistema chileno.</p>
+
+<p>La incorporación de la Guía "CL CORE" en la Adaptación del "IPS", permite establecer un conjunto de perfiles FHIR específicos para datos clínicos que deben integrarse en el IPS chileno, garantizando su compatibilidad con los sistemas de salud locales. Esto implica utilizar los perfiles CORE para representar información como datos de pacientes, medicamentos, diagnósticos y alergias, alineando estos datos con las necesidades de interoperabilidad nacional.</p>
+
+<h3 id="objetivo">Objetivo</h3>
+
+<p>Esta guía tiene como objetivo proporcionar una traducción y adaptación del International Patient Summary (IPS) a la realidad chilena, estableciendo una base estandarizada para la creación de resúmenes clínicos nacionales. A través de esta implementación, se busca asegurar que tanto los sectores públicos como los privados puedan generar y compartir resúmenes clínicos con un alto grado de compatibilidad e interoperabilidad, independientemente de los sistemas de información en uso. Este marco permitirá sentar las bases para una historia clínica compartida, facilitando el intercambio seguro y eficiente de información entre prestadores de salud y promoviendo una atención continua y coordinada para los pacientes en todo el país.</p>
+
+<h3 id="perfiles">Perfiles</h3>
+
+<p><i>There are no Global profiles defined</i></p>
+<!--$$4$$-->
+
+<h3 id="dependencias">Dependencias</h3>
+
+<div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Implementation Guide Reference">IG</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Explains why this dependency exists">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.3.0-ballot\temp\pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <span title="Canonical: https://hl7chile.cl/fhir/ig/clips">Resumen Clínico de Paciente de Chile (IPS-CL)</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.cl.clips/0.3.0-ballot">hl7.fhir.cl.clips#0.3.0-ballot</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.3.0-ballot\temp\pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/6.1.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/6.1.0">hl7.terminology.r4#6.1.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on HL7 Terminology</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.3.0-ballot\temp\pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://hl7.org/fhir/extensions/5.1.0" title="Canonical: http://hl7.org/fhir/extensions">FHIR Extensions Pack</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.extensions.r4/5.1.0">hl7.fhir.uv.extensions.r4#5.1.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on the HL7 Extension Pack</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.3.0-ballot\temp\pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="https://hl7chile.cl/fhir/ig/clcore/1.9.2" title="Canonical: https://hl7chile.cl/fhir/ig/clcore">Guía de Implementación ''cl core'' FHIR R4, (Versión Evolutiva)</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.cl.clcore/1.9.2">hl7.fhir.cl.clcore#1.9.2</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.3.0-ballot\temp\pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://hl7.org/fhir/uv/ips/2024Sep" title="Canonical: http://hl7.org/fhir/uv/ips">International Patient Summary Implementation Guide</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.ips/2.0.0-ballot">hl7.fhir.uv.ips#2.0.0-ballot</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.3.0-ballot\temp\pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIZgEiYEgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAIElEQVQ4y2P8//8/AyWAiYFCMGrAqAGjBowaMGoAAgAALL0DKYQ0DPIAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/6.0.2" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/6.0.2">hl7.terminology.r4#6.0.2</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table></div>
+<table class="grid"><tr><td><p><b>Package hl7.fhir.uv.extensions.r4#5.1.0</b></p>
+<p>This IG defines the global extensions - the ones defined for everyone. These extensions are always in scope wherever FHIR is being used (built Sat, Apr 27, 2024 18:39+1000+10:00)</p>
+</td></tr></table>
+<table class="grid"><tr><td><p><b>Package hl7.fhir.cl.clcore#1.9.2</b></p>
+<p>Guía de Implementación Versión de Desarrollo Sobre STU 1, para los perfiles Core que se van a requerir a nivel de desarrollo Nacional para Sistemas que Intercambien datos en estandar FHIR-R4 (built Wed, Dec 11, 2024 10:23-0300-03:00)</p>
+</td></tr></table>
+<!--$$3$$-->
+
+<h3 id="analisis-de-versiones-cruzadas">Analisis de versiones cruzadas</h3>
+
+<p>This is an R4 IG. None of the features it uses are changed in R4B, so it can be used as is with R4B systems. Packages for both <a href="package.r4.tgz">R4 (hl7.fhir.cl.clips.r4)</a> and <a href="package.r4b.tgz">R4B (hl7.fhir.cl.clips.r4b)</a> are available.</p>
+<!--$$2$$-->
+
+<h3 id="declaracion-de-propiedad-intelectual">Declaracion de propiedad intelectual</h3>
+
+<p>This publication includes IP covered under the following statements.</p>
+<ul>
+<li>All content on ISO Online is copyright protected. The copyright is owned by ISO. Any use of the content, including copying of it in whole or in part, for example to another Internet site, is prohibited and would require written permission from ISO.<div id="ipp_1" onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_1" style="display: none">
+<ul>
+<li><a href="https://hl7chile.cl/fhir/ig/clcore/1.9.2/CodeSystem-CodPais.html">Códigos de Países</a>: <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a>, <a href="Organization-Organization-CL-Ejemplo.html">Centro de Salud Familiar Barón</a>, <a href="Organization-OrganizationHospital-CL-Ejemplo.html">Hospital Dr. Gustavo Fricke</a> and <a href="Patient-PacienteClIpsEjemplo.html">Patient/PacienteClIpsEjemplo</a></li>
+</ul>
+</div></li>
+<li>ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page: <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a><div id="ipp_2" onclick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_2" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>: <a href="StructureDefinition-AllergiaInt-cl-ips.html">AlergiaIntClIps</a>, <a href="StructureDefinition-Bundle-documento-ips-cl.html">BundleDocumentoIPSCl</a><span id="ips_2" onclick="document.getElementById('ips_2').innerHTML = document.getElementById('ips2_2').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 29 more</span></span><span id="ips2_2" style="display: none">, <a href="CapabilityStatement-cl-ips-server.html">ClIpsServerCapabilityStatement</a>, <a href="StructureDefinition-Condition-cl-ips.html">ConditionClIps</a>, <a href="StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html">DeclaracionUsoDispositivoClIps</a>, <a href="StructureDefinition-DiagnosticReport-cl-ips.html">DiagnosticReportClIps</a>, <a href="StructureDefinition-Dispositivo-cl-ips.html">DispositivoClIps</a>, <a href="StructureDefinition-Dispositivo-observador-cl-ips.html">DispositivoObservadorClIps</a>, <a href="StructureDefinition-Composition-cl-ips.html">DocumentoClIps</a>, <a href="StructureDefinition-Flag-alerta-cl-ips.html">FlagAlertClIps</a>, <a href="StructureDefinition-ImagingStudy-cl-ips.html">ImagingStudyClIps</a>, <a href="StructureDefinition-Inmunizacion-cl-ips.html">InmunizacionClIps</a>, InternationalPatientSummaryChile, <a href="OperationDefinition-IpsClSummary.html">IpsClSummary</a>, <a href="StructureDefinition-Medicamento-cl-ips.html">MedicamentoClIps</a>, <a href="StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html">ObservationEmbarazoFechaEstimadaDePartoClIps</a>, <a href="StructureDefinition-Observation-estado-del-embarazo-cl-ips.html">ObservationEstadoEmbarazoClIps</a>, <a href="StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html">ObservationResultadoEmbarazoClIps</a>, <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">ObservationResultadoLaboratorioPatologiaClIps</a>, <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">ObservationResultadoRadiologyClIps</a>, <a href="StructureDefinition-Observation-uso-de-alcohol-cl-ips.html">ObservationUsoAlcoholClIps</a>, <a href="StructureDefinition-Observation-uso-de-tabaco-cl-ips.html">ObservationUsoTabacoClIps</a>, <a href="StructureDefinition-Organizacion-cl-ips.html">OrganizacionClIps</a>, <a href="StructureDefinition-Paciente-cl-ips.html">PacienteCLIps</a>, <a href="StructureDefinition-Parametros-entradas-ips-cl.html">ParametrosDeEntradasIPS</a>, <a href="StructureDefinition-MedicationRequest-cl-ips.html">PrescripcionClIps</a>, <a href="StructureDefinition-Prestador-cl-ips.html">PrestadorClIps</a>, <a href="StructureDefinition-Procedimientos-cl-ips.html">ProcedimientosClIps</a>, <a href="StructureDefinition-RegMedicamentos-cl-ips.html">RegMedicamentosClIps</a>, <a href="StructureDefinition-RolPrestador-cl-ips.html">RolPrestadorClIps</a> and <a href="StructureDefinition-Specimen-cl-ips.html">SpecimentClIPS</a></span></li>
+</ul>
+</div></li>
+<li>The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a><div id="ipp_3" onclick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_3" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ucum.html">Unified Code for Units of Measure (UCUM)</a>: <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a>, <a href="MedicationRequest-MedicationRequest-CL-Ejemplo.html">MedicationRequest/MedicationRequest-CL-Ejemplo</a>, <a href="MedicationStatement-MedicationStatement-CL-Ejemplo.html">MedicationStatement/MedicationStatement-CL-Ejemplo</a>, <a href="Observation-LabPatologia-CL-Ejemplo.html">Observation/LabPatologia-CL-Ejemplo</a> and <a href="Observation-ObservacionConsumoAlcoholEjemplo.html">Observation/ObservacionConsumoAlcoholEjemplo</a></li>
+</ul>
+</div></li>
+<li>These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright &copy; 2011 by the National Electrical Manufacturers Association.<div id="ipp_4" onclick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_4" style="display: none">
+<ul>
+<li><a href="http://hl7.org/fhir/R4/codesystem-dicom-dcim.html">DICOM Controlled Terminology Definitions</a>: <a href="ImagingStudy-EstudioImagenologiaCLEjemplo.html">ImagingStudy/EstudioImagenologiaCLEjemplo</a>, <a href="Observation-ResultadoRadiologyCLEjemplo.html">Observation/ResultadoRadiologyCLEjemplo</a> and <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">ObservationResultadoRadiologyClIps</a></li>
+</ul>
+</div></li>
+<li>This material contains content from <a href="http://loinc.org">LOINC</a>. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the <a href="http://loinc.org/license">license</a>. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.<div id="ipp_5" onclick="if (document.getElementById('ipp2_5').innerHTML != '') {document.getElementById('ipp_5').innerHTML = document.getElementById('ipp2_5').innerHTML; document.getElementById('ipp2_5').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_5" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-loinc.html">LOINC</a>: <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a>, <a href="Composition-Composition-CL-Ejemplo.html">Composition/Composition-CL-Ejemplo</a><span id="ips_5" onclick="document.getElementById('ips_5').innerHTML = document.getElementById('ips2_5').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 20 more</span></span><span id="ips2_5" style="display: none">, <a href="Condition-Condition-CL-Ejemplo.html">Condition/Condition-CL-Ejemplo</a>, <a href="DiagnosticReport-DiagnosticReportAlergia-CL-Ejemplo.html">DiagnosticReport/DiagnosticReportAlergia-CL-Ejemplo</a>, <a href="DiagnosticReport-DiagnosticReportLab-CL-Ejemplo.html">DiagnosticReport/DiagnosticReportLab-CL-Ejemplo</a>, <a href="StructureDefinition-Composition-cl-ips.html">DocumentoClIps</a>, <a href="ImagingStudy-EstudioImagenologiaCLEjemplo.html">ImagingStudy/EstudioImagenologiaCLEjemplo</a>, <a href="StructureDefinition-ImagingStudy-cl-ips.html">ImagingStudyClIps</a>, <a href="Observation-LabPatologia-CL-Ejemplo.html">Observation/LabPatologia-CL-Ejemplo</a>, <a href="Observation-ObservacionConsumoAlcoholEjemplo.html">Observation/ObservacionConsumoAlcoholEjemplo</a>, <a href="Observation-ObservacionConsumoTabacoEjemplo.html">Observation/ObservacionConsumoTabacoEjemplo</a>, <a href="Observation-ObservacionEstadoEmbarazoEjemplo.html">Observation/ObservacionEstadoEmbarazoEjemplo</a>, <a href="Observation-ObservacionFechaEstimadaPartoEjemplo.html">Observation/ObservacionFechaEstimadaPartoEjemplo</a>, <a href="Observation-ObservacionResultadoEmbarazoEjemplo.html">Observation/ObservacionResultadoEmbarazoEjemplo</a>, <a href="Observation-ResultadoRadiologyCLEjemplo.html">Observation/ResultadoRadiologyCLEjemplo</a>, <a href="StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html">ObservationEmbarazoFechaEstimadaDePartoClIps</a>, <a href="StructureDefinition-Observation-estado-del-embarazo-cl-ips.html">ObservationEstadoEmbarazoClIps</a>, <a href="StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html">ObservationResultadoEmbarazoClIps</a>, <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">ObservationResultadoLaboratorioPatologiaClIps</a>, <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">ObservationResultadoRadiologyClIps</a>, <a href="StructureDefinition-Observation-uso-de-alcohol-cl-ips.html">ObservationUsoAlcoholClIps</a> and <a href="StructureDefinition-Observation-uso-de-tabaco-cl-ips.html">ObservationUsoTabacoClIps</a></span></li>
+</ul>
+</div></li>
+<li>This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a> or <a href="mailto:info@snomed.org">info@snomed.org</a>.<div id="ipp_6" onclick="if (document.getElementById('ipp2_6').innerHTML != '') {document.getElementById('ipp_6').innerHTML = document.getElementById('ipp2_6').innerHTML; document.getElementById('ipp2_6').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_6" style="display: none">
+<ul>
+<li><a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED Clinical Terms&amp;reg; (SNOMED CT&amp;reg;)</a>: <a href="StructureDefinition-AllergiaInt-cl-ips.html">AlergiaIntClIps</a>, <a href="AllergyIntolerance-Alergia-CL-Ejemplo.html">AllergyIntolerance/Alergia-CL-Ejemplo</a><span id="ips_6" onclick="document.getElementById('ips_6').innerHTML = document.getElementById('ips2_6').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 25 more</span></span><span id="ips2_6" style="display: none">, <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a>, <a href="Condition-Condition-CL-Ejemplo.html">Condition/Condition-CL-Ejemplo</a>, <a href="StructureDefinition-Condition-cl-ips.html">ConditionClIps</a>, <a href="Device-Dispositivo-CL-Ejemplo.html">Device/Dispositivo-CL-Ejemplo</a>, <a href="Device-DispositivoEjecutanteObservador-CL-Ejemplo.html">Device/DispositivoEjecutanteObservador-CL-Ejemplo</a>, <a href="DeviceUseStatement-DeclaracionUsoDispositivo-CL-Ejemplo.html">DeviceUseStatement/DeclaracionUsoDispositivo-CL-Ejemplo</a>, <a href="StructureDefinition-Dispositivo-cl-ips.html">DispositivoClIps</a>, <a href="Flag-FlagAlertEjemplo.html">Flag/FlagAlertEjemplo</a>, <a href="ImagingStudy-EstudioImagenologiaCLEjemplo.html">ImagingStudy/EstudioImagenologiaCLEjemplo</a>, <a href="Immunization-Inmunizacion-CL-Ejemplo.html">Immunization/Inmunizacion-CL-Ejemplo</a>, <a href="StructureDefinition-Inmunizacion-cl-ips.html">InmunizacionClIps</a>, <a href="StructureDefinition-Medicamento-cl-ips.html">MedicamentoClIps</a>, <a href="Medication-MedicamentoCLEjemplo.html">Medication/MedicamentoCLEjemplo</a>, <a href="Observation-ObservacionConsumoTabacoEjemplo.html">Observation/ObservacionConsumoTabacoEjemplo</a>, <a href="Observation-ObservacionEstadoEmbarazoEjemplo.html">Observation/ObservacionEstadoEmbarazoEjemplo</a>, <a href="StructureDefinition-Observation-estado-del-embarazo-cl-ips.html">ObservationEstadoEmbarazoClIps</a>, <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">ObservationResultadoLaboratorioPatologiaClIps</a>, <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">ObservationResultadoRadiologyClIps</a>, <a href="StructureDefinition-Observation-uso-de-tabaco-cl-ips.html">ObservationUsoTabacoClIps</a>, <a href="StructureDefinition-MedicationRequest-cl-ips.html">PrescripcionClIps</a>, <a href="StructureDefinition-Procedimientos-cl-ips.html">ProcedimientosClIps</a>, <a href="Procedure-ProcedimientoCLEjemplo.html">Procedure/ProcedimientoCLEjemplo</a>, <a href="StructureDefinition-RegMedicamentos-cl-ips.html">RegMedicamentosClIps</a>, <a href="Specimen-SpecimenCLEjemplo.html">Specimen/SpecimenCLEjemplo</a> and <a href="StructureDefinition-Specimen-cl-ips.html">SpecimentClIPS</a></span></li>
+</ul>
+</div></li>
+<li>This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a><div id="ipp_7" onclick="if (document.getElementById('ipp2_7').innerHTML != '') {document.getElementById('ipp_7').innerHTML = document.getElementById('ipp2_7').innerHTML; document.getElementById('ipp2_7').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_7" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a>: <a href="AllergyIntolerance-Alergia-CL-Ejemplo.html">AllergyIntolerance/Alergia-CL-Ejemplo</a> and <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-allergyintolerance-verification.html">AllergyIntolerance Verification Status</a>: <a href="AllergyIntolerance-Alergia-CL-Ejemplo.html">AllergyIntolerance/Alergia-CL-Ejemplo</a> and <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-condition-category.html">Condition Category Codes</a>: <a href="StructureDefinition-Condition-cl-ips.html">ConditionClIps</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>: <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a> and <a href="Condition-Condition-CL-Ejemplo.html">Condition/Condition-CL-Ejemplo</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-data-absent-reason.html">DataAbsentReason</a>: <a href="StructureDefinition-DiagnosticReport-cl-ips.html">DiagnosticReportClIps</a> and <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">ObservationResultadoLaboratorioPatologiaClIps</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-flag-category.html">Flag Category</a>: <a href="Flag-FlagAlertEjemplo.html">Flag/FlagAlertEjemplo</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-observation-category.html">Observation Category Codes</a>: <a href="Observation-LabPatologia-CL-Ejemplo.html">Observation/LabPatologia-CL-Ejemplo</a>, <a href="Observation-ResultadoRadiologyCLEjemplo.html">Observation/ResultadoRadiologyCLEjemplo</a>, <a href="StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html">ObservationResultadoLaboratorioPatologiaClIps</a> and <a href="StructureDefinition-Observation-resultado-radiology-cl-ips.html">ObservationResultadoRadiologyClIps</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v2-0074.html">diagnosticServiceSectionId</a>: <a href="DiagnosticReport-DiagnosticReportAlergia-CL-Ejemplo.html">DiagnosticReport/DiagnosticReportAlergia-CL-Ejemplo</a> and <a href="DiagnosticReport-DiagnosticReportLab-CL-Ejemplo.html">DiagnosticReport/DiagnosticReportLab-CL-Ejemplo</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v2-0916.html">relevantClincialInformation</a>: <a href="Specimen-SpecimenCLEjemplo.html">Specimen/SpecimenCLEjemplo</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActClass.html">ActClass</a>: <a href="StructureDefinition-Composition-cl-ips.html">DocumentoClIps</a></li>
+<li><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ParticipationType.html">ParticipationType</a>: <a href="ImagingStudy-EstudioImagenologiaCLEjemplo.html">ImagingStudy/EstudioImagenologiaCLEjemplo</a></li>
+</ul>
+</div></li>
+<li>Usado con el permiso de HL7 International, todos los derechos resevados en los Licencias de HL7 Internacional.<div id="ipp_8" onclick="if (document.getElementById('ipp2_8').innerHTML != '') {document.getElementById('ipp_8').innerHTML = document.getElementById('ipp2_8').innerHTML; document.getElementById('ipp2_8').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_8" style="display: none">
+<ul>
+<li><a href="https://hl7chile.cl/fhir/ig/clcore/1.9.2/CodeSystem-CSCodComunasCL.html">Códigos de Comunas en Chile</a>: <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a>, <a href="Organization-Organization-CL-Ejemplo.html">Centro de Salud Familiar Barón</a>, <a href="Organization-OrganizationHospital-CL-Ejemplo.html">Hospital Dr. Gustavo Fricke</a> and <a href="Patient-PacienteClIpsEjemplo.html">Patient/PacienteClIpsEjemplo</a></li>
+<li><a href="https://hl7chile.cl/fhir/ig/clcore/1.9.2/CodeSystem-CSCodRegionCL.html">Códigos de Regiones en Chile</a>: <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a>, <a href="Organization-Organization-CL-Ejemplo.html">Centro de Salud Familiar Barón</a>, <a href="Organization-OrganizationHospital-CL-Ejemplo.html">Hospital Dr. Gustavo Fricke</a> and <a href="Patient-PacienteClIpsEjemplo.html">Patient/PacienteClIpsEjemplo</a></li>
+<li><a href="https://hl7chile.cl/fhir/ig/clcore/1.9.2/CodeSystem-CSCodigoDNI.html">Códigos de Documentos DNI para LATAM y el Caribe</a>: <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a> and <a href="Patient-PacienteClIpsEjemplo.html">Patient/PacienteClIpsEjemplo</a></li>
+<li><a href="https://hl7chile.cl/fhir/ig/clcore/1.9.2/CodeSystem-CSCodigoVacunas.html">Códigos de Vacunas RNI</a>: <a href="Immunization-Inmunizacion-CL-Ejemplo.html">Immunization/Inmunizacion-CL-Ejemplo</a></li>
+<li><a href="https://hl7chile.cl/fhir/ig/clcore/1.9.2/CodeSystem-CSEspecialidadesDeisCL.html">Códigos de Especialidades</a>: <a href="PractitionerRole-RolProfesionalCLEjemplo.html">PractitionerRole/RolProfesionalCLEjemplo</a> and <a href="PractitionerRole-RolProfesionalMedInternaCLEjemplo.html">PractitionerRole/RolProfesionalMedInternaCLEjemplo</a></li>
+<li><a href="https://hl7chile.cl/fhir/ig/clcore/1.9.2/CodeSystem-CSTipoIdentificador.html">Tipo Identificador</a>: <a href="Bundle-Bundle-CL-Ejemplo.html">Bundle/Bundle-CL-Ejemplo</a>, <a href="Practitioner-PrestadorMedFamiliarClIpsEjemplo.html">Practitioner/PrestadorMedFamiliarClIpsEjemplo</a> and <a href="Practitioner-PrestadorMedInternaClIpsEjemplo.html">Practitioner/PrestadorMedInternaClIpsEjemplo</a></li>
+</ul>
+</div></li>
+</ul>
+<!--$$1$$-->
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://hl7chile.cl">HL7 Chile</a>.  Package hl7.fhir.cl.clips#0.3.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Dec 16, 2024 09:46-0300">2024-12-16</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Tabla de contenidos</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="qa.html">Reporte QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://hl7chile.cl/fhir/ig/clips/history.html">Historial de versiones</a></a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

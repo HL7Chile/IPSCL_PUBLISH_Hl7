@@ -1,0 +1,58 @@
+{
+  "resourceType" : "ImagingStudy",
+  "id" : "EstudioImagenologiaCLEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImagingStudy EstudioImagenologiaCLEjemplo</b></p><a name=\"EstudioImagenologiaCLEjemplo\"> </a><a name=\"hcEstudioImagenologiaCLEjemplo\"> </a><a name=\"EstudioImagenologiaCLEjemplo-es-CL\"> </a><p><b>status</b>: Registered</p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>started</b>: 2014-07-09</p><p><b>procedureCode</b>: <span title=\"Codes:{http://loinc.org 103284-6}\">Radiografía portátil de abdomen 2 vistas</span></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 2919008}\">Náuseas, vómitos y diarrea.</span></p><blockquote><p><b>series</b></p><p><b>uid</b>: 2.16.124.113543.6003.2588828330.45298.17418.2723805630</p><p><b>modality</b>: <a href=\"http://hl7.org/fhir/R4/codesystem-dicom-dcim.html#dicom-dcim-DX\">DICOM DX</a>: Digital Radiography</p><p><b>bodySite</b>: <a href=\"http://snomed.info/id/818983003\">SNOMED CT 818983003</a>: Abdomen</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType CON}\">Consultante: Realiza evaluación inicial y recomendaciones</span></td><td><a href=\"Organization-OrganizationHospital-CL-Ejemplo.html\">Organization Hospital Dr. Gustavo Fricke</a></td></tr></table></blockquote></div>"
+  },
+  "status" : "registered",
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "started" : "2014-07-09",
+  "procedureCode" : [{
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "103284-6",
+      "display" : "Portable XR Abdomen 2 Views"
+    }],
+    "text" : "Radiografía portátil de abdomen 2 vistas"
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "2919008",
+      "display" : "Nausea, vomiting and diarrhea"
+    }],
+    "text" : "Náuseas, vómitos y diarrea."
+  }],
+  "series" : [{
+    "uid" : "2.16.124.113543.6003.2588828330.45298.17418.2723805630",
+    "modality" : {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "DX",
+      "display" : "Digital Radiography"
+    },
+    "bodySite" : {
+      "system" : "http://snomed.info/sct",
+      "code" : "818983003",
+      "display" : "Abdomen"
+    },
+    "performer" : [{
+      "function" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+          "code" : "CON",
+          "display" : "consultant"
+        }],
+        "text" : "Consultante: Realiza evaluación inicial y recomendaciones"
+      },
+      "actor" : {
+        "reference" : "Organization/OrganizationHospital-CL-Ejemplo"
+      }
+    }]
+  }]
+}

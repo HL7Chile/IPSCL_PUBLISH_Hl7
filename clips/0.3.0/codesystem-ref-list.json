@@ -1,0 +1,123 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://dicom.nema.org/resources/ontology/DCM",
+      "version" : "01",
+      "status" : "active",
+      "name" : "DICOM Controlled Terminology Definitions",
+      "title" : null,
+      "description" : "DICOM Code Definitions (Coding Scheme Designator \"DCM\" Coding Scheme Version \"01\")",
+      "oids" : ["1.2.840.10008.2.16.4"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-radiology-txtobs-uv-ips.html" : "Results Radiology Textual Observation - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-radiology-numobs-uv-ips.html" : "Results Radiology Measurement Observation - IPS"
+    },
+    {
+      "url" : "http://hl7.org/fhir/observation-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationStatus",
+      "title" : "ObservationStatus",
+      "description" : "Codes providing the status of an observation.",
+      "oids" : ["2.16.840.1.113883.4.642.4.401"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-status-uv-ips.html" : "Results Status Codes - IPS"
+    },
+    {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-radiology-observations-uv-ips.html" : "Results Radiology Observation - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-edd-method-uv-ips.html" : "Pregnancy Expected Delivery Date Method - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-pregnancies-summary-uv-ips.html" : "Pregnancies Summary - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-problem-type-loinc.html" : "Problem Type (LOINC)",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-radiology-txtobs-uv-ips.html" : "Results Radiology Textual Observation - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-laboratory-pathology-observations-uv-ips.html" : "Results Laboratory/Pathology Observation - IPS"
+    },
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-problems-uv-ips.html" : "Problems - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-medication-uv-ips.html" : "Medications - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-coded-values-laboratory-pathology-uv-ips.html" : "Results Coded Values Laboratory/Pathology - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-allergy-reaction-uv-ips.html" : "Allergy Reaction - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-specimen-type-uv-ips.html" : "Results Specimen Type - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-body-site-uv-ips.html" : "Body Site - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-vaccines-uv-ips.html" : "Vaccines - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-medical-devices-uv-ips.html" : "Medical Devices - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-target-diseases-uv-ips.html" : "Vaccine Target Diseases - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-specimen-collection-method-uv-ips.html" : "Results Specimen Collection Method - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-pregnancy-status-uv-ips.html" : "Pregnancy Status - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-procedures-uv-ips.html" : "Procedures - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-radiology-txtobs-uv-ips.html" : "Results Radiology Textual Observation - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-results-radiology-numobs-uv-ips.html" : "Results Radiology Measurement Observation - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-allergy-intolerance-uv-ips.html" : "Allergy Intolerance - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-current-smoking-status-uv-ips.html" : "Current Smoking Status - IPS",
+      "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
+      "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "ConditionCategoryCodes",
+      "title" : "Condition Category Codes",
+      "description" : "Preferred value set for Condition Categories.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1073"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-problem-type-uv-ips.html" : "Problem Type - IPS"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "DataAbsentReason",
+      "title" : "DataAbsentReason",
+      "description" : "Used to specify why the normally expected content of the data element is missing.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1048"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-data-absent-reason.html" : "DataAbsentReason"
+    },
+    {
+      "url" : "http://www.whocc.no/atc",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "WC",
+      "title" : "WHO ATC",
+      "description" : "WHO ATC",
+      "oids" : ["2.16.840.1.113883.6.73"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-whoatc-uv-ips.html" : "WHO ATC - IPS",
+      "http://hl7.org/fhir/uv/ips/2024Sep/ValueSet-vaccines-whoatc-uv-ips.html" : "Vaccines WHO ATC - IPS"
+    },
+    {
+      "url" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoVacunas",
+      "version" : "1.9.2",
+      "status" : "active",
+      "name" : "CSTiposVacunaCL",
+      "title" : "Códigos de Vacunas RNI",
+      "description" : "Códigos de las vacunas o inmunizaciones según indicaciones del Ministerio de Salud",
+      "uses" : {
+      },
+      "https://hl7chile.cl/fhir/ig/clcore/1.9.2/ValueSet-VSTiposVacunas.html" : "Tipos de Vacunas RNI"
+    }
+  ]
+}

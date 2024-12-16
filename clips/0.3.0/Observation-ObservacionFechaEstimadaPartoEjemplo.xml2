@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ObservacionFechaEstimadaPartoEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ObservacionFechaEstimadaPartoEjemplo</b></p><a name="ObservacionFechaEstimadaPartoEjemplo"> </a><a name="hcObservacionFechaEstimadaPartoEjemplo"> </a><a name="ObservacionFechaEstimadaPartoEjemplo-es-CL"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 11778-8}">Fecha estimada de parto</span></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>effective</b>: 2023-01-20</p><p><b>performer</b>: <a href="Practitioner-PrestadorMedFamiliarClIpsEjemplo.html">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>value</b>: 2023-10-02</p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11778-8"/>
+      <display value="Delivery date Estimated"/>
+    </coding>
+    <text value="Fecha estimada de parto"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <effectiveDateTime value="2023-01-20"/>
+  <performer>
+    <reference value="Practitioner/PrestadorMedFamiliarClIpsEjemplo"/>
+  </performer>
+  <valueDateTime value="2023-10-02"/>
+</Observation>

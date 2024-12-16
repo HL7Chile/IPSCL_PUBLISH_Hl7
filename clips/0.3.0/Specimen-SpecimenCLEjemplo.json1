@@ -1,0 +1,74 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "SpecimenCLEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Specimen-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen SpecimenCLEjemplo</b></p><a name=\"SpecimenCLEjemplo\"> </a><a name=\"hcSpecimenCLEjemplo\"> </a><a name=\"SpecimenCLEjemplo-es-CL\"> </a><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119297000}\">Muestra de sangre</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Method</b></td><td><b>BodySite</b></td><td><b>FastingStatus[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 129300006}\">Pinchazo</span></td><td><span title=\"Codes:{http://snomed.info/sct 49852007}\">Vena cubital media</span></td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0916 F}\">El paciente estaba en ayunas antes del procedimiento.</span></td></tr></table></div>"
+  },
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119297000",
+      "display" : "Blood specimen",
+      "_display" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "es"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Muestra de sangre"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    }],
+    "text" : "Muestra de sangre"
+  },
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "collection" : {
+    "method" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "129300006",
+        "display" : "Puncture - action",
+        "_display" : {
+          "extension" : [{
+            "extension" : [{
+              "url" : "lang",
+              "valueCode" : "es"
+            },
+            {
+              "url" : "content",
+              "valueString" : "Pinchazo"
+            }],
+            "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+          }]
+        }
+      }],
+      "text" : "Pinchazo"
+    },
+    "bodySite" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "49852007",
+        "display" : "Median cubital vein"
+      }],
+      "text" : "Vena cubital media"
+    },
+    "fastingStatusCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0916",
+        "code" : "F",
+        "display" : "Patient was fasting prior to the procedure."
+      }],
+      "text" : "El paciente estaba en ayunas antes del procedimiento."
+    }
+  }
+}

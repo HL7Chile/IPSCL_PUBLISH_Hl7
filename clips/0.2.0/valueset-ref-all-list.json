@@ -26,8 +26,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.95"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)"
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
+      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
@@ -41,8 +41,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.97"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)"
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
+      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
@@ -145,8 +145,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.346"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)"
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
+      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/body-site",
@@ -160,18 +160,18 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html" : "Declaración de uso del dispositivo (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
-      "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
-      "StructureDefinition-Inmunizacion-cl-ips.html" : "Immunización (IPS-CL)",
-      "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
       "StructureDefinition-ImagingStudy-cl-ips.html" : "Estudio de Imagenología (IPS-Cl)",
+      "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
+      "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
       "StructureDefinition-Condition-cl-ips.html" : "Condición (IPS-CL)",
-      "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
+      "StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html" : "Declaración de uso del dispositivo (IPS-CL)",
       "StructureDefinition-Procedimientos-cl-ips.html" : "Procedimientos (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
+      "StructureDefinition-Inmunizacion-cl-ips.html" : "Immunización (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/bodysite-laterality",
@@ -269,8 +269,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.161"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
       "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
+      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
       "StructureDefinition-Procedimientos-cl-ips.html" : "Procedimientos (IPS-CL)"
     },
     {
@@ -387,14 +387,14 @@
       "sources" : ["2.16.840.1.113883.4.642.3.5"],
       "uses" : {
       },
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
-      "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
       "StructureDefinition-DiagnosticReport-cl-ips.html" : "Reporte Diagnóstico (IPS-CL)",
+      "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
       "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
@@ -607,8 +607,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.981"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)"
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
+      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/event-status",
@@ -708,8 +708,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.57"],
       "uses" : {
       },
-      "StructureDefinition-Paciente-cl-ips.html" : "Paciente (IPS-CL)",
       "StructureDefinition-Medicamento-cl-ips.html" : "Medicamento (IPS-CL)",
+      "StructureDefinition-Paciente-cl-ips.html" : "Paciente (IPS-CL)",
       "StructureDefinition-Prestador-cl-ips.html" : "Prestador Individual (IPS-CL)",
       "StructureDefinition-Organizacion-cl-ips.html" : "Organización (IPS-CL)"
     },
@@ -843,34 +843,34 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html" : "Declaración de uso del dispositivo (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
-      "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Composition-cl-ips.html" : "Documento (IPS-CL)",
-      "StructureDefinition-DiagnosticReport-cl-ips.html" : "Reporte Diagnóstico (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
-      "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
-      "StructureDefinition-Procedimientos-cl-ips.html" : "Procedimientos (IPS-CL)",
-      "StructureDefinition-Bundle-documento-ips-cl.html" : "Bundle Resumen Clínico",
-      "StructureDefinition-Dispositivo-observador-cl-ips.html" : "Dispositivo - Ejecutante, Observador (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
-      "StructureDefinition-Parametros-entradas-ips-cl.html" : "Parametros De Entradas IPS Summary",
-      "StructureDefinition-Inmunizacion-cl-ips.html" : "Immunización (IPS-CL)",
-      "StructureDefinition-Medicamento-cl-ips.html" : "Medicamento (IPS-CL)",
-      "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
-      "StructureDefinition-ImagingStudy-cl-ips.html" : "Estudio de Imagenología (IPS-Cl)",
-      "StructureDefinition-Organizacion-cl-ips.html" : "Organización (IPS-CL)",
-      "StructureDefinition-Paciente-cl-ips.html" : "Paciente (IPS-CL)",
-      "StructureDefinition-RolPrestador-cl-ips.html" : "Función o Rol de Prestador Individual (IPS-CL)",
-      "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
-      "StructureDefinition-Flag-alerta-cl-ips.html" : "Flag - Alerta (IPS-CL)",
       "StructureDefinition-Dispositivo-cl-ips.html" : "Dispositivo (IPS-CL)",
-      "StructureDefinition-AllergiaInt-cl-ips.html" : "Alergias e Intolerancias (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
-      "StructureDefinition-Speciment-cl-ips.html" : "Muestra (IPS-CL)",
-      "StructureDefinition-Prestador-cl-ips.html" : "Prestador Individual (IPS-CL)",
+      "StructureDefinition-DiagnosticReport-cl-ips.html" : "Reporte Diagnóstico (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
+      "StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html" : "Declaración de uso del dispositivo (IPS-CL)",
       "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-Condition-cl-ips.html" : "Condición (IPS-CL)"
+      "StructureDefinition-Procedimientos-cl-ips.html" : "Procedimientos (IPS-CL)",
+      "StructureDefinition-Organizacion-cl-ips.html" : "Organización (IPS-CL)",
+      "StructureDefinition-Bundle-documento-ips-cl.html" : "Bundle Resumen Clínico",
+      "StructureDefinition-Inmunizacion-cl-ips.html" : "Immunización (IPS-CL)",
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
+      "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
+      "StructureDefinition-Speciment-cl-ips.html" : "Muestra (IPS-CL)",
+      "StructureDefinition-Composition-cl-ips.html" : "Documento (IPS-CL)",
+      "StructureDefinition-Paciente-cl-ips.html" : "Paciente (IPS-CL)",
+      "StructureDefinition-Flag-alerta-cl-ips.html" : "Flag - Alerta (IPS-CL)",
+      "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
+      "StructureDefinition-ImagingStudy-cl-ips.html" : "Estudio de Imagenología (IPS-Cl)",
+      "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Parametros-entradas-ips-cl.html" : "Parametros De Entradas IPS Summary",
+      "StructureDefinition-RolPrestador-cl-ips.html" : "Función o Rol de Prestador Individual (IPS-CL)",
+      "StructureDefinition-Condition-cl-ips.html" : "Condición (IPS-CL)",
+      "StructureDefinition-Prestador-cl-ips.html" : "Prestador Individual (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
+      "StructureDefinition-Dispositivo-observador-cl-ips.html" : "Dispositivo - Ejecutante, Observador (IPS-CL)",
+      "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Medicamento-cl-ips.html" : "Medicamento (IPS-CL)",
+      "StructureDefinition-AllergiaInt-cl-ips.html" : "Alergias e Intolerancias (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -971,8 +971,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.96"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)"
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
+      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
@@ -1135,13 +1135,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.403"],
       "uses" : {
       },
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
       "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
       "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -1155,13 +1155,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.396"],
       "uses" : {
       },
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
       "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
       "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -1177,13 +1177,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.399"],
       "uses" : {
       },
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
       "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
       "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -1197,13 +1197,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.395"],
       "uses" : {
       },
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
       "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
       "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -1217,11 +1217,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.400"],
       "uses" : {
       },
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
       "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/organization-type",
@@ -1394,13 +1394,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.407"],
       "uses" : {
       },
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
       "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
       "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -1416,13 +1416,13 @@
       "sources" : ["2.16.840.1.113883.4.642.3.397"],
       "uses" : {
       },
-      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
       "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
       "StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.html" : "Observación Resultado: Laboratorio/Patología (IPS-CL)",
-      "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/report-codes",
@@ -1464,26 +1464,26 @@
       "sources" : ["2.16.840.1.113883.4.642.3.27"],
       "uses" : {
       },
-      "StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html" : "Declaración de uso del dispositivo (IPS-CL)",
-      "StructureDefinition-Paciente-cl-ips.html" : "Paciente (IPS-CL)",
+      "StructureDefinition-Dispositivo-cl-ips.html" : "Dispositivo (IPS-CL)",
+      "StructureDefinition-DiagnosticReport-cl-ips.html" : "Reporte Diagnóstico (IPS-CL)",
+      "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
       "StructureDefinition-Observation-uso-de-alcohol-cl-ips.html" : "Observación - SH: Uso de Alcohol (IPS CL)",
       "StructureDefinition-RolPrestador-cl-ips.html" : "Función o Rol de Prestador Individual (IPS-CL)",
-      "StructureDefinition-Composition-cl-ips.html" : "Documento (IPS-CL)",
-      "StructureDefinition-DiagnosticReport-cl-ips.html" : "Reporte Diagnóstico (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
-      "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
-      "StructureDefinition-Procedimientos-cl-ips.html" : "Procedimientos (IPS-CL)",
-      "StructureDefinition-Dispositivo-cl-ips.html" : "Dispositivo (IPS-CL)",
-      "StructureDefinition-AllergiaInt-cl-ips.html" : "Alergias e Intolerancias (IPS-CL)",
       "StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips.html" : "Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)",
-      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
-      "StructureDefinition-Speciment-cl-ips.html" : "Muestra (IPS-CL)",
-      "StructureDefinition-Inmunizacion-cl-ips.html" : "Immunización (IPS-CL)",
-      "StructureDefinition-Medicamento-cl-ips.html" : "Medicamento (IPS-CL)",
-      "StructureDefinition-Observation-estado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Estado (IPS-CL)",
-      "StructureDefinition-Prestador-cl-ips.html" : "Prestador Individual (IPS-CL)",
+      "StructureDefinition-Condition-cl-ips.html" : "Condición (IPS-CL)",
+      "StructureDefinition-Declaracion-uso-dispositivo-cl-ips.html" : "Declaración de uso del dispositivo (IPS-CL)",
       "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-Condition-cl-ips.html" : "Condición (IPS-CL)"
+      "StructureDefinition-Prestador-cl-ips.html" : "Prestador Individual (IPS-CL)",
+      "StructureDefinition-Observation-uso-de-tabaco-cl-ips.html" : "Observación - SH: Uso de tabaco (IPS CL)",
+      "StructureDefinition-Procedimientos-cl-ips.html" : "Procedimientos (IPS-CL)",
+      "StructureDefinition-Inmunizacion-cl-ips.html" : "Immunización (IPS-CL)",
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
+      "StructureDefinition-Speciment-cl-ips.html" : "Muestra (IPS-CL)",
+      "StructureDefinition-Observation-resultado-del-embarazo-cl-ips.html" : "Observación - Embarazo: Resultados (IPS-CL)",
+      "StructureDefinition-Composition-cl-ips.html" : "Documento (IPS-CL)",
+      "StructureDefinition-Medicamento-cl-ips.html" : "Medicamento (IPS-CL)",
+      "StructureDefinition-Paciente-cl-ips.html" : "Paciente (IPS-CL)",
+      "StructureDefinition-AllergiaInt-cl-ips.html" : "Alergias e Intolerancias (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/route-codes",
@@ -1692,9 +1692,9 @@
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
       "StructureDefinition-Medicamento-cl-ips.html" : "Medicamento (IPS-CL)",
-      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)"
+      "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform",
@@ -1718,9 +1718,9 @@
       "systems" : ["http://standardterms.edqm.eu"],
       "uses" : {
       },
-      "StructureDefinition-Inmunizacion-cl-ips.html" : "Immunización (IPS-CL)",
+      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)",
       "StructureDefinition-MedicationRequest-cl-ips.html" : "Solicitud de medicación (IPS-CL)",
-      "StructureDefinition-RegMedicamentos-cl-ips.html" : "Declaración de medicación (IPS-CL)"
+      "StructureDefinition-Inmunizacion-cl-ips.html" : "Immunización (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips",
@@ -1843,8 +1843,8 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)",
-      "StructureDefinition-ImagingStudy-cl-ips.html" : "Estudio de Imagenología (IPS-Cl)"
+      "StructureDefinition-ImagingStudy-cl-ips.html" : "Estudio de Imagenología (IPS-Cl)",
+      "StructureDefinition-Observation-resultado-radiology-cl-ips.html" : "Observación Resultado: Imagenológico (IPS-CL)"
     },
     {
       "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-txtobs-uv-ips",

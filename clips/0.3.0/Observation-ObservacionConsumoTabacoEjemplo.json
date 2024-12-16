@@ -1,0 +1,35 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObservacionConsumoTabacoEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-tabaco-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ObservacionConsumoTabacoEjemplo</b></p><a name=\"ObservacionConsumoTabacoEjemplo\"> </a><a name=\"hcObservacionConsumoTabacoEjemplo\"> </a><a name=\"ObservacionConsumoTabacoEjemplo-es-CL\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 72166-2}\">Estado de tabaquismo</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2020-08-10</p><p><b>performer</b>: <a href=\"Practitioner-PrestadorMedFamiliarClIpsEjemplo.html\">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 428041000124106}\">Fumador ocasional de tabaco</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "72166-2",
+      "display" : "Tobacco smoking status"
+    }],
+    "text" : "Estado de tabaquismo"
+  },
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "effectiveDateTime" : "2020-08-10",
+  "performer" : [{
+    "reference" : "Practitioner/PrestadorMedFamiliarClIpsEjemplo"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "428041000124106",
+      "display" : "Occasional tobacco smoker"
+    }],
+    "text" : "Fumador ocasional de tabaco"
+  }
+}

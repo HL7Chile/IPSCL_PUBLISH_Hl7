@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="Inmunizacion-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es"><p class="res-header-id"><b>Generated Narrative: Immunization Inmunizacion-CL-Ejemplo</b></p><a name="Inmunizacion-CL-Ejemplo"> </a><a name="hcInmunizacion-CL-Ejemplo"> </a><a name="Inmunizacion-CL-Ejemplo-es-CL"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: es</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Inmunizacion-cl-ips.html">Inmunización (IPS-CL)</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title="Codes:{http://snomed.info/sct 871765008}, {https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoVacunas vacunaSRPTrivMonodos}">Vacuna contra el sarampión</span></p><p><b>patient</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>occurrence</b>: 2005-04-23</p><p><b>site</b>: <span title="Codes:{http://snomed.info/sct 368208006}">Brazo izquierdo</span></p><p><b>route</b>: <span title="Codes:{http://standardterms.edqm.eu 20066000}">Uso subcutáneo</span></p></div>
+  </text>
+  <status value="completed"/>
+  <vaccineCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="871765008"/>
+      <display value="Measles vaccine">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="es"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Vacuna contra el sarampión"/>
+          </extension>
+        </extension>
+      </display>
+    </coding>
+    <coding>
+      <system value="https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoVacunas"/>
+      <code value="vacunaSRPTrivMonodos"/>
+      <display value="Vacuna SRP (trivirica) Monodosis"/>
+    </coding>
+    <text value="Vacuna contra el sarampión"/>
+  </vaccineCode>
+  <patient>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </patient>
+  <occurrenceDateTime value="2005-04-23"/>
+  <site>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="368208006"/>
+      <display value="Left upper arm structure (body structure)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="es"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Brazo izquierdo"/>
+          </extension>
+        </extension>
+      </display>
+    </coding>
+    <text value="Brazo izquierdo"/>
+  </site>
+  <route>
+    <coding>
+      <system value="http://standardterms.edqm.eu"/>
+      <code value="20066000"/>
+      <display value="Subcutaneous use">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="es"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Uso subcutáneo"/>
+          </extension>
+        </extension>
+      </display>
+    </coding>
+    <text value="Uso subcutáneo"/>
+  </route>
+</Immunization>

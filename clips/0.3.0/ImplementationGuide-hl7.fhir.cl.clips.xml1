@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.cl.clips"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide hl7.fhir.cl.clips</b></p><a name="hl7.fhir.cl.clips"> </a><a name="hchl7.fhir.cl.clips"> </a><a name="hl7.fhir.cl.clips-es-CL"> </a><h2>InternationalPatientSummaryChile</h2><p>The official URL for this implementation guide is: </p><pre>https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips</pre><div><p>Guía IPS homologada para la realidad Chilena.</p>
+</div></div>
+  </text>
+  <url value="https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"/>
+  <version value="0.3.0-ballot"/>
+  <name value="InternationalPatientSummaryChile"/>
+  <title value="Resumen Clínico de Paciente de Chile (IPS-CL)"/>
+  <status value="active"/>
+  <date value="2024-12-16T09:46:05-03:00"/>
+  <publisher value="HL7 Chile"/>
+  <contact>
+    <name value="HL7 Chile"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7chile.cl"/>
+    </telecom>
+  </contact>
+  <description value="Guía IPS homologada para la realidad Chilena."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CL"/>
+      <display value="Chile"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.cl.clips"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="6.1.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.1.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_cl_clcore">
+    <uri value="https://hl7chile.cl/fhir/ig/clcore/ImplementationGuide/hl7.fhir.cl.clcore"/>
+    <packageId value="hl7.fhir.cl.clcore"/>
+    <version value="1.9.2"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_ips">
+    <uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+    <packageId value="hl7.fhir.uv.ips"/>
+    <version value="2.0.0-ballot"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2024+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU2 Ballot 1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://hl7chile.cl/fhir/ig/clips/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#0.3.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2024+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU2 Ballot 1"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://hl7chile.cl/fhir/ig/clips/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AllergyIntolerance"/>
+      </extension>
+      <reference>
+        <reference value="AllergyIntolerance/Alergia-CL-Ejemplo"/>
+      </reference>
+      <name value="Alergias - Ejemplo"/>
+      <description value="Ejemplo sobre el padecimiento de una o más alergias por parte del paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/AllergiaInt-cl-ips"/>
+      </reference>
+      <name value="Alergias e Intolerancias (IPS-CL)"/>
+      <description value="Este perfil restringe el recurso de Alergias e Intolerancias para representar este modelo a nivel nacional"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Flag"/>
+      </extension>
+      <reference>
+        <reference value="Flag/FlagAlertEjemplo"/>
+      </reference>
+      <name value="Alerta Paciente- Ejemplo"/>
+      <description value="Ejemplo de una alerta sobre un problema  que sufre el paciente"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/Bundle-CL-Ejemplo"/>
+      </reference>
+      <name value="Bundle - Ejemplo"/>
+      <description value="Ejemplo sobre un documento clínico tipo Bundle que representa el conjunto mínimo de datos para el Resumen Internacional de Pacientes (IPS)."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Bundle-documento-ips-cl"/>
+      </reference>
+      <name value="Bundle Resumen Clínico"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso Bundle por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), incluyendo restricciones locales de chile, para ser aplicado a nivel nacional."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/cl-ips-server"/>
+      </reference>
+      <name value="CapabilityStatement Servidor del Resumen Clínico de Paciente de Chile"/>
+      <description value="CapabilityStatement para definir las caracteristicas mínimas del servidor para ver las interacciones posibles"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/Composition-CL-Ejemplo"/>
+      </reference>
+      <name value="Composition - Ejemplo"/>
+      <description value="Ejemplo sobre un documento clínico que representa un conjunto de datos para el Resumen Internacional de Pacientes (IPS)."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Composition-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Condition-cl-ips"/>
+      </reference>
+      <name value="Condición (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso Condition por la Guía de Implementación FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un registro de un problema se representa en el resumen del paciente como una instancia del recurso Condition restringido por este perfil.&#xD;&#xA;&#xD;&#xA;Representación de un problema en el resumen internacional del paciente."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/Condition-CL-Ejemplo"/>
+      </reference>
+      <name value="Condición - Ejemplo"/>
+      <description value="Ejemplo de una condición que padece el paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/RegMedicamentos-cl-ips"/>
+      </reference>
+      <name value="Declaración de medicación (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso MedicationStatement según la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una declaración de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationStatement restringido por este perfil."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Declaracion-uso-dispositivo-cl-ips"/>
+      </reference>
+      <name value="Declaración de uso del dispositivo (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso DeviceUseStatement por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL). Una declaración sobre un dispositivo utilizado por el paciente o implantado en él se describe en el resumen del paciente como una instancia de un recurso DeviceUseStatement restringido por este perfil."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DeviceUseStatement"/>
+      </extension>
+      <reference>
+        <reference value="DeviceUseStatement/DeclaracionUsoDispositivo-CL-Ejemplo"/>
+      </reference>
+      <name value="Declaración Uso Dispositivo - Ejemplo"/>
+      <description value="Ejemplo sobre la declaración de uso de un dispositivo médico"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Dispositivo-cl-ips"/>
+      </reference>
+      <name value="Dispositivo (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso Device por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación de Chile (IPS-CL). Un dispositivo utilizado por el paciente o implantado en él se describe como una instancia del recurso Device restringido por este perfil."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Dispositivo-observador-cl-ips"/>
+      </reference>
+      <name value="Dispositivo - Ejecutante, Observador (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso Device por la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL).&#xD;&#xA;&#xD;&#xA;Este perfil describe un dispositivo que desempeña el papel de observador o ejecutante."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Device"/>
+      </extension>
+      <reference>
+        <reference value="Device/DispositivoEjecutanteObservador-CL-Ejemplo"/>
+      </reference>
+      <name value="Dispositivo - Ejecutante, Observador Ejemplo"/>
+      <description value="Ejemplo sobre un dispositivo médico en rol de observador o ejecutante"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-observador-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Device"/>
+      </extension>
+      <reference>
+        <reference value="Device/Dispositivo-CL-Ejemplo"/>
+      </reference>
+      <name value="Dispositivo Médico - Ejemplo"/>
+      <description value="Ejemplo sobre el dispositivo médico que utiliza el paciente"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Dispositivo-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Composition-cl-ips"/>
+      </reference>
+      <name value="Documento (IPS-CL)"/>
+      <description value="Documento clínico utilizado para representar el conjunto de datos del Resumen Internacional de Pacientes (IPS). &#xA;Un documento de Resumen Internacional de Paciente (IPS) es un extracto de historia clínica electrónica que contiene información sanitaria esencial sobre un sujeto de atención. &#xA;El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especialidad y la afección; pero sigue siendo clínicamente relevante. Tal como se especifica en las normas EN 17269 e ISO 27269, está diseñado para apoyar el caso de uso de la «atención transfronteriza no planificada», pero no se limita a él. Pretende ser internacional, es decir, ofrecer soluciones genéricas para su aplicación global más allá de una región o país concretos."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/PacienteClIpsEjemplo"/>
+      </reference>
+      <name value="Ejemplo de Paciente CL - IPS"/>
+      <description value="Ejemplo de paciente según el estándar IPS nacional"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Paciente-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/PrestadorMedFamiliarClIpsEjemplo"/>
+      </reference>
+      <name value="Ejemplo de Prestador Medicina Familiar CL - IPS"/>
+      <description value="Ejemplo de prestador de medicina familiar que atiende al paciente según el estándar IPS nacional"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/PrestadorMedInternaClIpsEjemplo"/>
+      </reference>
+      <name value="Ejemplo de Prestador Medicina Interna CL - IPS"/>
+      <description value="Ejemplo de prestador de medicina interna que atiende al paciente según el estándar IPS nacional"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ImagingStudy-cl-ips"/>
+      </reference>
+      <name value="Estudio de Imagenología (IPS-Cl)"/>
+      <description value="Estudio de imagenología realizado a un paciente, del cual se obtiene despues una observación para un reporte diagnóstico"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ImagingStudy"/>
+      </extension>
+      <reference>
+        <reference value="ImagingStudy/EstudioImagenologiaCLEjemplo"/>
+      </reference>
+      <name value="Estudio de imagenología - Ejemplo"/>
+      <description value="Ejemplo sobre el estudio imagenológico de un paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Flag-alerta-cl-ips"/>
+      </reference>
+      <name value="Flag - Alerta (IPS-CL)"/>
+      <description value="Este perfil limita el recurso Flag según la Guía de implementación de FHIR del Resumen Internacional del Paciente Adaptación Chile (IPS-CL). Un registro de una alerta se representa en el resumen del paciente como una instancia de un recurso Flag restringido por este perfil. &#xA;&#xA;Flag se utiliza para transmitir información sobre una alerta específica de una IPS. La información se marca para crear conciencia sobre posibles preocupaciones o peligros para/del sujeto de la IPS. Pone la información en primer plano y puede hacer referencia a otra información del resumen (a través de la extensión supportedInfo), así como también presentar obstáculos para la atención."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/RolPrestador-cl-ips"/>
+      </reference>
+      <name value="Función o Rol de Prestador Individual (IPS-CL)"/>
+      <description value="Este perfil restringe el recurso profesional para representar a un profesional que actúa como observador de resultaos expresados"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Inmunizacion-cl-ips"/>
+      </reference>
+      <name value="Inmunización (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso Inmunización por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS). Un registro de una vacunación se representa en el resumen del paciente como una instancia de un recurso Inmunización restringido por este perfil.&#xA;&#xA;Describe el evento de un paciente al que se le ha administrado una vacuna o un registro de una vacuna notificado por un paciente, un clínico u otra parte."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Immunization"/>
+      </extension>
+      <reference>
+        <reference value="Immunization/Inmunizacion-CL-Ejemplo"/>
+      </reference>
+      <name value="Inmunización - Ejemplo"/>
+      <description value="Ejemplo sobre las inmunizaciones que posee el paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/IpsClSummary"/>
+      </reference>
+      <name value="IPS-Cl Summary"/>
+      <description value="Esta operación devuelve un documento IPS en respuesta a una solicitud POST/GET (ver Operaciones FHIR). El documento devuelto **PUEDE** generarse bajo demanda y **DEBERÍA** representar la información más reciente disponible. Esta operación no necesariamente crearía una instancia IPS persistida en el servidor que responde a la solicitud. Cuando se desean registros históricos u otros documentos, esta operación no es adecuada. Para operaciones alternativas y guía sobre la generación de IPS, consulte **IPS Generation and Data Inclusion**.&#xA;&#xA;Generalmente, cuando se conoce el id lógico de un paciente, ese id se utilizaría para solicitar el resumen del paciente desde un servidor FHIR (ver patrón [id] a continuación). Cuando no se conoce, los servidores **PUEDEN** admitir el uso de otros identificadores (ver el parámetro identifier a continuación), por ejemplo un RUT.&#xA;&#xA;El servidor **DEBE** permitir el uso del perfil del [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html).&#xA;&#xA;Está operación nace de la operación [IPS Summary](https://hl7.org/fhir/uv/ips/2024Sep/OperationDefinition-summary.html) pero especificada para el caso de uso nacional de Chile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/LabPatologia-CL-Ejemplo"/>
+      </reference>
+      <name value="Laboratorio Patología - Ejemplo"/>
+      <description value="Ejemplo de una observación sobre un resultado proveniente del laboratorio de patología."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Medicamento-cl-ips"/>
+      </reference>
+      <name value="Medicamento (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso Medicamento por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un medicamento se describe en el resumen del paciente como una instancia de un recurso Medicamento restringido por este perfil."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/MedicamentoCLEjemplo"/>
+      </reference>
+      <name value="Medicamento - Ejemplo"/>
+      <description value="Ejemplo sobre un medicamento que utiliza el paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/MedicationRequest-CL-Ejemplo"/>
+      </reference>
+      <name value="Medication Request - Ejemplo"/>
+      <description value="Ejemplo sobre la solicitud de medicación relacionada con un paciente. Esta es prescrita por un profesional de salud"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/MedicationStatement-CL-Ejemplo"/>
+      </reference>
+      <name value="Medication Statement - Ejemplo"/>
+      <description value="Ejemplo sobre la declaración de uso de medicación del paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Specimen-cl-ips"/>
+      </reference>
+      <name value="Muestra (IPS-CL)"/>
+      <description value="Muestra por la cual hicieron el estudio"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/SpecimenCLEjemplo"/>
+      </reference>
+      <name value="Muestra - Ejemplo"/>
+      <description value="Ejemplo sobre una muestra biológica que se le extrajo al paciente para posteriormente hacer un estudio."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Specimen-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-estado-del-embarazo-cl-ips"/>
+      </reference>
+      <name value="Observación - Embarazo: Estado (IPS-CL)"/>
+      <description value="Este perfil restringe el recurso Observation para representar el estado del embarazo."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips"/>
+      </reference>
+      <name value="Observación - Embarazo: Fecha Estimada de Parto (IPS-CL)"/>
+      <description value="Este perfil restringe el recurso Observation para representar la fecha de parto estimada de un embarazo."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-resultado-del-embarazo-cl-ips"/>
+      </reference>
+      <name value="Observación - Embarazo: Resultados (IPS-CL)"/>
+      <description value="Este perfil restringe el recurso Observation para representar un resumen de resultados del embarazo."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-uso-de-alcohol-cl-ips"/>
+      </reference>
+      <name value="Observación - SH: Uso de Alcohol (IPS CL)"/>
+      <description value="Este perfil restringe el recurso Observation para representar la evaluación del consumo de alcohol del paciente."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-uso-de-tabaco-cl-ips"/>
+      </reference>
+      <name value="Observación - SH: Uso de tabaco (IPS CL)"/>
+      <description value="Este perfil restringe el recurso Observation para representar la evaluación del consumo de tabaco del paciente."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-resultado-radiology-cl-ips"/>
+      </reference>
+      <name value="Observación Resultado: Imagenológico (IPS-CL)"/>
+      <description value="Resultados obtenidos para un examen imagenológico"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips"/>
+      </reference>
+      <name value="Observación Resultado: Laboratorio/Patología (IPS-CL)"/>
+      <description value="Resultados obtenidos para un examen de laboratorio"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObservacionConsumoAlcoholEjemplo"/>
+      </reference>
+      <name value="Observación: Consumo de Alcohol - Ejemplo"/>
+      <description value="Ejemplo de una observación sobre el consumo de alcohol del paciente"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObservacionConsumoTabacoEjemplo"/>
+      </reference>
+      <name value="Observación: Consumo de Tabaco - Ejemplo"/>
+      <description value="Ejemplo de una observación sobre el consumo de tabaco del paciente"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-tabaco-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObservacionEstadoEmbarazoEjemplo"/>
+      </reference>
+      <name value="Observación: Estado del embarazo - Ejemplo"/>
+      <description value="Ejemplo de una observación sobre el estado del embarazo"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-estado-del-embarazo-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObservacionFechaEstimadaPartoEjemplo"/>
+      </reference>
+      <name value="Observación: Fecha Estimada de Parto - Ejemplo"/>
+      <description value="Ejemplo de una observación sobre la fecha estimada de parto"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ObservacionResultadoEmbarazoEjemplo"/>
+      </reference>
+      <name value="Observación: Resultado de Embarazo - Ejemplo"/>
+      <description value="Ejemplo de una observación sobre un resumen de los resultados de embarazo del paciente"/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Organizacion-cl-ips"/>
+      </reference>
+      <name value="Organización (IPS-CL)"/>
+      <description value="Este perfil restringe el recurso Organización para representar a una organización que actúa como ejecutante u observador para una observación de resultados (laboratorio, patología o imagen), o como ejecutante para un procedimiento."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/Organization-CL-Ejemplo"/>
+      </reference>
+      <name value="Organización - Ejemplo"/>
+      <description value="Ejemplo sobre la organización."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/OrganizationHospital-CL-Ejemplo"/>
+      </reference>
+      <name value="Organización Hospital - Ejemplo"/>
+      <description value="Ejemplo sobre la organización - Hospital."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Paciente-cl-ips"/>
+      </reference>
+      <name value="Paciente (IPS-CL)"/>
+      <description value="Perfil basado en IPS para paciente Chileno."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/Parametros-CL-Ejemplo"/>
+      </reference>
+      <name value="Parametros - Ejemplo"/>
+      <description value="Ejemplo sobre los parámetros de entrada para usar la operación Summary como un POST."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Parametros-entradas-ips-cl"/>
+      </reference>
+      <name value="Parametros De Entradas IPS Summary"/>
+      <description value="Parámetros de Entradas para usar la operación IPS-Summary de manera POST"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Prestador-cl-ips"/>
+      </reference>
+      <name value="Prestador Individual (IPS-CL)"/>
+      <description value="Este perfil restringe el recurso profesional para representar a un profesional que actúa como observador de resultados expresados."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/ProcedimientoCLEjemplo"/>
+      </reference>
+      <name value="Procedimiento - Ejemplo"/>
+      <description value="Ejemplo sobre un procedimiento al que se somete un paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Procedimientos-cl-ips"/>
+      </reference>
+      <name value="Procedimientos (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso Procedure por el proyecto IPS, el cual especifica una entrada en el Historial de Procedimientos para el resumen internacional del paciente basado en el estándar FHIR R4."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReportAlergia-CL-Ejemplo"/>
+      </reference>
+      <name value="Reporte Alergias (Diagnóstico) - Ejemplo"/>
+      <description value="Ejemplo de un reporte de un estudio diagnóstico de las alergias que padece el paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiagnosticReport-cl-ips"/>
+      </reference>
+      <name value="Reporte Diagnóstico (IPS-CL)"/>
+      <description value="Reporte resultado de un o varios estudios para diagnosticar una enfermedad. Este perfil es el simil al DiagnosticReport(IPS)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/DiagnosticReportLab-CL-Ejemplo"/>
+      </reference>
+      <name value="Reporte Laboratorio (Diagnóstico) - Ejemplo"/>
+      <description value="Ejemplo de un reporte de un estudio diagnóstico de alguna enfermedad que padece el paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ResultadoRadiologyCLEjemplo"/>
+      </reference>
+      <name value="Resultado de Radiología - Ejemplo"/>
+      <description value="Ejemplo sobre el resultado de radiología de un paciente."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/RolProfesionalCLEjemplo"/>
+      </reference>
+      <name value="Rol Profesional Medicina Familiar - Ejemplo"/>
+      <description value="Ejemplo sobre el rol de un profesional de la salud, específicamente de medicina familiar."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/RolProfesionalMedInternaCLEjemplo"/>
+      </reference>
+      <name value="Rol Profesional Medicina Interna - Ejemplo"/>
+      <description value="Ejemplo sobre el rol de un profesional de la salud, específicamente de medicina interna."/>
+      <exampleCanonical value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationRequest-cl-ips"/>
+      </reference>
+      <name value="Solicitud de medicación (IPS-CL)"/>
+      <description value="Este perfil representa las restricciones aplicadas al recurso MedicationRequest por la Guía de Implementación FHIR del Resumen Internacional del Paciente (IPS), basada en FHIR R4. Un registro de una solicitud de medicación se representa en el resumen del paciente como una instancia de un recurso MedicationRequest restringido por este perfil."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Resumen Clínico del Paciente de Chile"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="EstructuraIPS.html"/>
+        </extension>
+        <nameUrl value="EstructuraIPS.html"/>
+        <title value="Estructura del IPS"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="OperacionesIPS.html"/>
+        </extension>
+        <nameUrl value="OperacionesIPS.html"/>
+        <title value="Operaciones del IPS"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="artifacts.html"/>
+        </extension>
+        <nameUrl value="artifacts.html"/>
+        <title value="Artefactos Generados"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="changes.html"/>
+        </extension>
+        <nameUrl value="changes.html"/>
+        <title value="Historial de Cambios"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

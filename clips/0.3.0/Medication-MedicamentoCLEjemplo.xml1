@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="MedicamentoCLEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es"><p class="res-header-id"><b>Generated Narrative: Medication MedicamentoCLEjemplo</b></p><a name="MedicamentoCLEjemplo"> </a><a name="hcMedicamentoCLEjemplo"> </a><a name="MedicamentoCLEjemplo-es-CL"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: es</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Medicamento-cl-ips.html">Medicamento (IPS-CL)</a></p></div><p><b>Nombre Comercial Fármaco</b>: Aspirina</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 7947003}, {http://www.whocc.no/atc A01AD05}">Aspirina (medicamento)</span></p><p><b>status</b>: Inactive</p><p><b>form</b>: <span title="Codes:{http://standardterms.edqm.eu 10323000}">Pastilla</span></p></div>
+  </text>
+  <extension url="https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/NombreComercial">
+    <valueString value="Aspirina"/>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="7947003"/>
+      <display value="Product containing aspirin (medicinal product)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="es"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Aspirina (medicamento)"/>
+          </extension>
+        </extension>
+      </display>
+    </coding>
+    <coding>
+      <system value="http://www.whocc.no/atc"/>
+      <code value="A01AD05"/>
+      <display value="acetylsalicylic acid">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="es"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Ácido acetilsalicílico"/>
+          </extension>
+        </extension>
+      </display>
+    </coding>
+    <text value="Aspirina (medicamento)"/>
+  </code>
+  <status value="inactive"/>
+  <form>
+    <coding>
+      <system value="http://standardterms.edqm.eu"/>
+      <code value="10323000"/>
+      <display value="Pastille"/>
+    </coding>
+    <text value="Pastilla"/>
+  </form>
+</Medication>

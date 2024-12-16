@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Practitioner/PrestadorMedFamiliarClIpsEjemplo> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PrestadorMedFamiliarClIpsEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner PrestadorMedFamiliarClIpsEjemplo</b></p><a name=\"PrestadorMedFamiliarClIpsEjemplo\"> </a><a name=\"hcPrestadorMedFamiliarClIpsEjemplo\"> </a><a name=\"PrestadorMedFamiliarClIpsEjemplo-es-CL\"> </a><p><b>identifier</b>: RUN/12829325-k (use: official, )</p><p><b>name</b>: Catalina Alexandra Donoso (Official)</p><p><b>telecom</b>: <a href=\"mailto:DraCatalinaAle@hotmail.com\">DraCatalinaAle@hotmail.com</a></p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>esp</td><td><span title=\"Codes:\">Medicina Familiar</span></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "01" ] ;
+         fhir:display [ fhir:v "RUN" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "12829325-k" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Donoso" ] ;
+     fhir:given ( [ fhir:v "Catalina" ] [ fhir:v "Alexandra" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "DraCatalinaAle@hotmail.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:identifier ( [
+       fhir:value [ fhir:v "esp" ]
+     ] ) ;
+     fhir:code [
+       fhir:text [ fhir:v "Medicina Familiar" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

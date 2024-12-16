@@ -1,0 +1,79 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Organization/OrganizationHospital-CL-Ejemplo> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "OrganizationHospital-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization OrganizationHospital-CL-Ejemplo</b></p><a name=\"OrganizationHospital-CL-Ejemplo\"> </a><a name=\"hcOrganizationHospital-CL-Ejemplo\"> </a><a name=\"OrganizationHospital-CL-Ejemplo-es-CL\"> </a><p><b>identifier</b>: <code>https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc</code>/3271</p><p><b>name</b>: Hospital Dr. Gustavo Fricke</p><p><b>alias</b>: Hospital Gustavo Fricke</p><p><b>telecom</b>: ph: 322577571(Work)</p><p><b>address</b>: Calle 1532 Álvarez, Viña del Mar Viña del Mar Valparaíso Chile </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "3271" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Hospital Dr. Gustavo Fricke"] ; # 
+  fhir:alias ( [ fhir:v "Hospital Gustavo Fricke"] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "322577571" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "Calle 1532 Álvarez, Viña del Mar" ] ) ;
+     fhir:city [
+       fhir:v "Viña del Mar" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "05109" ] ;
+             fhir:display [ fhir:v "Viña del Mar" ]
+           ] )
+         ]
+       ] )
+     ] ;
+     fhir:state [
+       fhir:v "Valparaíso" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "05" ] ;
+             fhir:display [ fhir:v "Valparaíso" ]
+           ] )
+         ]
+       ] )
+     ] ;
+     fhir:country [
+       fhir:v "Chile" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "152" ] ;
+             fhir:display [ fhir:v "Chile" ]
+           ] )
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

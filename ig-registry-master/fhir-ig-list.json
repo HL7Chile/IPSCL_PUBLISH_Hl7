@@ -5816,13 +5816,14 @@
       "language" : ["en"],
       "canonical" : "https://hl7chile.cl/fhir/ig/clips",
       "ci-build" : "http://build.fhir.org/ig/HL7Chile/IPS-CL",
+      "product" : ["fhir", "fhir"],
       "editions" : [
         {
-          "name" : "STU1 Draft",
-          "ig-version" : "0.2.0",
-          "package" : "hl7.fhir.cl.clips#0.2.0",
+          "name" : "STU2 Ballot",
+          "ig-version" : "0.3.0-ballot",
+          "package" : "hl7.fhir.cl.clips#0.3.0-ballot",
           "fhir-version" : ["4.0.1"],
-          "url" : "https://hl7chile.cl/fhir/ig/clips/0.2.0"
+          "url" : "https://hl7chile.cl/fhir/ig/clips/0.3.0"
         }
       ]
     }

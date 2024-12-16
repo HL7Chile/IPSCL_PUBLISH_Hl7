@@ -1,0 +1,64 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Organization-CL-Ejemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Organization-CL-Ejemplo</b></p><a name=\"Organization-CL-Ejemplo\"> </a><a name=\"hcOrganization-CL-Ejemplo\"> </a><a name=\"Organization-CL-Ejemplo-es-CL\"> </a><p><b>identifier</b>: <code>https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc</code>/106302</p><p><b>name</b>: Centro de Salud Familiar Barón</p><p><b>alias</b>: CESFAM Barón</p><p><b>telecom</b>: ph: 800500520(Work)</p><p><b>address</b>: Calle 2370 Barros Luco Valparaíso Valparaíso Chile </p></div>"
+  },
+  "identifier" : [{
+    "system" : "https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc",
+    "value" : "106302"
+  }],
+  "name" : "Centro de Salud Familiar Barón",
+  "alias" : ["CESFAM Barón"],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "800500520",
+    "use" : "work"
+  }],
+  "address" : [{
+    "line" : ["Calle 2370 Barros Luco"],
+    "city" : "Valparaíso",
+    "_city" : {
+      "extension" : [{
+        "url" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL",
+            "code" : "05101",
+            "display" : "Valparaíso"
+          }]
+        }
+      }]
+    },
+    "state" : "Valparaíso",
+    "_state" : {
+      "extension" : [{
+        "url" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL",
+            "code" : "05",
+            "display" : "Valparaíso"
+          }]
+        }
+      }]
+    },
+    "country" : "Chile",
+    "_country" : {
+      "extension" : [{
+        "url" : "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais",
+            "code" : "152",
+            "display" : "Chile"
+          }]
+        }
+      }]
+    }
+  }]
+}

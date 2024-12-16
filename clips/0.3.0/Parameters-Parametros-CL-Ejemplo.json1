@@ -1,0 +1,18 @@
+{
+  "resourceType" : "Parameters",
+  "id" : "Parametros-CL-Ejemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl"]
+  },
+  "parameter" : [{
+    "name" : "identifier",
+    "valueIdentifier" : {
+      "system" : "http://regcivil.cl/Validacion/RUN",
+      "value" : "19.241.323-8"
+    }
+  },
+  {
+    "name" : "profile",
+    "valueUri" : "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Composition-cl-ips"
+  }]
+}

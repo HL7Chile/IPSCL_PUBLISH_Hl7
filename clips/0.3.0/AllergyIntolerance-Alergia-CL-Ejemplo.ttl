@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/AllergyIntolerance/Alergia-CL-Ejemplo> a fhir:AllergyIntolerance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Alergia-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance Alergia-CL-Ejemplo</b></p><a name=\"Alergia-CL-Ejemplo\"> </a><a name=\"hcAlergia-CL-Ejemplo\"> </a><a name=\"Alergia-CL-Ejemplo-es-CL\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Activo</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\">Confirmado</span></p><p><b>code</b>: <span title=\"Codes:{http://www.whocc.no/atc A01AB18}\">Clotrimazol</span></p><p><b>patient</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>onset</b>: 11 años<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codea = 'a')</span></p><p><b>recorder</b>: <a href=\"Practitioner-PrestadorMedInternaClIpsEjemplo.html\">Practitioner Nicolás Bastian Figueroa (official)</a></p><h3>Reactions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Manifestation</b></td><td><b>Severity</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 703938007}\">Dermatitis inflamatoria</span></td><td>Severe</td></tr></table></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Activo" ]
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] ) ;
+     fhir:text [ fhir:v "Confirmado" ]
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "A01AB18" ] ;
+       fhir:display [ fhir:v "clotrimazole" ]
+     ] ) ;
+     fhir:text [ fhir:v "Clotrimazol" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:Age ;
+     fhir:value [ fhir:v "11"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "años" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "a" ]
+  ] ; # 
+  fhir:recorder [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Practitioner/PrestadorMedInternaClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Practitioner/PrestadorMedInternaClIpsEjemplo" ]
+  ] ; # 
+  fhir:reaction ( [
+     fhir:manifestation ( [
+       fhir:coding ( [
+         a sct:703938007 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "703938007" ] ;
+         fhir:display [ fhir:v "Inflammatory dermatosis (disorder)" ]
+       ] ) ;
+       fhir:text [ fhir:v "Dermatitis inflamatoria" ]
+     ] ) ;
+     fhir:severity [ fhir:v "severe" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

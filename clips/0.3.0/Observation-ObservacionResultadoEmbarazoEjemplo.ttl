@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Observation/ObservacionResultadoEmbarazoEjemplo> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ObservacionResultadoEmbarazoEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ObservacionResultadoEmbarazoEjemplo</b></p><a name=\"ObservacionResultadoEmbarazoEjemplo\"> </a><a name=\"hcObservacionResultadoEmbarazoEjemplo\"> </a><a name=\"ObservacionResultadoEmbarazoEjemplo-es-CL\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 11640-0}\">[#] Nacimientos totales</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>effective</b>: 2022-08-18</p><p><b>performer</b>: <a href=\"Practitioner-PrestadorMedFamiliarClIpsEjemplo.html\">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>value</b>: 1 Hijo</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11640-0 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11640-0" ] ;
+       fhir:display [ fhir:v "[#] Births total" ]
+     ] ) ;
+     fhir:text [ fhir:v "[#] Nacimientos totales" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-08-18"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Practitioner/PrestadorMedFamiliarClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Practitioner/PrestadorMedFamiliarClIpsEjemplo" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "Hijo" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

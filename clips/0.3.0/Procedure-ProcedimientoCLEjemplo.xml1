@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="ProcedimientoCLEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Procedure ProcedimientoCLEjemplo</b></p><a name="ProcedimientoCLEjemplo"> </a><a name="hcProcedimientoCLEjemplo"> </a><a name="ProcedimientoCLEjemplo-es-CL"> </a><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Procedimiento quirúrgico</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 2598006}">Cirugía a corazón abierto</span></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>performed</b>: 2011-06-17</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-PrestadorMedInternaClIpsEjemplo.html">Practitioner Nicolás Bastian Figueroa (official)</a></td></tr></table><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 80891009}">Corazón</span></p></div>
+  </text>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+    <text value="Procedimiento quirúrgico"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="2598006"/>
+      <display value="Open heart surgery"/>
+    </coding>
+    <text value="Cirugía a corazón abierto"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <performedDateTime value="2011-06-17"/>
+  <performer>
+    <actor>
+      <reference value="Practitioner/PrestadorMedInternaClIpsEjemplo"/>
+    </actor>
+  </performer>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="80891009"/>
+      <display value="Heart structure"/>
+    </coding>
+    <text value="Corazón"/>
+  </bodySite>
+</Procedure>

@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/PractitionerRole/RolProfesionalCLEjemplo> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "RolProfesionalCLEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole RolProfesionalCLEjemplo</b></p><a name=\"RolProfesionalCLEjemplo\"> </a><a name=\"hcRolProfesionalCLEjemplo\"> </a><a name=\"RolProfesionalCLEjemplo-es-CL\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-PrestadorMedFamiliarClIpsEjemplo.html\">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>organization</b>: <a href=\"Organization-Organization-CL-Ejemplo.html\">Organization Centro de Salud Familiar Barón</a></p><p><b>specialty</b>: <span title=\"Codes:{https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialidadesDeisCL 28}\">Medicina Familiar</span></p></div>"
+  ] ; # 
+  fhir:practitioner [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Practitioner/PrestadorMedFamiliarClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Practitioner/PrestadorMedFamiliarClIpsEjemplo" ]
+  ] ; # 
+  fhir:organization [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Organization/Organization-CL-Ejemplo> ;
+     fhir:reference [ fhir:v "Organization/Organization-CL-Ejemplo" ]
+  ] ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialidadesDeisCL"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "28" ] ;
+       fhir:display [ fhir:v "Medicina Familiar" ]
+     ] ) ;
+     fhir:text [ fhir:v "Medicina Familiar" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,30 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Parameters/Parametros-CL-Ejemplo> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Parametros-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl>
+     ] )
+  ] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "identifier" ] ;
+     fhir:value [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "http://regcivil.cl/Validacion/RUN"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "19.241.323-8" ]
+     ]
+  ] [
+     fhir:name [ fhir:v "profile" ] ;
+     fhir:value [ fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Composition-cl-ips"^^xsd:anyURI ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

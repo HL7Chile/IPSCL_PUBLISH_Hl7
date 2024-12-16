@@ -4,12 +4,23 @@
 <description>New Packages published by HL7 Chile</description>
 <link>http://hl7chile.cl/fhir/ig/clips/package-feed.xml</link>
 <generator>HL7, Inc FHIR Publication tooling</generator>
-<lastBuildDate>Wed, 13 Nov 2024 08:35:08 -0300</lastBuildDate>
+<lastBuildDate>Mon, 16 Dec 2024 09:44:36 -0300</lastBuildDate>
 <atom:link href="http://hl7chile.cl/fhir/ig/clips/package-feed.xml" rel="self" type="application/rss+xml"/>
-<pubDate>Wed, 13 Nov 2024 08:35:08 -0300</pubDate>
+<pubDate>Mon, 16 Dec 2024 09:44:36 -0300</pubDate>
 <language>en</language>
 <ttl>600</ttl>
 
+    <item>
+      <title>hl7.fhir.cl.clips#0.3.0-ballot</title>
+      <description>Versión de Ballotaje para la conectatón 2025</description>
+      <link>https://hl7chile.cl/fhir/ig/clips/0.3.0/package.tgz</link>
+      <guid isPermaLink="true">https://hl7chile.cl/fhir/ig/clips/0.3.0/package.tgz</guid>
+      <dc:creator>HL7, Inc</dc:creator>
+      <fhir:version>4.0.1</fhir:version>
+      <fhir:kind>IG</fhir:kind>
+      <pubDate>Mon, 16 Dec 2024 09:44:36 -0300</pubDate>
+      <fhir:details>Publication run at 16/12/2024 by HU670_FULLOA using vVersion 1.8.1 (Git# 211ded24f613). Built 2024-12-10T06:06:00.400Z (6 days old) source id Unknown (todo) Run #3</fhir:details>
+    </item>
     <item>
       <title>hl7.fhir.cl.clips#0.2.0</title>
       <description>Versión de desarrollo</description>
@@ -18,7 +29,7 @@
       <dc:creator>HL7, Inc</dc:creator>
       <fhir:version>4.0.1</fhir:version>
       <fhir:kind>IG</fhir:kind>
-      <pubDate>Wed, 13 Nov 2024 08:35:08 -0300</pubDate>
-      <fhir:details>Publication run at 13/11/2024 by HU670_FULLOA using vVersion 1.7.1 (Git# 74ea670a3891). Built 2024-10-25T03:52:19.844Z (19 days old) source id Unknown (todo) Run #2</fhir:details>
+      <pubDate>Thu, 14 Nov 2024 07:43:21 -0300</pubDate>
+      <fhir:details>Publication run at 14/11/2024 by HU670_FULLOA using vVersion 1.7.2 (Git# a53365dccbf0). Built 2024-11-12T22:35:14.748Z (36 hours old) source id Unknown (todo) Run #2</fhir:details>
     </item></channel>
 </rss>

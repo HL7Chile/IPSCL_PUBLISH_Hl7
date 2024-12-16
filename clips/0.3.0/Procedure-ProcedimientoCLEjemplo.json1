@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Procedure",
+  "id" : "ProcedimientoCLEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure ProcedimientoCLEjemplo</b></p><a name=\"ProcedimientoCLEjemplo\"> </a><a name=\"hcProcedimientoCLEjemplo\"> </a><a name=\"ProcedimientoCLEjemplo-es-CL\"> </a><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Procedimiento quirúrgico</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 2598006}\">Cirugía a corazón abierto</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>performed</b>: 2011-06-17</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-PrestadorMedInternaClIpsEjemplo.html\">Practitioner Nicolás Bastian Figueroa (official)</a></td></tr></table><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 80891009}\">Corazón</span></p></div>"
+  },
+  "status" : "completed",
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "387713003",
+      "display" : "Surgical procedure"
+    }],
+    "text" : "Procedimiento quirúrgico"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "2598006",
+      "display" : "Open heart surgery"
+    }],
+    "text" : "Cirugía a corazón abierto"
+  },
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "performedDateTime" : "2011-06-17",
+  "performer" : [{
+    "actor" : {
+      "reference" : "Practitioner/PrestadorMedInternaClIpsEjemplo"
+    }
+  }],
+  "bodySite" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "80891009",
+      "display" : "Heart structure"
+    }],
+    "text" : "Corazón"
+  }]
+}

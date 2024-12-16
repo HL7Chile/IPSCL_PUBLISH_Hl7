@@ -6,17 +6,14 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^version = "0.1.0"
 * ^publisher = "Hl7 Chile"
 * ^status = #draft
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * obeys ips-obs-3 and ips-obs-4
@@ -39,6 +36,8 @@ Description: "Resultados obtenidos para un examen de laboratorio"
   * ^short = "Categoría de tipo: Laboratorio"
 
 * code 1..1 MS
+* code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
+* code only CodeableConceptIPS
 * code from ResultsLaboratoryPathologyObservationUvIps (preferred)
 
 * subject 1..1 MS
@@ -54,16 +53,22 @@ Description: "Resultados obtenidos para un examen de laboratorio"
 * performer 1..* MS
 * performer only Reference(Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips or CareTeam or Paciente-cl-ips or RelatedPerson)
 
+* value[x] 1..1 MS
+* value[x] ^short = "Resultado Actual"
 * valueString MS
+  * ^short = "Resultado Actual"
 * valueQuantity MS
+* valueQuantity ^short = "Una cantidad medida utilizando UCUM (Unified Code for Units of Measure)."
 * valueCodeableConcept MS
+  * ^short = "Concepto - referencia a una terminología o simplemente a un texto"
+* valueCodeableConcept only CodeableConceptIPS
 * valueCodeableConcept from ResultsCodedValuesLaboratoryPathologyUvIps (preferred)
 
 
 * interpretation only CodeableConceptIPS
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 
-* specimen only Reference(Speciment-cl-ips)
+* specimen only Reference(Specimen-cl-ips)
 
 * referenceRange 0..*
   * ^short = "Utilizados como guía para la interpretación"

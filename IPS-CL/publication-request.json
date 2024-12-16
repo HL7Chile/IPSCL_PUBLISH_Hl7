@@ -1,15 +1,12 @@
 {
     "package-id": "hl7.fhir.cl.clips",
-    "version": "0.2.0",
-    "desc": "Versión de desarrollo",
-    "path": "https://hl7chile.cl/fhir/ig/clips/0.2.0",
+    "version": "0.3.0-ballot",
+    "desc": "Versión de Ballotaje para la conectatón 2025",
+    "path": "https://hl7chile.cl/fhir/ig/clips/0.3.0",
     "changes": "changes.html",
-    "status": "draft",
-    "sequence": "STU1",
-    "first": true,
-    "category": "Patient Summary",
-    "title": "Resumen Clinico de Paciente de Chile",
-    "introduction": "Versiones publicadas guias IPS Chile",
-    "ci-build": "https://build.fhir.org/ig/HL7Chile/IPS-CL",
+    "status": "ballot",
+    "sequence": "STU2",
+    "first": false,
+    "mode": "working",
     "fhirversion": "4.0.1"
 }

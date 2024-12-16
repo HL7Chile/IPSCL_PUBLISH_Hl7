@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="MedicationRequest-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationRequest MedicationRequest-CL-Ejemplo</b></p><a name="MedicationRequest-CL-Ejemplo"> </a><a name="hcMedicationRequest-CL-Ejemplo"> </a><a name="MedicationRequest-CL-Ejemplo-es-CL"> </a><p><b>status</b>: Completed</p><p><b>intent</b>: Original Order</p><p><b>medication</b>: <a href="Medication-MedicamentoCLEjemplo.html">Pastilla Aspirina</a></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: Administrar 500 mg por 3 días</p><p><b>timing</b>: Once per 3 days</p><p><b>route</b>: <span title="Codes:{http://standardterms.edqm.eu 20002500}">Vía de administración bucal</span></p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>500 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote><h3>DispenseRequests</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ValidityPeriod</b></td></tr><tr><td style="display: none">*</td><td>2019-02-04 --&gt; 2019-02-05</td></tr></table></div>
+  </text>
+  <status value="completed"/>
+  <intent value="original-order"/>
+  <medicationReference>
+    <reference value="Medication/MedicamentoCLEjemplo"/>
+    <display value="Pastilla Aspirina"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <dosageInstruction>
+    <text value="Administrar 500 mg por 3 días"/>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="3"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://standardterms.edqm.eu"/>
+        <code value="20002500"/>
+        <display value="Buccal use"/>
+      </coding>
+      <text value="Vía de administración bucal"/>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="500"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+  <dispenseRequest>
+    <validityPeriod>
+      <start value="2019-02-04"/>
+      <end value="2019-02-05"/>
+    </validityPeriod>
+  </dispenseRequest>
+</MedicationRequest>

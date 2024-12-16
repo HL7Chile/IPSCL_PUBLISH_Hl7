@@ -42,7 +42,7 @@
   fhir:name [ fhir:v "RolPrestadorClIps"] ; # 
   fhir:title [ fhir:v "Función o Rol de Prestador Individual (IPS-CL)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-11-13T08:36:05-03:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-11-14T07:45:16-03:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HL7 Chile"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "HL7 Chile" ] ;

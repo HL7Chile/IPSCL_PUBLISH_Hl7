@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ResultadoRadiologyCLEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ResultadoRadiologyCLEjemplo</b></p><a name="ResultadoRadiologyCLEjemplo"> </a><a name="hcResultadoRadiologyCLEjemplo"> </a><a name="ResultadoRadiologyCLEjemplo-es-CL"> </a><p><b>partOf</b>: <a href="ImagingStudy-EstudioImagenologiaCLEjemplo.html">ImagingStudy: status = registered; started = 2014-07-09; procedureCode = Portable XR Abdomen 2 Views; reasonCode = Nausea, vomiting and diarrhea</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imágenes</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 103284-6}">Radiografía portátil de abdomen 2 vistas</span></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>effective</b>: 2014-07-09</p><p><b>performer</b>: <a href="Organization-OrganizationHospital-CL-Ejemplo.html">Organization Hospital Dr. Gustavo Fricke</a></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://dicom.nema.org/resources/ontology/DCM 121069}">Hallazgo previo</span></td><td>Lesión en tejido abdominal e inflamación de estómago.</td></tr></table></div>
+  </text>
+  <partOf>
+    <reference value="ImagingStudy/EstudioImagenologiaCLEjemplo"/>
+  </partOf>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="imaging"/>
+      <display value="Imaging"/>
+    </coding>
+    <text value="Imágenes"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="103284-6"/>
+      <display value="Portable XR Abdomen 2 Views"/>
+    </coding>
+    <text value="Radiografía portátil de abdomen 2 vistas"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <effectiveDateTime value="2014-07-09"/>
+  <performer>
+    <reference value="Organization/OrganizationHospital-CL-Ejemplo"/>
+  </performer>
+  <component>
+    <code>
+      <coding>
+        <system value="http://dicom.nema.org/resources/ontology/DCM"/>
+        <code value="121069"/>
+        <display value="Previous Finding"/>
+      </coding>
+      <text value="Hallazgo previo"/>
+    </code>
+    <valueString value="Lesión en tejido abdominal e inflamación de estómago."/>
+  </component>
+</Observation>

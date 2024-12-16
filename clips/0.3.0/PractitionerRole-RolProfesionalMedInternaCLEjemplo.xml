@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="RolProfesionalMedInternaCLEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RolPrestador-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole RolProfesionalMedInternaCLEjemplo</b></p><a name="RolProfesionalMedInternaCLEjemplo"> </a><a name="hcRolProfesionalMedInternaCLEjemplo"> </a><a name="RolProfesionalMedInternaCLEjemplo-es-CL"> </a><p><b>practitioner</b>: <a href="Practitioner-PrestadorMedInternaClIpsEjemplo.html">Practitioner Nicolás Bastian Figueroa (official)</a></p><p><b>organization</b>: <a href="Organization-OrganizationHospital-CL-Ejemplo.html">Organization Hospital Dr. Gustavo Fricke</a></p><p><b>specialty</b>: <span title="Codes:{https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialidadesDeisCL 30}">Medicina Interna</span></p></div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/PrestadorMedInternaClIpsEjemplo"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/OrganizationHospital-CL-Ejemplo"/>
+  </organization>
+  <specialty>
+    <coding>
+      <system value="https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSEspecialidadesDeisCL"/>
+      <code value="30"/>
+      <display value="Medicina Interna"/>
+    </coding>
+    <text value="Medicina Interna"/>
+  </specialty>
+</PractitionerRole>

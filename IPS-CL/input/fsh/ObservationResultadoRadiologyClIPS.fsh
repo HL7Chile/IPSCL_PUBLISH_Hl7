@@ -8,17 +8,13 @@ Description: "Resultados obtenidos para un examen imagenológico"
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
-* ^version = "0.1.0"
-* ^publisher = "Hl7 Chile"
+
+//* ^version = "0.1.1"
 * ^status = #draft
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7chile.cl"
+* ^experimental = false
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 
 * obeys ips-obs-1
@@ -33,17 +29,17 @@ Description: "Resultados obtenidos para un examen imagenológico"
 
 * category 1..*
 * category only CodeableConceptIPS
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.code"
-//* category ^slicing.discriminator.path = "$this"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"Laboratorio\""
+* category ^slicing.description = "Slicing para obligar el uso de una categoria de tipo: \"radiologia\""
 * category ^slicing.ordered = false
-* category contains laboratorio 1..1 MS
-* category[laboratorio].coding.code = #imaging
-//* category[laboratorio].coding.display = "Imaging"
-  * ^short = "Categoría de tipo: Laboratorio"
+* category contains radiologia 1..1 MS
+* category[radiologia] = CategoryRadiologia
+  * ^short = "Categoría de tipo: Radiología"
 
+* code only CodeableConceptIPS
+* code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
 * code from ResultsRadiologyObservationUvIps (extensible)
 
 * subject 1..1 MS
@@ -54,18 +50,18 @@ Description: "Resultados obtenidos para un examen imagenológico"
 * effective[x] only dateTime or Period
 * effective[x].extension contains DataAbsentReason named data-absent-reason 0..1 MS
 * effective[x].extension[data-absent-reason] ^short = "Motivo por el cual no se encuentra el dato"
-* effective[x].extension[data-absent-reason].value[x] from $VSdataabsentreason (required)
-* effective[x].extension[data-absent-reason].value[x] ^binding.description = "Es usado para especificar porque el elemento esperado  por algún motivo el dato no se encuentra"
 
 * performer 1..* MS
 * performer only Reference(Prestador-cl-ips or RolPrestador-cl-ips or Organizacion-cl-ips or CareTeam or Paciente-cl-ips or RelatedPerson)
 
+* value[x] ^short = "Resultado Actual"
 * valueString MS
+* valueString ^short = "Resultado Actual"
 
 * interpretation only CodeableConceptIPS
   * ^short = "Concepto que referencia a una terminología o un texto acorde"
 
-* specimen only Reference(Speciment-cl-ips)
+* specimen only Reference(Specimen-cl-ips)
 
 * device only Reference(DispositivoClIps or DeviceMetric)
 
@@ -88,31 +84,37 @@ Description: "Resultados obtenidos para un examen imagenológico"
 
 * component[observacionTextual]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyTextualObservationUvIps (extensible)
   * value[x] only string
 
 * component[observacionCodigo]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyObservationUvIps (extensible)
   * value[x] only CodeableConceptIPS
 
 * component[observacionMedicionNumericaCuantitativa]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
   * value[x] only QuantityIPS
 
 * component[observacionMedicionRangoNumerico]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
   * value[x] only RangeIPS
 
 * component[observacionMedicionRadioNumerico]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
   * value[x] only RatioIPS
 
 * component[observacionMedicionMuestraDatos]
   * code only CodeableConceptIPS
+  * code ^short = "Concepto - referencia a una terminología o simplemente a un texto"
   * code from ResultsRadiologyMeasurementObservationUvIps (extensible)
   * value[x] only SampledData
 
@@ -126,12 +128,7 @@ InstanceOf: CodingIPS
 Usage: #inline
 * system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * code = #imaging
-/*
-* display.extension[translation]
-  * url = "http://hl7.org/fhir/StructureDefinition/translation"
-  * extension[lang].valueCode = #es
-  * extension[content].valueString = "Laboratorio"
-*/
+
 
 Invariant: ips-obs-1
 Description: "hasMember y el component son mutuamente exclusivo"

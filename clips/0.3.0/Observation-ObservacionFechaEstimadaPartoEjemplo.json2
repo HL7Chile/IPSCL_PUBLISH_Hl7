@@ -1,0 +1,28 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ObservacionFechaEstimadaPartoEjemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-embarazo-fecha-estimada-de-parto-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ObservacionFechaEstimadaPartoEjemplo</b></p><a name=\"ObservacionFechaEstimadaPartoEjemplo\"> </a><a name=\"hcObservacionFechaEstimadaPartoEjemplo\"> </a><a name=\"ObservacionFechaEstimadaPartoEjemplo-es-CL\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 11778-8}\">Fecha estimada de parto</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</a></p><p><b>effective</b>: 2023-01-20</p><p><b>performer</b>: <a href=\"Practitioner-PrestadorMedFamiliarClIpsEjemplo.html\">Practitioner Catalina Alexandra Donoso (official)</a></p><p><b>value</b>: 2023-10-02</p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "11778-8",
+      "display" : "Delivery date Estimated"
+    }],
+    "text" : "Fecha estimada de parto"
+  },
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "effectiveDateTime" : "2023-01-20",
+  "performer" : [{
+    "reference" : "Practitioner/PrestadorMedFamiliarClIpsEjemplo"
+  }],
+  "valueDateTime" : "2023-10-02"
+}

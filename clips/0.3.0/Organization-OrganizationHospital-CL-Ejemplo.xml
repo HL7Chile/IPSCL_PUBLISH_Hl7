@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="OrganizationHospital-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization OrganizationHospital-CL-Ejemplo</b></p><a name="OrganizationHospital-CL-Ejemplo"> </a><a name="hcOrganizationHospital-CL-Ejemplo"> </a><a name="OrganizationHospital-CL-Ejemplo-es-CL"> </a><p><b>identifier</b>: <code>https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc</code>/3271</p><p><b>name</b>: Hospital Dr. Gustavo Fricke</p><p><b>alias</b>: Hospital Gustavo Fricke</p><p><b>telecom</b>: ph: 322577571(Work)</p><p><b>address</b>: Calle 1532 Álvarez, Viña del Mar Viña del Mar Valparaíso Chile </p></div>
+  </text>
+  <identifier>
+    <system value="https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc"/>
+    <value value="3271"/>
+  </identifier>
+  <name value="Hospital Dr. Gustavo Fricke"/>
+  <alias value="Hospital Gustavo Fricke"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="322577571"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <line value="Calle 1532 Álvarez, Viña del Mar"/>
+    <city value="Viña del Mar">
+      <extension url="https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL"/>
+            <code value="05109"/>
+            <display value="Viña del Mar"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </city>
+    <state value="Valparaíso">
+      <extension url="https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl">
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"/>
+            <code value="05"/>
+            <display value="Valparaíso"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </state>
+    <country value="Chile">
+      <extension url="https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises">
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"/>
+            <code value="152"/>
+            <display value="Chile"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </country>
+  </address>
+</Organization>

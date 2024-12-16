@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Procedure/ProcedimientoCLEjemplo> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ProcedimientoCLEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure ProcedimientoCLEjemplo</b></p><a name=\"ProcedimientoCLEjemplo\"> </a><a name=\"hcProcedimientoCLEjemplo\"> </a><a name=\"ProcedimientoCLEjemplo-es-CL\"> </a><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Procedimiento quirúrgico</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 2598006}\">Cirugía a corazón abierto</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>performed</b>: 2011-06-17</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-PrestadorMedInternaClIpsEjemplo.html\">Practitioner Nicolás Bastian Figueroa (official)</a></td></tr></table><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 80891009}\">Corazón</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       a sct:387713003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "387713003" ] ;
+       fhir:display [ fhir:v "Surgical procedure" ]
+     ] ) ;
+     fhir:text [ fhir:v "Procedimiento quirúrgico" ]
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:2598006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2598006" ] ;
+       fhir:display [ fhir:v "Open heart surgery" ]
+     ] ) ;
+     fhir:text [ fhir:v "Cirugía a corazón abierto" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:performed [ fhir:v "2011-06-17"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:actor [
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/Practitioner/PrestadorMedInternaClIpsEjemplo> ;
+       fhir:reference [ fhir:v "Practitioner/PrestadorMedInternaClIpsEjemplo" ]
+     ]
+  ] ) ; # 
+  fhir:bodySite ( [
+     fhir:coding ( [
+       a sct:80891009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80891009" ] ;
+       fhir:display [ fhir:v "Heart structure" ]
+     ] ) ;
+     fhir:text [ fhir:v "Corazón" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

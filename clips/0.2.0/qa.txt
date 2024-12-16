@@ -1,10 +1,10 @@
 InternationalPatientSummaryChile : Validation Results
 =========================================
 
-err = 0, warn = 2, info = 27
-IG Publisher Version: 1.7.1 Out of date - current version is 1.7.2
-Generated Wed Nov 13 08:40:42 CLST 2024. FHIR version 4.0.1 for hl7.fhir.cl.clips#0.2.0 (canonical = https://hl7chile.cl/fhir/ig/clips)
- Build Errors : 0 / 1 / 1
+err = 0, warn = 7, info = 26
+IG Publisher Version: 1.7.2
+Generated Thu Nov 14 07:51:14 CLST 2024. FHIR version 4.0.1 for hl7.fhir.cl.clips#0.2.0 (canonical = https://hl7chile.cl/fhir/ig/clips)
+ Build Errors : 0 / 0 / 0
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\AllergyIntolerance-Alergia-CL-Ejemplo : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\Bundle-Bundle-CL-Ejemplo : 0 / 0 / 34
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\Composition-Composition-CL-Ejemplo : 0 / 0 / 5
@@ -40,7 +40,7 @@ Generated Wed Nov 13 08:40:42 CLST 2024. FHIR version 4.0.1 for hl7.fhir.cl.clip
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\Specimen-SpecimenCLEjemplo : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-AllergiaInt-cl-ips : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Bundle-documento-ips-cl : 0 / 0 / 1
- C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Composition-cl-ips : 0 / 0 / 1
+ C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Composition-cl-ips : 0 / 4 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Condition-cl-ips : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Declaracion-uso-dispositivo-cl-ips : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-DiagnosticReport-cl-ips : 0 / 0 / 1
@@ -54,7 +54,7 @@ Generated Wed Nov 13 08:40:42 CLST 2024. FHIR version 4.0.1 for hl7.fhir.cl.clip
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-embarazo-fecha-estimada-de-parto-cl-ips : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-estado-del-embarazo-cl-ips : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-resultado-del-embarazo-cl-ips : 0 / 0 / 1
- C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips : 0 / 0 / 1
+ C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips : 0 / 2 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-resultado-radiology-cl-ips : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-uso-de-alcohol-cl-ips : 0 / 0 / 1
  C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-uso-de-tabaco-cl-ips : 0 / 0 / 1
@@ -69,8 +69,6 @@ Generated Wed Nov 13 08:40:42 CLST 2024. FHIR version 4.0.1 for hl7.fhir.cl.clip
  C:\Users\franco.ulloa\Documents\sushi\ipscl_publish_hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\ImplementationGuide-hl7.fhir.cl.clips : 0 / 0 / 1
 </table>
 == n/a ==
-WARNING: ImplementationGuide.dependency[3].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
-INFORMATION: ImplementationGuide.dependency[3].url: The correct canonical URL for this dependency is http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\AllergyIntolerance-Alergia-CL-Ejemplo.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\Bundle-Bundle-CL-Ejemplo.json ==
 INFORMATION: Bundle/Bundle-CL-Ejemplo: Bundle.entry[0].resource.type.coding[0].display: There are no valid display names found for the code http://loinc.org#60591-5 for language(s) 'es-ES'. The display is 'Patient summary Document' the default language display
@@ -133,6 +131,10 @@ INFORMATION: Observation/ResultadoRadiologyCLEjemplo: Observation.code.coding[0]
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-AllergiaInt-cl-ips.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Bundle-documento-ips-cl.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Composition-cl-ips.json ==
+WARNING: StructureDefinition/Composition-cl-ips: StructureDefinition.differential.element[16].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
+WARNING: StructureDefinition/Composition-cl-ips: StructureDefinition.differential.element[20].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
+WARNING: StructureDefinition/Composition-cl-ips: StructureDefinition.snapshot.element[39].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
+WARNING: StructureDefinition/Composition-cl-ips: StructureDefinition.snapshot.element[53].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Condition-cl-ips.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Declaracion-uso-dispositivo-cl-ips.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-DiagnosticReport-cl-ips.json ==
@@ -148,6 +150,8 @@ WARNING: StructureDefinition/ImagingStudy-cl-ips: StructureDefinition.snapshot.e
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-estado-del-embarazo-cl-ips.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-resultado-del-embarazo-cl-ips.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-resultado-laboratorio-patologico-cl-ips.json ==
+WARNING: StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips: StructureDefinition.differential.element[2].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
+WARNING: StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips: StructureDefinition.snapshot.element[13].slicing.discriminator[0]: The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-resultado-radiology-cl-ips.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-uso-de-alcohol-cl-ips.json ==
 == C:\Users\franco.ulloa\Documents\sushi\IPSCL_PUBLISH_Hl7\temp\hl7.fhir.cl.clips#0.2.0\fsh-generated\resources\StructureDefinition-Observation-uso-de-tabaco-cl-ips.json ==

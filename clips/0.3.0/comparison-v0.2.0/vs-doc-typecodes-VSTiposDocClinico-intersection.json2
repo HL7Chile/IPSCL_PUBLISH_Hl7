@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "13ecbf57-dc0f-4ed7-a78f-bdc2510b25fa-12",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/13ecbf57-dc0f-4ed7-a78f-bdc2510b25fa-12",
+  "name" : "IntersectionFHIRDocumentTypeCodesAndVSTiposDocClinico",
+  "title" : "Intersection of FHIR Document Type Codes And Tipos de Documentos Clínicos",
+  "status" : "draft",
+  "date" : "2024-12-16T09:47:43-03:00"
+}

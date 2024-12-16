@@ -1,57 +1,31 @@
-Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-Alias: loinc = http://loinc.org
-Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
-Alias: $clinicaldocument = http://hl7.org/fhir/StructureDefinition/clinicaldocument
-Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
-Alias: $MedicationStatement-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips
-Alias: $MedicationRequest-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips
-Alias: $AllergyIntolerance-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips
-Alias: $Condition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips
-Alias: $Procedure-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips
-Alias: $Immunization-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips
-Alias: $DeviceUseStatement-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips
-Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
-Alias: $DiagnosticReport-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips
-Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
-Alias: $Observation-tobaccouse-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips
-Alias: $Observation-alcoholuse-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips
-Alias: $Observation-pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips
-Alias: $Observation-pregnancy-outcome-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips
-Alias: $Flag-alert-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips
-
 Profile: DocumentoClIps
-Parent: Composition
+Parent: DocumentoCl
 Id: Composition-cl-ips
 Title: "Documento (IPS-CL)"
 Description: """Documento clínico utilizado para representar el conjunto de datos del Resumen Internacional de Pacientes (IPS). 
 Un documento de Resumen Internacional de Paciente (IPS) es un extracto de historia clínica electrónica que contiene información sanitaria esencial sobre un sujeto de atención. 
 El conjunto de datos IPS es mínimo y no exhaustivo; independiente de la especialidad y la afección; pero sigue siendo clínicamente relevante. Tal como se especifica en las normas EN 17269 e ISO 27269, está diseñado para apoyar el caso de uso de la «atención transfronteriza no planificada», pero no se limita a él. Pretende ser internacional, es decir, ofrecer soluciones genéricas para su aplicación global más allá de una región o país concretos.
-
-Este perfil se basa en el perfil ClinicalDocument."""
+"""
 
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 1
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
+
 * ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
 * ^extension[=].valueCode = #draft
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "https://hl7chile.cl/fhir/ig/clips/ImplementationGuide/hl7.fhir.cl.clips"
 
-* ^version = "0.1.0"
+
+//* ^version = "0.1.1"
 * ^status = #draft
 * ^experimental = false
-* ^publisher = "HL7 Chile"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7chile.cl"
 * ^jurisdiction = urn:iso:std:iso:3166#CL "Chile"
 * ^copyright = "HL7 International"
 
-* . ^short = "International Patient Summary Documento"
-* . ^definition = "International Patient Summary documento. \r\nUna composición es un conjunto de información relacionada con la asistencia sanitaria que se ensambla en un único documento lógico que proporciona una única declaración coherente de significado, establece su propio contexto y que tiene atestación clínica con respecto a quién realiza la declaración. \r\nAunque una composición define la estructura, en realidad no contiene el contenido: el contenido completo de un documento se encuentra en un paquete, cuyo primer recurso es la composición."
+* . ^short = "Composición de un Resumen Clínico de Paciente Para Chile"
+* . ^definition = "Composición de un Resumen Clínico de Paciente Para Chile. \r\nUna composición es un conjunto de información relacionada con la asistencia sanitaria que se ensambla en un único documento lógico que proporciona una única declaración coherente de significado, establece su propio contexto y que tiene atestación clínica con respecto a quién realiza la declaración. \r\nAunque una composición define la estructura, en realidad no contiene el contenido: el contenido completo de un documento se encuentra en un paquete, cuyo primer recurso es la composición."
 * text MS
+  * ^short = "Resumen de texto del recurso, para interpretación humana"
 * identifier MS
+  * ^short = "Identificador independiente de la versión para la Composición"
 * status MS
 * type only CodeableConceptIPS
 * type = loinc#60591-5
@@ -59,10 +33,13 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * type ^short = "Tipo de Documento (\"Resumen de Paciente\")"
 * type ^definition = "Especifica que el documento refiere al Resumen de Paciente (Loinc \"60591-5\")\r\n"
 * subject 1.. MS
+  * ^short = "Quién y/o qué trata la composición"
 * subject only Reference(PacienteCLIps)
 * subject ^definition = "Sobre quién o que es el documento. \r\nEn general, una composición puede referirse a una persona (paciente o profesional sanitario), a un dispositivo (por ejemplo, una máquina) o incluso a un grupo de sujetos (como un documento sobre un rebaño de ganado o un conjunto de pacientes que comparten una exposición común).\r\nPara el IPS, el sujeto es siempre el paciente."
 * subject.reference 1.. MS
+  * ^short = "Referencia literal, interna o url absoluta"
 * date MS
+  * ^short = "Hora de edición de la composición"
 * author MS
 * author ^short = "Quién y/o qué fue el autor del IPS"
 * author ^definition = "Identifica al responsable de la información en el IPS, no necesariamente a quien la ingresó.\r\n\r\nEl tipo de autor, de manera de determinar la \"naturaleza\"del resumen de paciente: e.g. a \"Datos curativos\" IPS Vs. uno generado \"automaticamente\"."
@@ -70,14 +47,20 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * title ^short = "International Patient Summary Genérico para uso en Chile"
 * title ^definition = "Etiqueta oficial de lectura humana para el documento.\r\n\r\nPara este documento debiera ser \"Resumen de Paciente Basado en IPS\""
 * attester MS
+  * ^short = "Atestigua la exactitud de la composición"
 * attester.mode MS
 * attester.time MS
+  * ^short = "Hora y fecha que atestigua el composición"
 * attester.party MS
+  * ^short = "Quien atestigua la composición"
 * custodian MS
+  * ^short = "Organización que mantiente la composición"
+* relatesTo.target[x] ^short = "Objetivo de la relación"
 * relatesTo.target[x] only Identifier or Reference(Composition or DocumentoClIps)
 * event ^slicing.discriminator[0].type = #pattern
 * event ^slicing.discriminator[=].path = "code"
 * event ^slicing.rules = #open
+* event ^short = "El(los) servicio(s) clínico(s) que están siendo documentados"
 //* event ^definition = "La principal actividad descrita por un IPS es la prestación de asistencia sanitaria durante un periodo de tiempo. \En la representación CDA del IPS esto se muestra estableciendo el valor de serviceEvent/@classCode a «PCPR» (prestación de asistencia) e indicando la duración durante la cual se prestó la asistencia en serviceEvent/effectiveTime. \En la representación FHIR debe utilizarse al menos un evento para registrar esta información.También pueden incluirse datos adicionales de fuera de esta duración si son relevantes para la atención prestada durante ese intervalo de tiempo (por ejemplo, revisados durante el intervalo de tiempo indicado). Por ejemplo, si el IPS es generado por un GP basado en la información registrada en su EHR-S, entonces el valor de inicio debe representar la fecha en la que comenzó la relación de tratamiento entre el paciente y el GP; y el valor final la fecha del último evento asistencial."
 * event contains careProvisioningEvent 0..1 MS
 * event[careProvisioningEvent] ^short = "La asistencia descrita en el documento"
@@ -96,7 +79,7 @@ Este perfil se basa en el perfil ClinicalDocument."""
 * section ^short = "Secciones que componen el IPS"
 * section ^definition = "Las seccion es raíz que componen el documento IPS."
 * section.code 1.. MS
-* section.code only $CodeableConcept-uv-ips
+* section.code only CodeableConceptIPS
 * section.text 1.. MS
 * section.emptyReason ..0
 * section.emptyReason ^mustSupport = false

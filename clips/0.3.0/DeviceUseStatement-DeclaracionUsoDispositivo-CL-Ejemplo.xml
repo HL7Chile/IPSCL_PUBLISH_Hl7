@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DeviceUseStatement xmlns="http://hl7.org/fhir">
+  <id value="DeclaracionUsoDispositivo-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DeviceUseStatement DeclaracionUsoDispositivo-CL-Ejemplo</b></p><a name="DeclaracionUsoDispositivo-CL-Ejemplo"> </a><a name="hcDeclaracionUsoDispositivo-CL-Ejemplo"> </a><a name="DeclaracionUsoDispositivo-CL-Ejemplo-es-CL"> </a><p><b>status</b>: Completed</p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>timing</b>: 2022-12-20 --&gt; 2023-04-03</p><p><b>device</b>: <a href="Device-Dispositivo-CL-Ejemplo.html">Device: manufacturer = Ortopedia-Care; type = Orthopedic device</a></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 1927002}">Toda región del codo izquierdo</span></p></div>
+  </text>
+  <status value="completed"/>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <timingPeriod>
+    <start value="2022-12-20"/>
+    <end value="2023-04-03"/>
+  </timingPeriod>
+  <device>
+    <reference value="Device/Dispositivo-CL-Ejemplo"/>
+  </device>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="1927002"/>
+      <display value="Entire left elbow region"/>
+    </coding>
+    <text value="Toda región del codo izquierdo"/>
+  </bodySite>
+</DeviceUseStatement>

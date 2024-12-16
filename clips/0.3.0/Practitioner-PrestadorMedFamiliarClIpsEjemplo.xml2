@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="PrestadorMedFamiliarClIpsEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner PrestadorMedFamiliarClIpsEjemplo</b></p><a name="PrestadorMedFamiliarClIpsEjemplo"> </a><a name="hcPrestadorMedFamiliarClIpsEjemplo"> </a><a name="PrestadorMedFamiliarClIpsEjemplo-es-CL"> </a><p><b>identifier</b>: RUN/12829325-k (use: official, )</p><p><b>name</b>: Catalina Alexandra Donoso (Official)</p><p><b>telecom</b>: <a href="mailto:DraCatalinaAle@hotmail.com">DraCatalinaAle@hotmail.com</a></p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td style="display: none">*</td><td>esp</td><td><span title="Codes:">Medicina Familiar</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador"/>
+        <code value="01"/>
+        <display value="RUN"/>
+      </coding>
+    </type>
+    <value value="12829325-k"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Donoso"/>
+    <given value="Catalina"/>
+    <given value="Alexandra"/>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="DraCatalinaAle@hotmail.com"/>
+    <use value="work"/>
+  </telecom>
+  <qualification>
+    <identifier>
+      <value value="esp"/>
+    </identifier>
+    <code>
+      <text value="Medicina Familiar"/>
+    </code>
+  </qualification>
+</Practitioner>

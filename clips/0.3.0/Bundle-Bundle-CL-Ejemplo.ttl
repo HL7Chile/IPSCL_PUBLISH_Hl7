@@ -1,0 +1,499 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Bundle/Bundle-CL-Ejemplo> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Bundle-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [ fhir:v "urn:oid:2.16.152.1.10.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "IPS-Bundle-2024-001" ]
+  ] ; # 
+  fhir:type [ fhir:v "document"] ; # 
+  fhir:timestamp [ fhir:v "2024-05-30T15:00:00.000-04:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "urn:uuid:debdd403-9c7e-48d0-93c4-71a4ecc89f2f"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:debdd403-9c7e-48d0-93c4-71a4ecc89f2f> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:e80c16ae-eec7-4ff7-99c4-27e756ace6fa"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:e80c16ae-eec7-4ff7-99c4-27e756ace6fa> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:4383be84-d431-47e1-85e7-80d995742514"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:4383be84-d431-47e1-85e7-80d995742514> )
+  ] [
+     fhir:fullUrl [ fhir:v "urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350"^^xsd:anyURI ] ;
+     fhir:resource ( <urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350> )
+  ] ) . # 
+
+<urn:uuid:debdd403-9c7e-48d0-93c4-71a4ecc89f2f> a fhir:Composition ;
+  fhir:id [ fhir:v "debdd403-9c7e-48d0-93c4-71a4ecc89f2f"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_debdd403-9c7e-48d0-93c4-71a4ecc89f2f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition debdd403-9c7e-48d0-93c4-71a4ecc89f2f</b></p><a name=\"debdd403-9c7e-48d0-93c4-71a4ecc89f2f\"> </a><a name=\"hcdebdd403-9c7e-48d0-93c4-71a4ecc89f2f\"> </a><a name=\"debdd403-9c7e-48d0-93c4-71a4ecc89f2f-es-CL\"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 60591-5}\">Documento resumen del paciente</span></p><p><b>date</b>: 2024-05-28</p><p><b>author</b>: <a href=\"Bundle-Bundle-CL-Ejemplo.html#urn-uuid-503a0267-1cfd-44cc-a382-e052a78fa5cc\">Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400</a></p><p><b>title</b>: International Patient Summary Genérico para uso en Chile</p><p><b>custodian</b>: <a href=\"Bundle-Bundle-CL-Ejemplo.html#urn-uuid-e80c16ae-eec7-4ff7-99c4-27e756ace6fa\">Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400</a></p><h3>RelatesTos</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Target[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Appends</td><td><code>urn:oid:2.16.152.1.10.1</code>/IPS-CL-2024-001</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:60591-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "60591-5" ] ;
+       fhir:display [ fhir:v "Patient summary Document" ]
+     ] ) ;
+     fhir:text [ fhir:v "Documento resumen del paciente" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a" ]
+  ] ; # 
+  fhir:date [ fhir:v "2024-05-28"^^xsd:date] ; # 
+  fhir:author ( [
+     fhir:reference [ fhir:v "urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "International Patient Summary Genérico para uso en Chile"] ; # 
+  fhir:custodian [
+     fhir:reference [ fhir:v "urn:uuid:e80c16ae-eec7-4ff7-99c4-27e756ace6fa" ]
+  ] ; # 
+  fhir:relatesTo ( [
+     fhir:code [ fhir:v "appends" ] ;
+     fhir:target [
+       a fhir:Identifier ;
+       fhir:system [ fhir:v "urn:oid:2.16.152.1.10.1"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "IPS-CL-2024-001" ]
+     ]
+  ] ) ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Medicamentos" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10160-0 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "10160-0" ] ;
+         fhir:display [ fhir:v "History of Medication use Narrative" ]
+       ] ) ;
+       fhir:text [ fhir:v "Historial de uso de medicamentos" ]
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Medication Name</b>: Aspirina (medicamento)</div><div><b>Code</b>: <span>7947003</span></div><div><b>Status</b>: <span>completed, started 2019-02-04</span></div><div>Instructions: Administrar 500 mg por 3 días</div></li></ul></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Alergias" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:48765-2 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "48765-2" ] ;
+         fhir:display [ fhir:v "Allergies and adverse reactions Document" ]
+       ] ) ;
+       fhir:text [ fhir:v "Documento de alergias y reacciones adversas" ]
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Allergy Name</b>: Hierro y Clotrimazol</div><div><b>Verification Status</b>: Confirmado</div><div><b>Reaction</b>: <span>Gastritis y Dermatitis inflamatoria</span></div></li></ul></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:4383be84-d431-47e1-85e7-80d995742514" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Problemas de salud - Condiciones" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11450-4 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11450-4" ] ;
+         fhir:display [ fhir:v "Problem list - Reported" ]
+       ] ) ;
+       fhir:text [ fhir:v "Lista de problemas" ]
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li><div><b>Condition Name</b>: Hipertensión esencial benigna</div><div><b>Code</b>: <span>1201005</span></div><div><b>Status</b>: <span>Activa</span></div></li></ul></div>"
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350" ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a> a fhir:Patient ;
+  fhir:id [ fhir:v "a4104fff-1237-4cc4-8b7e-6c4c235f282a"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Paciente-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Paciente-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_a4104fff-1237-4cc4-8b7e-6c4c235f282a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient a4104fff-1237-4cc4-8b7e-6c4c235f282a</b></p><a name=\"a4104fff-1237-4cc4-8b7e-6c4c235f282a\"> </a><a name=\"hca4104fff-1237-4cc4-8b7e-6c4c235f282a\"> </a><a name=\"a4104fff-1237-4cc4-8b7e-6c4c235f282a-es-CL\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Valentina Ester Henriquez (official) Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 932785678(Mobile)</li><li>Av. General Vidaurre, casa 84 G, playa ancha(home)</li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "152" ] ;
+             fhir:display [ fhir:v "Chile" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NNCHL" ] ;
+         fhir:display [ fhir:v "Chile" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://regcivil.cl/Validacion/RUN"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "19.241.323-8" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Henriquez" ] ;
+     fhir:given ( [ fhir:v "Valentina" ] [ fhir:v "Ester" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "932785678" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1995-05-01"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:text [ fhir:v "Av. General Vidaurre, casa 84 G, playa ancha" ] ;
+     fhir:line ( [ fhir:v "Av. General Vidaurre, casa 84 G" ] ) ;
+     fhir:city [
+       fhir:v "Santiago Centro" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "13101" ] ;
+             fhir:display [ fhir:v "Santiago Centro" ]
+           ] )
+         ]
+       ] )
+     ] ;
+     fhir:state [
+       fhir:v "Metropolitana de Santiago" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "13" ] ;
+             fhir:display [ fhir:v "Metropolitana de Santiago" ]
+           ] )
+         ]
+       ] )
+     ] ;
+     fhir:country [
+       fhir:v "Chile" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "152" ] ;
+             fhir:display [ fhir:v "Chile" ]
+           ] )
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+<urn:uuid:503a0267-1cfd-44cc-a382-e052a78fa5cc> a fhir:Practitioner ;
+  fhir:id [ fhir:v "503a0267-1cfd-44cc-a382-e052a78fa5cc"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Prestador-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_503a0267-1cfd-44cc-a382-e052a78fa5cc\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 503a0267-1cfd-44cc-a382-e052a78fa5cc</b></p><a name=\"503a0267-1cfd-44cc-a382-e052a78fa5cc\"> </a><a name=\"hc503a0267-1cfd-44cc-a382-e052a78fa5cc\"> </a><a name=\"503a0267-1cfd-44cc-a382-e052a78fa5cc-es-CL\"> </a><p><b>identifier</b>: RUN/17435678-2 (use: official, )</p><p><b>name</b>: Nicolás Bastian Figueroa (Official)</p><p><b>telecom</b>: <a href=\"mailto:DrNicolasB@hotmail.com\">DrNicolasB@hotmail.com</a></p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>subesp</td><td><span title=\"Codes:\">Cirugía cardiovascular</span></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "01" ] ;
+         fhir:display [ fhir:v "RUN" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "17435678-2" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Figueroa" ] ;
+     fhir:given ( [ fhir:v "Nicolás" ] [ fhir:v "Bastian" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "DrNicolasB@hotmail.com" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:qualification ( [
+     fhir:identifier ( [
+       fhir:value [ fhir:v "subesp" ]
+     ] ) ;
+     fhir:code [
+       fhir:text [ fhir:v "Cirugía cardiovascular" ]
+     ]
+  ] ) . # 
+
+<urn:uuid:e80c16ae-eec7-4ff7-99c4-27e756ace6fa> a fhir:Organization ;
+  fhir:id [ fhir:v "e80c16ae-eec7-4ff7-99c4-27e756ace6fa"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_e80c16ae-eec7-4ff7-99c4-27e756ace6fa\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization e80c16ae-eec7-4ff7-99c4-27e756ace6fa</b></p><a name=\"e80c16ae-eec7-4ff7-99c4-27e756ace6fa\"> </a><a name=\"hce80c16ae-eec7-4ff7-99c4-27e756ace6fa\"> </a><a name=\"e80c16ae-eec7-4ff7-99c4-27e756ace6fa-es-CL\"> </a><p><b>identifier</b>: <code>https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc</code>/3271</p><p><b>name</b>: Hospital Dr. Gustavo Fricke</p><p><b>alias</b>: Hospital Gustavo Fricke</p><p><b>telecom</b>: ph: 322577571(Work)</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "3271" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Hospital Dr. Gustavo Fricke"] ; # 
+  fhir:alias ( [ fhir:v "Hospital Gustavo Fricke"] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "322577571" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+<urn:uuid:f6759f7e-630f-400e-bbe2-c8378fa6a1a5> a fhir:MedicationStatement ;
+  fhir:id [ fhir:v "f6759f7e-630f-400e-bbe2-c8378fa6a1a5"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationStatement_f6759f7e-630f-400e-bbe2-c8378fa6a1a5\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationStatement f6759f7e-630f-400e-bbe2-c8378fa6a1a5</b></p><a name=\"f6759f7e-630f-400e-bbe2-c8378fa6a1a5\"> </a><a name=\"hcf6759f7e-630f-400e-bbe2-c8378fa6a1a5\"> </a><a name=\"f6759f7e-630f-400e-bbe2-c8378fa6a1a5-es-CL\"> </a><p><b>status</b>: Completed</p><p><b>medication</b>: <a href=\"Bundle-Bundle-CL-Ejemplo.html#urn-uuid-edbe2197-1ead-44d3-b572-4b26de4fb427\">Pastilla Aspirina</a></p><p><b>subject</b>: <a href=\"Bundle-Bundle-CL-Ejemplo.html#urn-uuid-a4104fff-1237-4cc4-8b7e-6c4c235f282a\">Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400</a></p><p><b>effective</b>: 2019-02-04 --&gt; 2019-02-07</p><blockquote><p><b>dosage</b></p><p><b>text</b>: Administrar 500 mg/día</p><p><b>timing</b>: Once per 3 days</p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20002500}\">Vía de administración bucal</span></p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>500 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:reference [ fhir:v "urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427" ] ;
+     fhir:display [ fhir:v "Pastilla Aspirina" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2019-02-04"^^xsd:date ] ;
+     fhir:end [ fhir:v "2019-02-07"^^xsd:date ]
+  ] ; # 
+  fhir:dosage ( [
+     fhir:text [ fhir:v "Administrar 500 mg/día" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "3"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "20002500" ] ;
+         fhir:display [ fhir:v "Buccal use" ]
+       ] ) ;
+       fhir:text [ fhir:v "Vía de administración bucal" ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg" ]
+       ]
+     ] )
+  ] ) . # 
+
+<urn:uuid:edbe2197-1ead-44d3-b572-4b26de4fb427> a fhir:Medication ;
+  fhir:id [ fhir:v "edbe2197-1ead-44d3-b572-4b26de4fb427"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Medicamento-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_edbe2197-1ead-44d3-b572-4b26de4fb427\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication edbe2197-1ead-44d3-b572-4b26de4fb427</b></p><a name=\"edbe2197-1ead-44d3-b572-4b26de4fb427\"> </a><a name=\"hcedbe2197-1ead-44d3-b572-4b26de4fb427\"> </a><a name=\"edbe2197-1ead-44d3-b572-4b26de4fb427-es-CL\"> </a><p><b>Nombre Comercial Fármaco</b>: Aspirina</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 7947003}\">Aspirina (medicamento)</span></p><p><b>form</b>: <span title=\"Codes:{http://standardterms.edqm.eu 10323000}\">Pastilla</span></p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/NombreComercial"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "Aspirina" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:7947003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "7947003" ] ;
+       fhir:display [
+         fhir:v "Product containing aspirin (medicinal product)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "es" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Aspirina (medicamento)" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] ) ;
+     fhir:text [ fhir:v "Aspirina (medicamento)" ]
+  ] ; # 
+  fhir:form [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "10323000" ] ;
+       fhir:display [ fhir:v "Pastille" ]
+     ] ) ;
+     fhir:text [ fhir:v "Pastilla" ]
+  ] . # 
+
+<urn:uuid:4383be84-d431-47e1-85e7-80d995742514> a fhir:AllergyIntolerance ;
+  fhir:id [ fhir:v "4383be84-d431-47e1-85e7-80d995742514"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"AllergyIntolerance_4383be84-d431-47e1-85e7-80d995742514\"> </a><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance 4383be84-d431-47e1-85e7-80d995742514</b></p><a name=\"4383be84-d431-47e1-85e7-80d995742514\"> </a><a name=\"hc4383be84-d431-47e1-85e7-80d995742514\"> </a><a name=\"4383be84-d431-47e1-85e7-80d995742514-es-CL\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Activo</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\">Confirmado</span></p><p><b>type</b>: Allergy</p><p><b>code</b>: <span title=\"Codes:{http://www.whocc.no/atc A01AB18}\">Clotrimazol</span></p><p><b>patient</b>: <a href=\"Bundle-Bundle-CL-Ejemplo.html#urn-uuid-a4104fff-1237-4cc4-8b7e-6c4c235f282a\">Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400</a></p><p><b>onset</b>: 11 años<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codea = 'a')</span></p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Activo" ]
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] ) ;
+     fhir:text [ fhir:v "Confirmado" ]
+  ] ; # 
+  fhir:type [ fhir:v "allergy"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "A01AB18" ] ;
+       fhir:display [ fhir:v "clotrimazole" ]
+     ] ) ;
+     fhir:text [ fhir:v "Clotrimazol" ]
+  ] ; # 
+  fhir:patient [
+     fhir:reference [ fhir:v "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:Age ;
+     fhir:value [ fhir:v "11"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "años" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "a" ]
+  ] . # 
+
+<urn:uuid:fd5676b3-0011-49a3-9c21-d1bd8458f350> a fhir:Condition ;
+  fhir:id [ fhir:v "fd5676b3-0011-49a3-9c21-d1bd8458f350"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_fd5676b3-0011-49a3-9c21-d1bd8458f350\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition fd5676b3-0011-49a3-9c21-d1bd8458f350</b></p><a name=\"fd5676b3-0011-49a3-9c21-d1bd8458f350\"> </a><a name=\"hcfd5676b3-0011-49a3-9c21-d1bd8458f350\"> </a><a name=\"fd5676b3-0011-49a3-9c21-d1bd8458f350-es-CL\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Activa</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 75326-9}\">Problema</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 1201005}\">Hipertensión esencial benigna</span></p><p><b>subject</b>: <a href=\"Bundle-Bundle-CL-Ejemplo.html#urn-uuid-a4104fff-1237-4cc4-8b7e-6c4c235f282a\">Bundle: identifier = urn:oid:2.16.152.1.10.1#IPS-Bundle-2024-001; type = document; timestamp = 2024-05-30 15:00:00-0400</a></p><p><b>onset</b>: 2023-08-04 --&gt; (ongoing)</p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Activa" ]
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a loinc:75326-9 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "75326-9" ] ;
+       fhir:display [ fhir:v "Problem" ]
+     ] ) ;
+     fhir:text [ fhir:v "Problema" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:1201005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1201005" ] ;
+       fhir:display [ fhir:v "Benign essential hypertension" ]
+     ] ) ;
+     fhir:text [ fhir:v "Hipertensión esencial benigna" ]
+  ] ; # 
+  fhir:subject [
+     fhir:reference [ fhir:v "urn:uuid:a4104fff-1237-4cc4-8b7e-6c4c235f282a" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2023-08-04"^^xsd:date ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

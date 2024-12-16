@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Specimen/SpecimenCLEjemplo> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "SpecimenCLEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Specimen-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Specimen-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen SpecimenCLEjemplo</b></p><a name=\"SpecimenCLEjemplo\"> </a><a name=\"hcSpecimenCLEjemplo\"> </a><a name=\"SpecimenCLEjemplo-es-CL\"> </a><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119297000}\">Muestra de sangre</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Method</b></td><td><b>BodySite</b></td><td><b>FastingStatus[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 129300006}\">Pinchazo</span></td><td><span title=\"Codes:{http://snomed.info/sct 49852007}\">Vena cubital media</span></td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0916 F}\">El paciente estaba en ayunas antes del procedimiento.</span></td></tr></table></div>"
+  ] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:119297000 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "119297000" ] ;
+       fhir:display [
+         fhir:v "Blood specimen" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "es" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Muestra de sangre" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] ) ;
+     fhir:text [ fhir:v "Muestra de sangre" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:collection [
+     fhir:method [
+       fhir:coding ( [
+         a sct:129300006 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "129300006" ] ;
+         fhir:display [
+           fhir:v "Puncture - action" ;
+           fhir:extension ( [
+             fhir:extension ( [
+               fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "es" ]
+             ] [
+               fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "Pinchazo" ]
+             ] ) ;
+             fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+           ] )
+         ]
+       ] ) ;
+       fhir:text [ fhir:v "Pinchazo" ]
+     ] ;
+     fhir:bodySite [
+       fhir:coding ( [
+         a sct:49852007 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "49852007" ] ;
+         fhir:display [ fhir:v "Median cubital vein" ]
+       ] ) ;
+       fhir:text [ fhir:v "Vena cubital media" ]
+     ] ;
+     fhir:fastingStatus [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0916"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "F" ] ;
+         fhir:display [ fhir:v "Patient was fasting prior to the procedure." ]
+       ] ) ;
+       fhir:text [ fhir:v "El paciente estaba en ayunas antes del procedimiento." ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

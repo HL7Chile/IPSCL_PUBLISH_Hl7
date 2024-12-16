@@ -1,0 +1,40 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "DiagnosticReportLab-CL-Ejemplo",
+  "meta" : {
+    "profile" : ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport DiagnosticReportLab-CL-Ejemplo</b></p><a name=\"DiagnosticReportLab-CL-Ejemplo\"> </a><a name=\"hcDiagnosticReportLab-CL-Ejemplo\"> </a><a name=\"DiagnosticReportLab-CL-Ejemplo-es-CL\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}\">Reporte de laboratorio</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratorio</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8\u00a0(use:\u00a0official,\u00a0))</td></tr><tr><td>When For</td><td>2015-06-10</td></tr><tr><td>Performer</td><td> <a href=\"Organization-OrganizationHospital-CL-Ejemplo.html\">Hospital Dr. Gustavo Fricke</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-LabPatologia-CL-Ejemplo.html\"><span title=\"Codes:{http://loinc.org 100746-7}\">Glucosa en sangre venosa mixta</span></a></td><td>5.5 [mmol/L]<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></td><td>Final</td><td>Nivel normal de glucosa en sangre venosa</td><td>2015-06-04</td></tr></table></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "LAB",
+      "display" : "Laboratory"
+    }],
+    "text" : "Laboratorio"
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "11502-2",
+      "display" : "Laboratory report"
+    }],
+    "text" : "Reporte de laboratorio"
+  },
+  "subject" : {
+    "reference" : "Patient/PacienteClIpsEjemplo"
+  },
+  "effectiveDateTime" : "2015-06-10",
+  "performer" : [{
+    "reference" : "Organization/OrganizationHospital-CL-Ejemplo",
+    "display" : "Hospital Dr. Gustavo Fricke"
+  }],
+  "result" : [{
+    "reference" : "Observation/LabPatologia-CL-Ejemplo",
+    "display" : "Nivel normal de glucosa en sangre venosa"
+  }]
+}

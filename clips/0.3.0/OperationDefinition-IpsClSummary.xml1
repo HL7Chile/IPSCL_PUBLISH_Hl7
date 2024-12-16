@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="IpsClSummary"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition IpsClSummary</b></p><a name="IpsClSummary"> </a><a name="hcIpsClSummary"> </a><a name="IpsClSummary-es-CL"> </a><p>URL: [base]/Patient/$summary</p><p>URL: [base]/Patient/[id]/$summary</p><p>Input parameters Profile:<a href="StructureDefinition-Parametros-entradas-ips-cl.html">Parametros De Entradas IPS Summary</a></p><p>Output parameters Profile:<a href="StructureDefinition-Bundle-documento-ips-cl.html">Bundle Resumen Clínico</a></p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a><br/>(<a href="http://hl7.org/fhir/R4/search.html#token">token</a>)</td><td/><td><div><p>Cuando no se utiliza el id lógico del paciente, los servidores <strong>PUEDEN</strong> optar por admitir la selección del paciente basada en el identificador proporcionado. A menos que el sistema de identificadores sea desconocido, los solicitantes <strong>DEBERÍAN</strong> incluir tanto el sistema como el valor (por ejemplo, 'identifier=https://standards.digital.health.nz/ns/nhi-id|CNNJ9186') al usar este parámetro.</p>
+</div></td></tr><tr><td>IN</td><td>profile</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td><td/><td><div><p>Se debe especificar un perfil específico para el resumen del paciente. Para el caso de Chile se debe especificar el <a href="StructureDefinition-Composition-cl-ips.html">Documento (IPS-CL)</a>.</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>0..1</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td><td/><td><div><p>El Bundle devuelto es un documento que cumple con el parámetro del perfil de Composición <a href="StructureDefinition-Composition-cl-ips.html">Documento (IPS-CL)</a>.</p>
+</div></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft"/>
+  </extension>
+  <url value="https://hl7chile.cl/fhir/ig/clips/OperationDefinition/IpsClSummary"/>
+  <version value="0.3.0-ballot"/>
+  <name value="IpsClSummary"/>
+  <title value="IPS-Cl Summary"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2024-10-04"/>
+  <publisher value="HL7 Chile"/>
+  <contact>
+    <name value="HL7 Chile"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7chile.cl"/>
+    </telecom>
+  </contact>
+  <description value="Esta operación devuelve un documento IPS en respuesta a una solicitud POST/GET (ver Operaciones FHIR). El documento devuelto **PUEDE** generarse bajo demanda y **DEBERÍA** representar la información más reciente disponible. Esta operación no necesariamente crearía una instancia IPS persistida en el servidor que responde a la solicitud. Cuando se desean registros históricos u otros documentos, esta operación no es adecuada. Para operaciones alternativas y guía sobre la generación de IPS, consulte **IPS Generation and Data Inclusion**.&#xA;&#xA;Generalmente, cuando se conoce el id lógico de un paciente, ese id se utilizaría para solicitar el resumen del paciente desde un servidor FHIR (ver patrón [id] a continuación). Cuando no se conoce, los servidores **PUEDEN** admitir el uso de otros identificadores (ver el parámetro identifier a continuación), por ejemplo un RUT.&#xA;&#xA;El servidor **DEBE** permitir el uso del perfil del [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html).&#xA;&#xA;Está operación nace de la operación [IPS Summary](https://hl7.org/fhir/uv/ips/2024Sep/OperationDefinition-summary.html) pero especificada para el caso de uso nacional de Chile."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CL"/>
+      <display value="Chile"/>
+    </coding>
+  </jurisdiction>
+  <code value="summary"/>
+  <base value="http://hl7.org/fhir/uv/ips/OperationDefinition/summary"/>
+  <resource value="Patient"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="true"/>
+  <inputProfile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Parametros-entradas-ips-cl"/>
+  <outputProfile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"/>
+  <parameter>
+    <name value="identifier"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Cuando no se utiliza el id lógico del paciente, los servidores **PUEDEN** optar por admitir la selección del paciente basada en el identificador proporcionado. A menos que el sistema de identificadores sea desconocido, los solicitantes **DEBERÍAN** incluir tanto el sistema como el valor (por ejemplo, 'identifier=https://standards.digital.health.nz/ns/nhi-id|CNNJ9186') al usar este parámetro."/>
+    <type value="string"/>
+    <searchType value="token"/>
+  </parameter>
+  <parameter>
+    <name value="profile"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Se debe especificar un perfil específico para el resumen del paciente. Para el caso de Chile se debe especificar el [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html)."/>
+    <type value="uri"/>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="El Bundle devuelto es un documento que cumple con el parámetro del perfil de Composición [Documento (IPS-CL)](StructureDefinition-Composition-cl-ips.html)."/>
+    <type value="Bundle"/>
+  </parameter>
+</OperationDefinition>

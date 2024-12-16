@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Flag xmlns="http://hl7.org/fhir">
+  <id value="FlagAlertEjemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips"/>
+  </meta>
+  <language value="es"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es"><p class="res-header-id"><b>Generated Narrative: Flag FlagAlertEjemplo</b></p><a name="FlagAlertEjemplo"> </a><a name="hcFlagAlertEjemplo"> </a><a name="FlagAlertEjemplo-es-CL"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: es</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Flag-alerta-cl-ips.html">Flag - Alerta (IPS-CL)</a></p></div><p><b>Flag Priority</b>: <span title="Codes:{http://hl7.org/fhir/flag-priority-code PH}">High priority</span></p><p><b>status</b>: Active</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/flag-category drug}">Alerta relacionada con la medicación del paciente</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 419511003}">Paciente propenso a reacciones adversas a medicamentos</span></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/flag-priority">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/flag-priority-code"/>
+        <code value="PH"/>
+        <display value="High priority"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="active"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/flag-category"/>
+      <code value="drug"/>
+      <display value="Drug"/>
+    </coding>
+    <text value="Alerta relacionada con la medicación del paciente"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="419511003"/>
+      <display value="Propensity to adverse reactions to drug"/>
+    </coding>
+    <text value="Paciente propenso a reacciones adversas a medicamentos"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+</Flag>

@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/ImagingStudy/EstudioImagenologiaCLEjemplo> a fhir:ImagingStudy ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EstudioImagenologiaCLEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/ImagingStudy-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImagingStudy EstudioImagenologiaCLEjemplo</b></p><a name=\"EstudioImagenologiaCLEjemplo\"> </a><a name=\"hcEstudioImagenologiaCLEjemplo\"> </a><a name=\"EstudioImagenologiaCLEjemplo-es-CL\"> </a><p><b>status</b>: Registered</p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>started</b>: 2014-07-09</p><p><b>procedureCode</b>: <span title=\"Codes:{http://loinc.org 103284-6}\">Radiografía portátil de abdomen 2 vistas</span></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 2919008}\">Náuseas, vómitos y diarrea.</span></p><blockquote><p><b>series</b></p><p><b>uid</b>: 2.16.124.113543.6003.2588828330.45298.17418.2723805630</p><p><b>modality</b>: <a href=\"http://hl7.org/fhir/R4/codesystem-dicom-dcim.html#dicom-dcim-DX\">DICOM DX</a>: Digital Radiography</p><p><b>bodySite</b>: <a href=\"http://snomed.info/id/818983003\">SNOMED CT 818983003</a>: Abdomen</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType CON}\">Consultante: Realiza evaluación inicial y recomendaciones</span></td><td><a href=\"Organization-OrganizationHospital-CL-Ejemplo.html\">Organization Hospital Dr. Gustavo Fricke</a></td></tr></table></blockquote></div>"
+  ] ; # 
+  fhir:status [ fhir:v "registered"] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:started [ fhir:v "2014-07-09"^^xsd:date] ; # 
+  fhir:procedureCode ( [
+     fhir:coding ( [
+       a loinc:103284-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "103284-6" ] ;
+       fhir:display [ fhir:v "Portable XR Abdomen 2 Views" ]
+     ] ) ;
+     fhir:text [ fhir:v "Radiografía portátil de abdomen 2 vistas" ]
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:2919008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2919008" ] ;
+       fhir:display [ fhir:v "Nausea, vomiting and diarrhea" ]
+     ] ) ;
+     fhir:text [ fhir:v "Náuseas, vómitos y diarrea." ]
+  ] ) ; # 
+  fhir:series ( [
+     fhir:uid [ fhir:v "2.16.124.113543.6003.2588828330.45298.17418.2723805630" ] ;
+     fhir:modality [
+       fhir:system [ fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "DX" ] ;
+       fhir:display [ fhir:v "Digital Radiography" ]
+     ] ;
+     fhir:bodySite [
+       a sct:818983003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "818983003" ] ;
+       fhir:display [ fhir:v "Abdomen" ]
+     ] ;
+     fhir:performer ( [
+       fhir:function [
+         fhir:coding ( [
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "CON" ] ;
+           fhir:display [ fhir:v "consultant" ]
+         ] ) ;
+         fhir:text [ fhir:v "Consultante: Realiza evaluación inicial y recomendaciones" ]
+       ] ;
+       fhir:actor [
+         fhir:link <https://hl7chile.cl/fhir/ig/clips/Organization/OrganizationHospital-CL-Ejemplo> ;
+         fhir:reference [ fhir:v "Organization/OrganizationHospital-CL-Ejemplo" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

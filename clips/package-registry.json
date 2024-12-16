@@ -7,11 +7,11 @@
       "canonical" : "https://hl7chile.cl/fhir/ig/clips",
       "category" : "Patient Summary",
       "ci-build" : "https://build.fhir.org/ig/HL7Chile/IPS-CL",
-      "version-count" : 1,
+      "version-count" : 2,
       "latest" : {
-        "version" : "0.2.0",
-        "date" : "2024-11-13",
-        "path" : "https://hl7chile.cl/fhir/ig/clips/0.2.0"
+        "version" : "0.3.0-ballot",
+        "date" : "2024-12-16",
+        "path" : "https://hl7chile.cl/fhir/ig/clips/0.3.0"
       }
     }
   ]

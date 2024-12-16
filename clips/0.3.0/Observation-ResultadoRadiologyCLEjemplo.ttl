@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Observation/ResultadoRadiologyCLEjemplo> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ResultadoRadiologyCLEjemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ResultadoRadiologyCLEjemplo</b></p><a name=\"ResultadoRadiologyCLEjemplo\"> </a><a name=\"hcResultadoRadiologyCLEjemplo\"> </a><a name=\"ResultadoRadiologyCLEjemplo-es-CL\"> </a><p><b>partOf</b>: <a href=\"ImagingStudy-EstudioImagenologiaCLEjemplo.html\">ImagingStudy: status = registered; started = 2014-07-09; procedureCode = Portable XR Abdomen 2 Views; reasonCode = Nausea, vomiting and diarrhea</a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}\">Imágenes</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 103284-6}\">Radiografía portátil de abdomen 2 vistas</span></p><p><b>subject</b>: <a href=\"Patient-PacienteClIpsEjemplo.html\">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>effective</b>: 2014-07-09</p><p><b>performer</b>: <a href=\"Organization-OrganizationHospital-CL-Ejemplo.html\">Organization Hospital Dr. Gustavo Fricke</a></p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://dicom.nema.org/resources/ontology/DCM 121069}\">Hallazgo previo</span></td><td>Lesión en tejido abdominal e inflamación de estómago.</td></tr></table></div>"
+  ] ; # 
+  fhir:partOf ( [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/ImagingStudy/EstudioImagenologiaCLEjemplo> ;
+     fhir:reference [ fhir:v "ImagingStudy/EstudioImagenologiaCLEjemplo" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "imaging" ] ;
+       fhir:display [ fhir:v "Imaging" ]
+     ] ) ;
+     fhir:text [ fhir:v "Imágenes" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:103284-6 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "103284-6" ] ;
+       fhir:display [ fhir:v "Portable XR Abdomen 2 Views" ]
+     ] ) ;
+     fhir:text [ fhir:v "Radiografía portátil de abdomen 2 vistas" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Patient/PacienteClIpsEjemplo> ;
+     fhir:reference [ fhir:v "Patient/PacienteClIpsEjemplo" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2014-07-09"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <https://hl7chile.cl/fhir/ig/clips/Organization/OrganizationHospital-CL-Ejemplo> ;
+     fhir:reference [ fhir:v "Organization/OrganizationHospital-CL-Ejemplo" ]
+  ] ) ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "121069" ] ;
+         fhir:display [ fhir:v "Previous Finding" ]
+       ] ) ;
+       fhir:text [ fhir:v "Hallazgo previo" ]
+     ] ;
+     fhir:value [ fhir:v "Lesión en tejido abdominal e inflamación de estómago." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

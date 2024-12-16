@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="LabPatologia-CL-Ejemplo"/>
+  <meta>
+    <profile value="https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation LabPatologia-CL-Ejemplo</b></p><a name="LabPatologia-CL-Ejemplo"> </a><a name="hcLabPatologia-CL-Ejemplo"> </a><a name="LabPatologia-CL-Ejemplo-es-CL"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratorio</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 100746-7}">Glucosa en sangre venosa mixta</span></p><p><b>subject</b>: <a href="Patient-PacienteClIpsEjemplo.html">Vale  Female, DoB: 1995-05-01 ( Chile: 19.241.323-8 (use: official, ))</a></p><p><b>effective</b>: 2015-06-04</p><p><b>performer</b>: <a href="Organization-OrganizationHospital-CL-Ejemplo.html">Organization Hospital Dr. Gustavo Fricke</a></p><p><b>value</b>: 5.5 [mmol/L]<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p><p><b>note</b>: Nivel normal de glucosa en sangre venosa</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+    <text value="Laboratorio"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="100746-7"/>
+      <display value="Glucose [Moles/volume] in Mixed venous blood"/>
+    </coding>
+    <text value="Glucosa en sangre venosa mixta"/>
+  </code>
+  <subject>
+    <reference value="Patient/PacienteClIpsEjemplo"/>
+  </subject>
+  <effectiveDateTime value="2015-06-04"/>
+  <performer>
+    <reference value="Organization/OrganizationHospital-CL-Ejemplo"/>
+  </performer>
+  <valueQuantity>
+    <value value="5.5"/>
+    <unit value="[mmol/L]"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mmol/L"/>
+  </valueQuantity>
+  <note>
+    <text value="Nivel normal de glucosa en sangre venosa"/>
+  </note>
+</Observation>

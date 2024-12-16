@@ -1,0 +1,79 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7chile.cl/fhir/ig/clips/Organization/Organization-CL-Ejemplo> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Organization-CL-Ejemplo"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips"^^xsd:anyURI ;
+       fhir:link <https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Organizacion-cl-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Organization-CL-Ejemplo</b></p><a name=\"Organization-CL-Ejemplo\"> </a><a name=\"hcOrganization-CL-Ejemplo\"> </a><a name=\"Organization-CL-Ejemplo-es-CL\"> </a><p><b>identifier</b>: <code>https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc</code>/106302</p><p><b>name</b>: Centro de Salud Familiar Barón</p><p><b>alias</b>: CESFAM Barón</p><p><b>telecom</b>: ph: 800500520(Work)</p><p><b>address</b>: Calle 2370 Barros Luco Valparaíso Valparaíso Chile </p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "106302" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Centro de Salud Familiar Barón"] ; # 
+  fhir:alias ( [ fhir:v "CESFAM Barón"] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "800500520" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "Calle 2370 Barros Luco" ] ) ;
+     fhir:city [
+       fhir:v "Valparaíso" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "05101" ] ;
+             fhir:display [ fhir:v "Valparaíso" ]
+           ] )
+         ]
+       ] )
+     ] ;
+     fhir:state [
+       fhir:v "Valparaíso" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "05" ] ;
+             fhir:display [ fhir:v "Valparaíso" ]
+           ] )
+         ]
+       ] )
+     ] ;
+     fhir:country [
+       fhir:v "Chile" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "152" ] ;
+             fhir:display [ fhir:v "Chile" ]
+           ] )
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
